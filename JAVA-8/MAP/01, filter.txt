@@ -1,0 +1,300 @@
+                                                              FILTER
+______________________________________________________________________________________________________________________________________________
+
+                                                            EASY (1-20)
+                                                         ------------------
+
+(1) Given a list of integers, filter out the even numbers ?
+ • Input:
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+ • Output: [1, 3, 5]
+
+(2) Given a list of strings, filter out strings with length greater than 3 ?
+• Input: 
+List<String> list = Arrays.asList("apple", "bat", "car", "dog");
+• Output: ["bat", "car", "dog"]
+
+(3) Given a list of names, filter out names that start with 'A' ?
+• Input:
+List<String> list = Arrays.asList("Alice", "Bob", "Charlie");
+• Output: ["Bob", "Charlie"]
+
+(4)  Given a list of integers, find out numbers greater than 10 ?
+• Input: 
+List<Integer> list = Arrays.asList(5, 10, 15, 20);
+• Output: [15, 20]
+
+(5) Given a list of products, find out those that are in stock (quantity > 0) ?
+• Input: 
+ List<Product> list = Arrays.asList(
+                new Product("Laptop", 0),
+                new Product("Phone", 5)
+        );
+• Output: [{name: "Phone", quantity: 5}]
+
+(6) Given a list of ages, find out those that are legal adults (age ≥ 18) ?
+• Input: 
+List<Integer> list = Arrays.asList(15, 20, 17, 22);
+• Output: [20, 22]
+
+(7) Given a list of employees, find out those who work in the IT department?
+• Input: 
+        List<Employee> list = Arrays.asList(
+                new Employee("Alice", "HR"),
+                new Employee("Bob", "IT")
+        );
+• Output: [{name: "Bob", department: "IT"}]
+
+(8) Given a list of strings, filter out null or empty strings?
+• Input: 
+List<String> list = Arrays.asList("apple", "", null, "banana");
+• Output: ["apple", "banana"]
+
+(9) Given a list of books, find out those with a rating above 4.0 ?
+• Input: 
+        List<Books> list = Arrays.asList(
+                new Books("book1", 4.5),
+                new Books("book2", 3.9)
+        );
+• Output: [{title: "Book1", rating: 4.5}]
+
+(10) Given a list of temperatures, find out those above freezing (temp > 0) ?
+• Input: 
+List<Integer> list = Arrays.asList(10, -5, 20, -15);
+• Output: [10, 20] 
+
+(11) Given a list of employees, find the names of employees who earn more than 50,000 ?
+Input :
+List<Employee> employees = Arrays.asList(  
+    new Employee("John", 60000),  
+    new Employee("Jane", 40000),  
+    new Employee("Jack", 70000)  
+);  
+Output : ["John", "Jack"]
+
+(12) Given a list of integers, find the first even number greater than 10 ?
+Input : 
+List<Integer> numbers = Arrays.asList(5, 12, 8, 21, 13);
+Output : 12
+
+(13) Given a list of strings, count how many strings start with the letter "A"?
+Input: 
+List<String> words = Arrays.asList("Apple", "Banana", "Avocado", "Cherry", "Apricot");
+Output: 3
+
+(14) Given a list of transactions, find the total amount of all transactions?
+Input : 
+List<Transaction> transactions = Arrays.asList(  
+    new Transaction(100),  
+    new Transaction(200),  
+    new Transaction(300)  
+);  
+Output: 600
+
+(15) Given a list of integers, find the maximum value.?
+Input: 
+List<Integer> numbers = Arrays.asList(3, 7, 2, 9, 5);
+Output: 9
+
+(16) Given a list of strings, concatenate all the strings into a single string separated by commas.?
+Input: 
+List<String> words = Arrays.asList("apple", "banana", "cherry");
+Output: apple,banana,cherry
+
+(17) Given a list of strings, find the longest string.?
+Input: 
+List<String> words = Arrays.asList("apple", "banana", "strawberry", "cherry");
+Output: strawberry
+
+(18) Given a list of integers, return a list of squares of the numbers.?
+Input: 
+List<Integer> numbers = Arrays.asList(2, 3, 4);
+Output: [4, 9, 16]
+
+(19) Given a list of numbers, find the sum of all odd numbers after multiplying them by 2.?
+Input: 
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+Output: 18
+
+(20) Given a list of numbers, find the sum of the squares of all even numbers greater than 10.?
+Input: 
+List<Integer> numbers = Arrays.asList(4, 12, 15, 20, 8, 18);
+Output: 868
+
+
+
+                                                          🔶 MEDIUM (1-12)
+                                                        -------------------------
+
+(1) Print the multiplication of alternate number in an array ?
+Input: 
+int arr []= {1,43,2,25,1,53,6};
+Output: 12
+
+(2) WAF to multiply 1st and last element and 2nd element to 2nd last element in a given array
+Input: 
+int arr[]={4,5,7,2,1,9};
+Output: 36,5
+
+(3) Students who scored more than 70 ?
+Input:
+List<E_02> list = Arrays.asList(  
+    new Students("Alice", 85),  
+    new Students("Bob", 65)  
+);  
+Output: Alice
+
+(4) Employees with salary > 50,000 ?
+Input: 
+List<E_02> list = Arrays.asList(  
+    new Employees("Alice", 40000),  
+    new Employees("Bob", 55000)  
+);  
+Output: Bob
+
+(5) Strings that don’t contain letter ‘e’
+Input: 
+List<String> list = Arrays.asList("apple", "bat", "dog");
+Output: bat , dog
+
+(6) Names with <= 5 characters
+Input: 
+List<String> list = Arrays.asList("Alice", "Bob", "Charlie");
+Output: Alice, Bob
+
+(7) Countries in Europe ?
+Input :
+List<Country> countries = Arrays.asList(  
+    new Country("Germany", "Europe"),  
+    new Country("USA", "North America")  
+); 
+Output: Germany
+
+(8) Students with all grades >= 40 ?
+Input: 
+List<Students> students = Arrays.asList(  
+    new Students("Alice", Arrays.asList(45, 50, 35)),  
+    new Students("Bob", Arrays.asList(50, 60, 45))  
+);  
+ Output: Bob
+
+(9) Group students by department ?
+Input: List<Student> students = Arrays.asList(
+    new Student("Alice", "CS"),
+    new Student("Bob", "Math"),
+    new Student("Charlie", "CS")
+);
+Output: {
+  "CS": ["Alice", "Charlie"],
+  "Math": ["Bob"]
+}
+
+(10) Find the employee with highest salary in "IT" ?
+Input: List<Employee> employees = Arrays.asList(
+    new Employee("John", "IT", 60000),
+    new Employee("Jane", "HR", 40000),
+    new Employee("Jack", "IT", 70000)
+);
+Output: Employee("Jack", "IT", 70000)
+
+(11) Find average salary per department ?
+Input: List<Employee> employees = Arrays.asList(
+    new Employee("John", "IT", 60000),
+    new Employee("Jane", "HR", 50000),
+    new Employee("Jack", "IT", 70000),
+    new Employee("Jill", "HR", 40000)
+);
+Output: {
+  "IT": 65000.0,
+  "HR": 45000.0
+}
+
+(12)  Product of top 3 highest numbers ?
+Input: List<Integer> numbers = Arrays.asList(3, 7, 2, 9, 5, 6);
+Output: 378
+
+
+
+                                                              🔴 HARD (1-8)
+                                                            --------------------
+
+(1) Customers with orders > 3 ?
+Input: List<Customers> list = Arrays.asList(
+    new Customers("Alice", 2),
+    new Customers("Bob", 5)
+);
+Output: [Customers{name='Bob', orders=5}]
+
+(2) Events lasting more than 3 hours ?
+Input: List<Events> list = Arrays.asList(
+    new Events("Event1", 2, 4),
+    new Events("Event2", 2, 6)
+);
+Output: [Events{name='Event2', start=2, end=6}]
+
+(3) Employees with attendance < 90% ?
+Input: List<Employees> list = Arrays.asList(
+    new Employees("Alice", 95),
+    new Employees("Bob", 85)
+);
+Output: [Employees{name='Bob', attendance=85}]
+
+(4) Projects that lasted more than 1 year ?
+Input : List<Projects> list = Arrays.asList(
+    new Projects("Project1", "2020-01-01", "2020-12-31"),
+    new Projects("Project2", "2020-01-01", "2021-06-30")
+);
+Output: [Projects{name='Project2', start='2020-01-01', end='2021-06-30'}]
+
+(5) Students whose average score >= 70 ?
+Input: List<Students> students = Arrays.asList(
+    new Students("Alice", Arrays.asList(60, 70, 80)),
+    new Students("Bob", Arrays.asList(50, 60, 65))
+);
+Output: [Students{name='Alice', scores=[60, 70, 80]}]
+
+(6) Highest paid employee per department ?
+Input : List<Employee> employees = Arrays.asList(
+    new Employee("John", "IT", 60000),
+    new Employee("Jane", "HR", 50000),
+    new Employee("Jack", "IT", 70000),
+    new Employee("Jill", "HR", 40000)
+);
+Output: {
+  "IT": Employee("Jack", "IT", 70000),
+  "HR": Employee("Jane", "HR", 50000)
+}
+
+(7)  Check if any Finance employee earns > 100000 ?
+Input: List<Employee> employees = Arrays.asList(
+    new Employee("John", "Finance", 120000),
+    new Employee("Jane", "IT", 95000),
+    new Employee("Jack", "Finance", 90000)
+);
+Output: true
+
+(8)  Top 3 students with highest scores ?
+Input: List<Student> students = Arrays.asList(
+    new Student("Alice", 85),
+    new Student("Bob", 92),
+    new Student("Charlie", 88),
+    new Student("David", 95),
+    new Student("Eva", 91)
+);
+Output: [
+  Student("David", 95),
+  Student("Bob", 92),
+  Student("Eva", 91)
+]
+
+
+
+
+
+
+
+
+
+
+
+
