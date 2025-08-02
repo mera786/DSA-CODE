@@ -1,0 +1,151 @@
+
+                                                          FLATMAP
+_____________________________________________________________________________________________________________________________________________
+
+                                                          EASY (1-10)
+                                                         --------------
+
+(1) Extracting Hashtags from Tweets? 
+Input:  
+List<String> tweets = Arrays.asList( 
+"I love #Java", 
+"Programming in #Python is great" 
+); 
+Output: [#Java, #Python] 
+
+
+(2) Flattening Nested Lists of Integers?
+Input: 
+ List<List<Integer>> data = Arrays.asList(
+                Arrays.asList(1, 2),
+                Arrays.asList(3, 4),
+                Arrays.asList(5)
+        );
+Output: [1, 2, 3, 4, 5]
+
+
+(3) Flattening Nested Lists of Strings? 
+Input: 
+        List<List<String>> data = Arrays.asList(
+                Arrays.asList("apple", "banana"),
+                Arrays.asList("cherry"),
+                Arrays.asList("date")
+        );
+Output: [apple, banana, cherry, date] 
+
+(4) Mapping and Flattening to Integer Lists? 
+Input: 
+        List<List<String>> data = Arrays.asList(
+                Arrays.asList("1", "2"),
+                Arrays.asList("3"),
+                Arrays.asList("4")
+        );
+Output: [1, 2, 3, 4] 
+
+
+(5) Flattening a List of Optional Values? 
+Input: 
+        List<List<Optional<String>>> data = Arrays.asList(
+                Arrays.asList(Optional.of("a")),
+                Arrays.asList(Optional.empty()),
+                Arrays.asList(Optional.of("b"))
+        );
+Output: [a, b] 
+
+(6) Flattening a List of Lists with Different Sizes? 
+Input: [[1], [2, 3, 4], [5, 6]] 
+Output: [1, 2, 3, 4, 5, 6]
+
+
+(7) Flattening a List of Characters? 
+Input: [['a', 'b'], ['c', 'd']] 
+Output: [a, b, c, d] 
+
+(8) Flattening and Removing Duplicates?
+Input: [[1, 2], [2, 3], [3, 4]] 
+Output: [1, 2, 3, 4] 
+
+
+(9) Flattening Nested Maps? 
+Input: [{"a": [1, 2]}, {"b": [3, 4]}] 
+Output: [1, 2, 3, 4] 
+
+
+(10)   Flattening a List of Lists of Booleans? 
+Input: [[true, false], [false, true]] 
+Output: [true, false, false, true] 
+
+
+(11)  Flattening a List of Integer Ranges? 
+Input: [[1, 2, 3], [4, 5]] 
+Output: [1, 2, 3, 4, 5] 
+
+
+                                                                MEDIUM (1-10)
+                                                             -----------------------
+
+(1) Flattening a List of Lists and Converting to Strings? 
+Input: [[1, 2], [3, 4]] 
+Output: [1, 2, 3, 4] 
+
+(2) Flattening and Summing Nested Lists of Integers? 
+Input: [[1, 2], [3, 4]] 
+Output: 10 
+
+(3) Flattening a List of Student Subjects? 
+Input: [{name: "John", subjects: ["Math", "Science"]}, {name: "Jane", subjects: ["English"]}] 
+Output: [Math, Science, English] 
+
+(4) Flattening a List of User Roles? 
+Input: [{username: "user1", roles: ["admin", "editor"]}, {username: "user2", roles: ["viewer"]}] 
+Output: ["admin", "editor", "viewer"] 
+
+(5) Flattening a List of JSON Objects? 
+Input: [{id: 1, tags: ["java", "spring"]}, {id: 2, tags: ["python", "django"]}] 
+Output: ["java", "spring", "python", "django"]
+
+(6) Flattening a List of Mixed Data Types? 
+Input: [[1, "a"], [2, "b"], [3, "c"]] 
+Output: [1, a, 2, b, 3, c] 
+
+(7) Flattening a List of Paths? 
+Input: [[“/home/user”], [“/etc”], [“/var/log”]] 
+Output: [/home/user, /etc, /var/log] 
+
+(8) Flattening a List of Recipes with Ingredients? 
+Input:  [{name: "Cake", ingredients: ["flour", "sugar"]}, {name: "Pasta", ingredients: ["noodles", 
+"sauce"]}] 
+Output: [flour, sugar, noodles, sauce] 
+
+
+
+                                                                HARD (1-10)
+                                                              -----------------
+
+(1) Flattening Nested Optional Values? 
+Input: [Optional.of(Arrays.asList(1, 2)), Optional.empty(), Optional.of(Arrays.asList(3, 4))] 
+Output: [1, 2, 3, 4] 
+
+(2) Flattening a List of Maps with Multiple Entries? 
+Input: [{key1: ["val1", "val2"]}, {key2: ["val3"]}] 
+Output: [val1, val2, val3] 
+
+(3) Flattening a List of Product Attributes? 
+Input: [{name: "Laptop", attributes: ["16GB RAM", "512GB SSD"]}, {name: "Phone", 
+attributes: ["128GB", "5G"]}] 
+Output: ["16GB RAM", "512GB SSD", "128GB", "5G"] 
+
+(4) Flattening Nested Hierarchical Data? 
+Input: [[{"id": 1, "name": "A"}, {"id": 2, "name": "B"}], [{"id": 3, "name": "C"}]] 
+Output: [A{id=1, name='A'}, A{id=2, name='B'}, A{id=3, name='C'}] 
+
+(5) Flattening and Grouping Tags from Articles? 
+Input:  [{title: "Article1", tags: ["Java", "Programming"]}, {title: "Article2", tags: ["Java", 
+"Spring"]}] 
+Output: ["Java", "Programming", "Spring"] 
+
+
+
+
+
+
