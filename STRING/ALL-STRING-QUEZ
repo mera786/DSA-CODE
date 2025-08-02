@@ -1,7 +1,7 @@
                                                              STRING
 ******************************************************************************************************************************************
 
-                                                              ✅ EASY LEVEL (1-13)
+                                                              ✅ EASY LEVEL (1-15)
                                                             --------------------------
 
 (1) print sub string of a string ?
@@ -87,6 +87,19 @@ int k = 2
 String str = “decode”
 int k = 2;
  Output: dedeco.
+
+REGULAR EXPRESSION:                                  
+(14) remove all white spaces from string ?
+  Input 1: "    j   a  va   s   ta   r    ";
+  Output: javastar
+  Input 2: "   Hello  World   ";
+  Output: HelloWorld
+(15) remove special character from string ?
+  Input 1 : "$ja!6va$&st%ar1";
+  Output: javastar
+  Input: "#ja!6va$&st%ar1";
+  Output: #!$&%
+
 
 
                                                     🔸 Medium String Questions (1-16)
