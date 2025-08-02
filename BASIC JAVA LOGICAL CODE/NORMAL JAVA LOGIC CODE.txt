@@ -1,0 +1,70 @@
+(1) Write code for Fibonacci series using normal logic and recursion?
+Input: 
+int num = 15;
+output: 0 1 1 2 3 5 8 13.
+Note:- Fibonacci series is a sequence where each number is the sum of the previous two numbers.
+
+(2) Write code for finding factorial of a Num ?
+Input : 
+int num=5;  
+output: 120.
+Note:- The factorial of a number n is the product of all positive integers less than or equal to n.
+
+(3) Check number is prime or not if prime then print all it's privious prime nums?
+Input: 
+int num=17; 
+output: 2,3,5,7,11,13,17.
+Note:- A prime number is a natural number greater than 1, that can be divided only by 1 and itself.
+
+(4) Write code to check is Armstrong or not ?
+Input: 
+int num=153; 
+output = true.
+Note:- An Armstrong number is a number that is equal to the sum of its digits each digit raised to the power of the number of digits.
+       ex- sum of (each digit ^ number of digits) == original number.
+
+(5)Check is number palindrome or not ?
+Input: 
+int num = 32123;  
+output: true.
+Note:- A palindrome number is a number that reads the same backward as forward.
+
+(6) Count give digits ?
+Input: 
+int num=12345675;
+Output: 8
+
+(7) Reverse digit of numbers ?
+Input: 
+int num=1234;
+Output: 4321
+
+(8) sum of digits for given number?
+Input:
+int num=1234;
+Output: 10
+
+(9) write code for first multiple of 5 and 7 ?
+Input :
+int num1=1;
+Output: 35
+
+(10) find sum of first n natural number ?
+Input: 
+int num=3; 
+Output: 6
+Note: The sum of the first n natural numbers means adding all numbers from 1 to n.
+
+(11) calculate sum of integers until invalid input given    invalid input: -1?
+        
+(12) calculate ‘a’ raise to the power ‘b’ ?
+Input:  
+int a = 4,   b= 2;
+Output: 16
+Note: a^b
+
+(13) using recursion find nth Fibonacci series?
+Input: 
+int num=10; 
+Output: 55.
+
