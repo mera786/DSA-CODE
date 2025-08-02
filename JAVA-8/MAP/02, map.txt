@@ -1,0 +1,196 @@
+                                                            MAP
+_____________________________________________________________________________________________________________________________________________
+
+                                                           MAP EASY (1- 10)
+                                                         ---------------------
+
+(1) Double the Numbers ? 
+Input:  
+List<Integer> list = Arrays.asList(1, 2, 3, 4); 
+Output:  
+[2, 4, 6, 8] 
+
+(2) print each one String Lengths ? 
+Input:  
+List<String> list = Arrays.asList("apple", "banana", "cherry"); 
+Output: [5, 6, 6]
+
+(3) Uppercase Conversion? 
+Input: 
+List<String> list = Arrays.asList("john", "doe", "smith"); 
+Output: [JOHN, DOE, SMITH]
+
+(4) Square of Numbers? 
+Input: 
+List<Integer> list = Arrays.asList(1, 2, 3, 4); 
+Output: [1, 4, 9, 16] 
+
+(5) Extracting First Characters? 
+Input: 
+List<String> list = Arrays.asList("apple", "banana", "cherry"); 
+Output: [a, b, c]
+
+(6) Adding Prefix ? 
+Input: 
+List<String> list = Arrays.asList("item1", "item2", "item3"); 
+Output: [prefix_item1, prefix_item2, prefix_item3]
+
+(7) String to Integer Conversion? 
+Input: 
+List<String> list = Arrays.asList("1", "2", "3"); 
+Output: [1, 2, 3] 
+
+(8) Convert to Objects? 
+Input: 
+List<String> names = Arrays.asList("Alice", "Bob"); 
+Output: [A{name='Alice'}, A{name='Bob'}] 
+
+(9) Trimming Strings? 
+Input: 
+List<String> list = Arrays.asList("     hello   ","     world      "); 
+Output: [hello, world] 
+
+(10)  Creating an Index List? 
+Input: 
+List<String> list = Arrays.asList("a", "b", "c"); 
+Output: [0, 1, 2]
+
+
+
+
+                                                      MEDIUM (1-10)
+                                                   ---------------------
+
+(1) Mapping to Custom Class with name and Age? 
+Input: 
+List<String> list = Arrays.asList("John:30", "Jane:25"); 
+Output: [A{name='John', age=30}, A{name='Jane', age=25}] 
+
+(2) Mapping Full Name to Initials of both first letter? 
+Input: 
+List<String> list = Arrays.asList("John Doe", "Jane Smith","sahil alam"); 
+Output: [JD, JS, SA] 
+
+(3) Mapping to Specific Character Count Per String like,'p' for the first string, 'a' from second and 'e' from third?
+Input: 
+List<String> list = Arrays.asList("apple", "banana", "cherry"); 
+Output: [2, 3, 1] 
+
+(4) Extracting Last Name from Full Name? 
+Input: 
+List<String> list = Arrays.asList("John Doe", "Jane Smith"); 
+Output: [Doe, Smith] 
+
+(5) Calculating Age in Days? 
+Input: 
+List<Integer> list = Arrays.asList(30, 25); 
+Output: [10950, 9125]
+
+(6) Extracting Domain from Email? 
+Input: 
+List<String> list = Arrays.asList("user@example.com", "admin@domain.com"); 
+Output: [example.com, domain.com] 
+
+(7) Convert Temperatures from Celsius to Fahrenheit? 
+Input: 
+List<Integer> list = Arrays.asList(0, 100, 37); 
+Output: [32.0, 212.0, 98.6] 
+
+(8) Creating a List of Even/Odd Status from integer list? 
+Input: 
+List<Integer> list = Arrays.asList(1, 2, 3, 4); 
+Output: [odd, even, odd, even] 
+
+(9) Extracting Year from Date Strings? 
+Input: 
+List<String> list = Arrays.asList("2024-01-01", "2023-05-12"); 
+Output: [2024, 2023] 
+
+
+
+                                                                HARD(1-10)
+                                                              --------------
+
+(1) Mapping to Custom Object with Multiple Properties? 
+Input: 
+List<String> list = Arrays.asList("John:30:New York", "Jane:25:Los Angeles"); 
+Output: [A{name='John', age=30, city='New York'}, A{name='Jane', age=25, city='Los Angeles'}]
+
+(2) Mapping to a List of Book Titles? 
+Input: 
+List<Book> list = Arrays.asList( 
+new Book("1984", "Orwell"), 
+new Book("Brave New World", "Huxley") 
+); 
+Output: [1984, Brave New World] 
+
+(3) Converting to JSON Format? 
+Input:  
+List<A> list = Arrays.asList( 
+new A("Alice"), 
+new A("Bob") 
+); 
+Output: ["{\"name\":\"Alice\"}", "{\"name\":\"Bob\"}"]
+Note:   // ✅ Convert to JSON using Jackson
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(filteredList);
+
+(4) Mapping Student Grades to Letter Grades? 
+Input:
+List<Integer> list = Arrays.asList(95, 85, 76, 62); 
+Output: [A, B, C, D]
+
+(5) Extracting Specific Fields from Complex Objects? 
+Input:  
+List<A> list = Arrays.asList( 
+new A("John", "Doe", 50000), 
+new A("Jane", "Smith", 60000) 
+); 
+Output: [John Doe, Jane Smith] 
+
+(6) Mapping to Summary Statistics? 
+Input:  
+List<Integer> list = Arrays.asList(100, 200, 300); 
+Output: [100, 200, 300, 600] 
+
+(7) Mapping to a List of JSON Objects? 
+Input:  
+List<Person> people = Arrays.asList( 
+new Person("Alice", 25), 
+new Person("Bob", 30) 
+); 
+Output: ["{\"name\":\"Alice\",\"age\":25}", "{\"name\":\"Bob\",\"age\":30}"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
