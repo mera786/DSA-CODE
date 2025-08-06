@@ -55,6 +55,27 @@ intput :
 int [] arr = {1, 2, 3, 4, 5};
 output : true
 
+
+Note:- before solving 11 no. question solve below questions like,
+-> How to print all contiguous subarrays of an array?
+  Input: int[] arr = {1, 2, 3};
+  Output: 
+[1]
+[1, 2]
+[1, 2, 3]
+[2]
+[2, 3]
+[3]
+-> How to calculate the sum of each subarray?
+   Input: int[] arr = {1, 2, 3};
+   Output: 
+[1] → 1
+[1, 2] → 3
+[1, 2, 3] → 6
+[2] → 2
+[2, 3] → 5
+[3] → 3
+
 (11) Find the largest sum contiguous subarray (Kadaneʼs Algorithm)?
 intput :
 int [] arr = {-2, -3, 4, -1, -1, 5, -3};
@@ -74,12 +95,12 @@ int k = 2 ;
 output : 4, 5, 1, 2, 3
 Note: left rotate = piche wala element aage aayega as per k steps.
 
-(14) Find the frequency of each element in an array?
+(14) Find the frequency of each element in an array? (sort+loop or hashmap).
 intput :
 int [] arr = {1,2,2,3,3,3,3};
 output : 1=1,  2=2, 3=4
 
-(15) Move all zeros to the end of an array ?
+(15) Move all zeros to the end of an array ? (order matter use Two Pointer, if not use Swap-based approach)
 intput :
 int [] arr = {0,1,0,3,12};
 output : 1,3,12,0,0
