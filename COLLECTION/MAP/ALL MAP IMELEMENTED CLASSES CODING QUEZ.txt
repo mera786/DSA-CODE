@@ -4,67 +4,99 @@
 🟢 Easy
 *********
 
-(1) Add the following key-value pairs to a HashMap.?
+(1) Add the following key-value pairs to a HashMap.?       use put()
 Input:
 [(1, "Apple"), (2, "Banana"), (3, "Cherry")]
 Output:
 {1=Apple, 2=Banana, 3=Cherry}
 
-(2) Retrieve a value from a HashMap using the given key.?
+(2) Retrieve a value from a HashMap using the given key.?     use get()
 Input:
-Map = {1=Apple, 2=Banana, 3=Cherry}
-Key = 2
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
+tar :
+int Key = 2
 Output:
 Banana
 
-(3) Check if a given key exists in the HashMap.?
+(3) Check if a given key exists in the HashMap.?       use contains()
 Input:
-Map = {1=Apple, 2=Banana, 3=Cherry}
-Key = 3
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
+tar :
+int Key = 3
 Output:
 true
 
-(4) Remove a key-value pair from the HashMap using the given key.
+(4) Remove a key-value pair from the HashMap using the given key. ?              use remove()
 Input:
-Map = {1=Apple, 2=Banana, 3=Cherry}
-Key to remove = 2
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
+tar :
+int removeKey = 2
 Output:
 Updated Map = {1=Apple, 3=Cherry}
 
-(5) Iterate through all the keys and values in the given HashMap and print each key-value pair.?
+(5) Iterate through all the keys and values in the given HashMap and print each key-value pair.?   use entrySet()
 Input:
-Map = {1=Apple, 2=Banana, 3=Cherry}
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
 Output:
 1 => Apple  
 2 => Banana  
 3 => Cherry
 
-(6) Find the number of key-value pairs present in the given HashMap. ?
+(6) Find the number of key-value pairs present in the given HashMap. ?         use size()
 Input:
-Map = {1=Apple, 2=Banana, 3=Cherry}
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
 Output:
 Size = 3
 
-(7) Remove all key-value pairs from the given HashMap.?
+(7) Remove all key-value pairs from the given HashMap.?               use clear()
 Input:
-Map = {1=Apple, 2=Banana, 3=Cherry}
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
 Output:
 Map = {} (an empty map)
 
-(8) Convert all the keys from the given HashMap into a List.
+(8) Convert all the keys from the given HashMap into a List.?        use foreach+keyset+put  or java 8 keyset+stream+collect()
 Input:
-Map = {1=Apple, 2=Banana, 3=Cherry}
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
 Output:
 List = [1, 2, 3]
 
-(9) Check whether the given HashMap is empty or not.?
+(9) Check whether the given HashMap is empty or not.?             use isEmpty()
+Input:
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+map.put(3, "Cherry");
 Output:
 true
 
-(10) Copy all key-value pairs from one HashMap into another. ?
+(10) Copy all key-value pairs from one HashMap into another. ?    use map2 constructor to copy  or putAll()  or java 8 collectors.tomap()  or java 10                                                                                                                                                          Map.copyOf(map1)
 Input:
-Map1 = {1=Apple, 2=Banana}
-Map2 = {}
+        Map<Integer, String> map1 = new HashMap<>();
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+        map.put(3, "Cherry");
+Map<Integer, String> map2 = new HashMap<>();
 Operation:
 Copy contents of Map1 into Map2.
 Output:
