@@ -145,7 +145,7 @@ Output:
 Merged Map: {a=1, b=5, c=4}
 
 
-(5) How do you group a list of strings by their lengths in Java?
+(5) How do you group a list of strings by their lengths in Java?            use loop  or java 8 groupingBy()
 Input:
 List<String> words = Arrays.asList("apple", "bat", "car", "banana", "dog", "elephant");
 Expected Output:
@@ -156,7 +156,7 @@ Expected Output:
   8 = [elephant]
 }
 
-(6) How do you find duplicate elements in an array in Java?
+(6) How do you find duplicate elements in an array in Java?     use sort+loop  or loop+map or java 8 mapping key 
 Input:
 int[] arr = {1, 2, 3, 2, 4, 5, 1, 6};
 Output:
