@@ -51,83 +51,104 @@
 Input: 
 List<String> list = Arrays.asList("Apple", "Banana", "Orange","Mango");
 
-(2) Create an ArrayList and add the elements "Red", "Green", "Blue", and "Yellow" to it.Then remove the element at index 2 and print the updated list?
+(2) Create an ArrayList and add the elements "Red", "Green", "Blue", and "Yellow" to it.Then remove the element at index 2 and print the updated list?   use  remove()
 Input: 
 List<String> list = Arrays.asList("Red", "Green", "Blue","Yellow");
 target :
 int indx = 2;
 Output: [Red, Green, Yellow]
 
-(3) Create an ArrayList and add the elements "Cat", "Dog", "Elephant", and "Tiger" to it.Then check if the element "Elephant" exists in the list or not ?
+(3) Create an ArrayList and add the elements "Cat", "Dog", "Elephant", and "Tiger" to it.Then check if the element "Elephant" exists in the list or not ?   use contains()
 💡 Input Elements:
 List<String> list = Arrays.asList("Cat", "Dog", "Elephant", "Tiger");
 🎯 Search For: 
 String tar = "Elephant";
 Output: Elephant is present in the list.
 
-(4) Create an ArrayList with the elements [10, 20, 30, 40, 50].Reverse the list and print the result?
+(4) Create an ArrayList with the elements [10, 20, 30, 40, 50].Reverse the list and print the result?    use Collections.reverse(list)  or  java 8 Streams  or ListIterator  or  using two pointer?
 Input:
 List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
 Output: [50, 40, 30, 20, 10]
 
-(5) Create an ArrayList with the elements ["Java", "Python", "C++"].Clone the list into another list and print both the original and cloned lists ?
+(5) Create an ArrayList with the elements ["Java", "Python", "C++"].Clone the list into another list and print both the original and cloned lists ?  use ArrayList constructor  or  addAll()  or clone() or java 8 ?
 Input:
 List<String> list1= Arrays.asList("Java", "Python", "C++");
 Output:
 Original List: [Java, Python, C++]
 Cloned List: [Java, Python, C++]
 
-(6) Merge two ArrayLists ? without using extra space no way ? if only want reading do Stream-based Reading. use concat
+(6) Merge two ArrayLists ? without using extra space no way ? 
 Input:
 First list: 
 List<String> list1 = Arrays.asList("Apple", "Banana");
 Second list:
 List<String> list2 = Arrays.asList("Cherry", "Date");
 Output: 
+Note:- Using extra space (new list created) :
+-> list1 Constructor and list2 addAll()
+-> java 8 Stream.concat()
+-> Manual loop
+Without extra space :
+list1.addAll()  or list2.addAll()
 
 
-(7) Given an ArrayList with elements: ["apple", "banana", "apple", "orange", "banana"],remove the duplicate elements and print the list of unique elements.?
-                                           without set , use distinct with stream or 1st sort+convert to array + loop + using equals check condition.?
+(7) Given an ArrayList with elements: ["apple", "banana", "apple", "orange", "banana"],remove the duplicate elements and print the list of unique elements.?             
 Input:
 List<String> list = Arrays.asList("apple", "banana", "apple", "orange", "banana");
 Output: [apple, banana, orange]
+Note: 
+-> use set , 
+-> use distinct with stream 
+-> 1st sort+convert to array + loop + using equals check condition.?
 
-(8) Sort ArrayList of integers in ascending order .? bubble sort or Collections.sort() or Stream.sorted().
+(8) Sort ArrayList of integers in ascending order .? 
 Input: 
 List<Integer> list = Arrays.asList(5, 2, 8, 1, 3);
 Output: 1 2 3 5 8 
+Note:
+-> bubble sort or 
+-> Collections.sort() or
+-> java 8 list+stream+sorted().
 
-(9) Given an ArrayList containing: ["Java", "Python", "C++", "JavaScript"],check if the element "Python" exists in the list and print true or false.?
+(9) Given an ArrayList containing: ["Java", "Python", "C++", "JavaScript"],check if the element "Python" exists in the list and print true or false.?  use contains()
 Input:
 List<String> list = Arrays.asList("Java", "Python", "C++", "JavaScript");
 tar :
 String tar = "Python";
 Output: true.
 
-(10) Given an ArrayList with elements ["A", "B", "C", "D"],convert it to an array and print the array elements.? StringBuilder or Create char array and add or                                                                                                                    java 8 String.join() ?
+(10) Given an ArrayList with elements ["A", "B", "C", "D"],convert it to an array and print the array elements.? 
 Input: 
 List<String> list = Arrays.asList("A", "B", "C", "D");
 output: [A, B, C, D]
-
-
+Note: 
+-> loop+StringBuilder+tocharArray()
+-> Create char array + loop + fill
+-> java 8 String.join()+tocharArray() ?
 
 
 🟡 Medium
 **************
 
-(1) Remove even/odd numbers from an ArrayList ?      use iterator  or java 8 list.removeIf()?
+(1) Remove even/odd numbers from an ArrayList ?
 Input for even:
 List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8)); // modifible list needed.
 Output:
 [1, 3, 5, 7]
+Note:
+-> use iterator  or 
+-> java 8 list.removeIf()?
 
-(2) Given an ArrayList of integers, replace all occurrences of 5 with 50.?   using set() with loop or java 8 map()?
+(2) Given an ArrayList of integers, replace all occurrences of 5 with 50.?
 Input:
 List<Integer> list = Arrays.asList(1, 5, 3, 5, 7, 5);
 Output:
 [1, 50, 3, 50, 7, 50]
+Note:
+-> using set()+loop or 
+-> java 8 map()?
 
-(3) Given an ArrayList of integers, rotate the elements 2 positions to the right.? swap() or Collections.rotate(list,2 or -2) or java 8 Stream+concat+sublist()?
+(3) Given an ArrayList of integers, rotate the elements 2 positions to the right.?
 Input:
 List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
 Output:
@@ -141,6 +162,10 @@ For Right Rotation (k steps): Always reverse in this order:
 -> first k elements
 -> remaining (n - k) elements
 -> entire list
+Approach:
+-> Collections.rotate(list,2 or -2) or 
+-> java 8 Stream+concat+sublist()
+-> swap() using two pointer. 
 
 (4) Find the second largest and second smallest element in an ArrayList of integers.? Using java 8
 Input: 
@@ -148,30 +173,41 @@ List<Integer> list = Arrays.asList(10, 5, 8, 20, 15);
 Output: 
 Second Largest: 15  
 Second Smallest: 8
+Note:
+-> java 8 sort+skip
+-> loop+ if+else-if (2x times)
 
 
-(5) Sort an ArrayList of strings based on their length using a custom comparator.? Java 8
+(5) Sort an ArrayList of strings based on their length using a custom comparator.? 
 Input: 
 List<String> list = Arrays.asList("Java", "C", "Python", "Go");
 Output: [C, Go, Java, Python]
+Note:
+-> Java 8 sort()
+-> Collections.sort by overriding comparator anonymous inner class.
 
-(6) Group elements of an ArrayList by their frequency and print the count of each element?   map with loop or java 8 groupingby+counting?
+(6) Group elements of an ArrayList by their frequency and print the count of each element? 
 Input: 
 List<String> list = Arrays.asList("apple", "banana", "apple", "orange", "banana", "apple");
 Output: 
 apple: 3  
 banana: 2  
 orange: 1
-
 Note: Sublist :=> contiguous sequence of elements 
 How Many Sublists Can Be Created from a list/array? Total sublists= n(n+1)/2
 -> print all possible contiguous sublists from this list?
+Approach :
+->  java 8 groupingby+counting
+->  Using a Map with a loop
 
-(7) Given an ArrayList of integers, find all continuous sublists whose sum is equal to a given value k ? use nested loops or use hashmap
+(7) Given an ArrayList of integers, find all continuous sublists whose sum is equal to a given value k ?         BAKI HAI YHA SE ****************************##########
 Input: [1, 2, 3, 4, 5]
 int k = 5 ;
 Output: 
 Sublists: [2, 3], [5]
+Note:
+-> use nested loops or 
+-> use hashmap
 
 
 (8) Generate all permutations of elements in an ArrayList.?
