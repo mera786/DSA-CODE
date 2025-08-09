@@ -170,7 +170,7 @@ Retrieve student with roll number 101
 Output :
 Student{rollNumber=101, name='Alice', marks=85}
 
-(8) How do you create a map with default values for missing keys in Java?
+(8) How do you create a map with default values for missing keys in Java?        use loop+map   or use java 8
 Input:
 You have a list of keys:
 List<String> keys = Arrays.asList("a", "b", "c");
@@ -178,7 +178,7 @@ You want to create a map where each key maps to the default value 0.
 Output:
 {a=0, b=0, c=0}
 
-(9) Given an array of strings, group the anagrams together using a Map.?
+(9) Given an array of strings, group the anagrams together using a Map.?   loop + sort + map 
 Input:
 String [] arr = {"eat", "tea", "tan", "ate", "nat", "bat"};
 Output:
@@ -187,28 +187,56 @@ Output:
   ["tan", "nat"],
   ["bat"]
 ]
+Note: An anagram is a word or phrase, by rearranging the letters of another word or phrase, using all the original letters exactly once.
+Example:
+"listen" → rearranged to → "silent"
+"evil" → rearranged to → "vile"
+Key points:
+Same characters in both strings.
+Same frequency of each character.
+Order doesn’t matter.
+
+
 
 
 🔴 Hard
-LRU cache using HashMap + LinkedList.
+**********
 
-Find subarrays with sum = K using prefix sum + map.
+(1) Given an integer array nums and an integer k, find the total number of continuous subarrays whose sum equals to k. Use prefix sum and HashMap ?  using nested loop  or 
+Input :
+int [] nums = {1, 2, 3, 4, 1, 2}; 
+int k = 6;
+Output: 
+Total subarrays with sum = 6: 3
+Note:- Subarrays: [1, 2, 3], [2, 4], [4, 1, 1] all sum to 6.
 
-Implement Trie using HashMap.
+(2) Check if two strings are isomorphic using maps.?   use create two hashmap 
+Input:
+String s1 = "egg";
+String s2 = "add";
+Output: true
 
-Check if two strings are isomorphic using maps.
+Note:-
+Two strings s and t are called isomorphic if the characters in s can be replaced to get t, while preserving the order of characters.
+-> Each character in s must map to exactly one character in t.
+-> No two characters from s can map to the same character in t (one-to-one mapping).
+-> Detect if two strings are anagrams using frequency map.
+Example:
+s = "egg"  
+t = "add"
+Output: true
+s = "foo"  
+t = "bar"
+Output: false.
 
-Detect if two strings are anagrams using frequency map.
+(3) Given two strings, check if they are anagrams of each other ?   convert char arr+Sort+Compare  or Frequency Count Using HashMap  or Frequency Count Using Array
+Input:
+String s1 = "listen";  
+String s2 = "silent";
+Output: true
+Note:- Both have the same letters with the same frequency.but order can be different or not.
 
-Track frequency of API hits in a time window.
 
-Find top K frequent elements.
-
-Implement a phonebook using HashMap<String, List<String>>.
-
-Implement multilevel cache system using multiple maps.
-
-Store and retrieve nested JSON-like structures using HashMap.
 
 ✅ LinkedHashMap Questions
 🟢 Easy
