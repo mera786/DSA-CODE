@@ -8,11 +8,16 @@ ________________________________________________________________________________
 intput :
 int [] arr = {1, 2, 3, 4, 5};
 output : 5
+Note:-
+-> initialize with -infinity (∞)+loop + condition > infinity
+-> 
 
 (2) Find the second largest element in an array ?
 intput :
 int [] arr = {12, 35, 1, 10, 34,1};
 output : 34
+Note:-
+-> find max + intialize max as - ∞ + find max
 
 (3) Find the minimum element in an array?
 intput :
@@ -28,6 +33,10 @@ output : 11
 intput :
 int [] arr = {1, 2, 3, 4, 5};
 output : 5,4,3,2,1
+Note:-
+-> create an array + loop in reverse order + fill the array
+-> two pointer + swap
+-> 
 
 (6) Find the sum of all elements in an array?
 intput :
@@ -87,6 +96,8 @@ int [] arr = {1,2,3,4,5};
 int k = 2 ;
 output : 3,4,5,1,2
 Note: left rotate = aage wala element piche jayega as per k steps.
+-> create an array + use loops to fill elements
+-> reverse+swap 
 
 (13) Right rotate an array by one position ?
 intput :
@@ -128,6 +139,36 @@ output : 1,2,3,4,5
 intput :
 int [] arr = {2,3,5,4,5,3,4};
 output : 2
+Note:-
+-> sort+first & last elements check condition + middle element check condition using for loop
+-> nested loop if equals pair make -1 and one more loop with condition > 0
+-> forEach loop + xor operation
+-> using hashmap
+
+(20) given an array 'arr' consisting of integers . Return the first value that is repeating in this array. if no value is being repeated return -1?
+Input:
+int [] arr = {1,5,3,4,6,3,4};
+Output: 3
+Note:-
+-> nested loop + conditon + return
+
+(21) given 2 integers a and b swap the given 2 values using temporary variables?
+Input:
+int a = 9;
+int b = 3;
+Output:
+a=3;
+b=9;
+Note:- 
+-> create temp variable + exchange value
+-> sum and difference method
+
+(22) given Q queries check if the given number is present in the array or not?
+Input:
+int [] arr = {5,6,5,400,560,1000,400};
+Note: value of all elements in the array is less than 10 to the power 5.
+-> using frequency array 
+
 
 
                                                            Intermediate Level (1-20) 
@@ -153,6 +194,9 @@ intput :
 int [] arr = {1,5,7,-1};
 int x = 6;
 output : [(0,1),(2,3)]
+Note:-
+-> nested loops
+-> 
 
 (5) Find the maximum product of two integers in an array ?
 intput :
@@ -259,11 +303,14 @@ Input:
 int [] arr  = {0,0,1,0,1,1};
 Output: 4;
 
-(2) Find the triplet that sum to a given value ?
+(2) Find the triplet that sum to a given value x?
 Input:
 int [] arr  = {12,3,4,1,6,9};
 int sum = 24;
 Output: 12,3,9;
+Note:- 
+-> three loops
+-> 
 
 (3) Find the minimum number of swaps required to sort the array ?
 Input:
