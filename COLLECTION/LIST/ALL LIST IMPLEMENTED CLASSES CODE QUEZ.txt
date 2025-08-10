@@ -200,8 +200,9 @@ Approach :
 ->  java 8 groupingby+counting
 ->  Using a Map with a loop
 
-(7) Given an ArrayList of integers, find all continuous sublists whose sum is equal to a given value k ?         BAKI HAI YHA SE ****************************##########
-Input: [1, 2, 3, 4, 5]
+(7) Given an ArrayList of integers, find all continuous sublists whose sum is equal to a given value k ?
+Input: 
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 int k = 5 ;
 Output: 
 Sublists: [2, 3], [5]
