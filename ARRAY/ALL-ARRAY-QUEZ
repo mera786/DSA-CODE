@@ -321,12 +321,21 @@ Note:
 Note:- prefix sum :- jis index ka prefix sum find kr rhe ho , wo index ka sum + previous all sum = prefix sum. 
      Formula : pref[i] = pref[i-1]+arr[i];
 Input:
+int [] arr = {2,1,3,4,5};
 Output= 2,3,6,10,15
 Approach :
 -> Extra space: new array +loop+ formula to fill elements but loop start from 1
 -> without Extra space: loop + formula
 
-(24) Given an array of integers of size n, Answer Q queries where need to print the sum of values in a given range of indices from l to r (both included)?
+(24) given an integer array 'arr' return the suffix sum in the same array without creating a new array?
+Input:
+int [] arr = {2,1,3,4,5};
+Output= 2,3,6,10,15
+Approach:
+-> reverse loop + arr[i] += arr[i + 1];
+
+
+(25) Given an array of integers of size n, Answer Q queries where need to print the sum of values in a given range of indices from l to r (both included)?
      note- value of l and r in queries follow 1 based-indexing?
 Input:
 int [] arr = {2,4,1,3,6};
@@ -337,11 +346,7 @@ Note:-
 -> loop from l to r + calculate prefSum + assing prefSum into sum
 -> first calculate prefSum + convert l and r for 1 based-indexing + then with condition + formula: sum = prefSum[r] - prefSum[l - 1]
 
-
-**************************** MANVI-ARRAY-LEC-19-START-FROM-36:00 MINUTES ***********************************************************************
-************************************************************************************************************************************************
-
-(24) Check if we can partition the array into two subArrays with equal Sum ? in other words, check that the prefix sum of a part of the array is equal to the 
+(26) Check if we can partition the array into two subArrays with equal Sum ? in other words, check that the prefix sum of a part of the array is equal to the 
      suffix sum of rest of the array?
 Input 1: 
 int [] arr = {15,5,6,4,8,2};
@@ -349,10 +354,8 @@ Output: true because prefSum of 15,5 = 20 and suffSum of 6,4,8,2 = 20
 Input 2: 
 int [] arr = {1,3,2,4,5};
 Output: false
-
-
-
-
+Note:=
+-> calculate total array sum and calculate prefixSum and calculate suffixsum=totalArraySum-prefixSum.+ check is both equals.
 
 
 
