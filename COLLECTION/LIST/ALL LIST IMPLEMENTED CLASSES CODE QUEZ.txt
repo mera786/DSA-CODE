@@ -247,8 +247,14 @@ Note: Defination : A permutation is an arrangement of all elements of a set in e
    Permutations of n items means all possible arrangements, and the total number of such arrangements is n!.
 
 (9) Given an ArrayList, remove all elements that appear more than once and keep only the unique elements.?
-Input: ["apple", "banana", "apple", "orange", "banana", "grape"]
+Input: 
+ArraysList<String> list = new ArraysList<>(Arrays.asList("apple", "banana", "apple", "orange", "banana", "grape"));
 Output: ["orange", "grape"]
+Note:-
+-> Using a Map<String, Integer> to Count Frequencies
+-> Using Collections.frequency() (Simple but slower for large lists)
+-> Using Java 8+ Streams
+-> Using Two Sets – Set to Track Uniques and Duplicates
 
 
 
