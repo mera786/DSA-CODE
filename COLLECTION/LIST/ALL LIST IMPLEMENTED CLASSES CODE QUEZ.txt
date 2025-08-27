@@ -1,5 +1,5 @@
 
-✅ Core ArrayList Methods You Should Know : 
+✅ Core ArrayList Methods You Should Know :
 
 | Category        | Method                                        | Purpose                      |
 | --------------- | --------------------------------------------- | ---------------------------- |
@@ -79,7 +79,8 @@ List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
 Output: [50, 40, 30, 20, 10]
 Note:
 ->  use Collections.reverse(list)  or  
--> java 8 Streams  or ListIterator  or  
+-> java 8 Streams  or 
+-> ListIterator  or  
 -> using two pointer?
 
 (5) Create an ArrayList with the elements ["Java", "Python", "C++"].Clone the list into another list and print both the original and cloned lists ?  
@@ -97,7 +98,7 @@ Note:
 (6) Merge two ArrayLists ? without using extra space no way ? 
 Input:
 First list: 
-List<String> list1 = Arrays.asList("Apple", "Banana");
+List<String> list1 = Arrays.asList("Apple", "Banana"); // change to modifable list using new keyword
 Second list:
 List<String> list2 = Arrays.asList("Cherry", "Date");
 Output: 
@@ -135,13 +136,15 @@ tar :
 String tar = "Python";
 Output: true.
 Note:
-->  loop + use contains()
+-> use contains()
+-> use stream() + anyMatch() + equals()
 
 (10) Given an ArrayList with elements ["A", "B", "C", "D"],convert it to an array and print the array elements.? 
 Input: 
 List<String> list = Arrays.asList("A", "B", "C", "D");
 output: [A, B, C, D]
 Note: 
+-> use toArray()  called 'Collection-to-Array conversion idiom'
 -> loop+StringBuilder+tocharArray()
 -> Create char array + loop + fill
 -> java 8 String.join()+tocharArray() ?
@@ -156,6 +159,7 @@ List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8)); // 
 Output:
 [1, 3, 5, 7]
 Note:
+-> use filter()
 -> use iterator  or 
 -> java 8 list.removeIf()?
 
@@ -165,7 +169,7 @@ List<Integer> list = Arrays.asList(1, 5, 3, 5, 7, 5);
 Output:
 [1, 50, 3, 50, 7, 50]
 Note:
--> using loop+ list's set() or 
+-> using loop+ condition check + list's set() or 
 -> java 8 map()?
 
 (3) Given an ArrayList of integers, rotate the elements 2 positions to the right.?
@@ -185,7 +189,6 @@ For Right Rotation (k steps): Always reverse in this order:
 -> entire list
 Approach:
 -> Collections.rotate(list,2 or -2) or 
--> java 8 Stream+concat+sublist()+stream().
 -> swap() using two pointer. 
 
 (4) Find the second largest and second smallest element in an ArrayList of integers.? Using java 8
