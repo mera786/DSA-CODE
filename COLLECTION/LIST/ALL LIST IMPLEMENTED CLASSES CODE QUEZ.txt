@@ -260,6 +260,11 @@ Note:-
 -> Using Two Sets – Set to Track Uniques and Duplicates
 
 
+(10) You have an Employee class with fields id, name, and salary. Write a Java Stream API solution to update the salary of employees,
+      whose salary is below 5000 by adding 1000. The order of employees should remain the same.
+Input:
+List<Employee> employees = Arrays.asList(Arrays.asList(),)
+
 
 
 
@@ -311,26 +316,6 @@ Rotate list by k nodes.
 
 Add two numbers represented by linked lists.
 
-🔴 Hard
-Flatten a multi-level linked list.
-
-Reverse nodes in k-group.
-
-Copy linked list with arbitrary pointers (deep copy).
-
-Implement LRU cache using doubly linked list.
-
-Detect and remove duplicate sublists.
-
-Sort linked list using merge sort.
-
-Rearrange list as alternating low-high pattern.
-
-Find intersection point of two linked lists.
-
-Reverse a sublist between given positions.
-
-Convert sorted linked list to balanced BST.
 
 ✅ Vector Questions
 Similar to ArrayList, but thread-safe. You can reuse many ArrayList questions here with a multithreading twist.
@@ -377,28 +362,10 @@ Generate combinations using Vector.
 
 Custom sorting using comparator.
 
-🔴 Hard
-Build thread-safe LRU using Vector.
 
-Create undo/redo system using Vector.
-
-Implement custom blocking queue with Vector.
-
-Real-time multi-threaded logging using Vector.
-
-Batch processing with thread-safe flush.
-
-Implement memory paging simulator using Vector.
-
-Backtracking-based state manager.
-
-Time-series buffer (like price ticker).
-
-Simulate browser history with Vector.
-
-Rollback transaction manager with Vector.
 
 ✅ Stack Questions
+
 🟢 Easy
 Push/pop/peek operations.
 
@@ -441,30 +408,10 @@ Push all elements in reverse order.
 
 Implement expression parser.
 
-🔴 Hard
-Largest rectangle in histogram (using stack).
-
-Maximal area in binary matrix.
-
-Next greater frequency element.
-
-Stack-based sorting with constraints.
-
-Celebrity problem (stack approach).
-
-Implement backtracking system.
-
-Decode and expand compressed tree structures.
-
-Design browser with forward/back button.
-
-Push-pop sequence validator.
-
-Balanced parenthesis with wildcard (*)) handling.
-
 
 
 ✅ Here are some coding question ideas:
+
 🟢 Easy (Basics + Usage)
 Create a CopyOnWriteArrayList and add elements.
 
@@ -485,49 +432,6 @@ Use contains() and indexOf() methods.
 Sort the list using Collections.sort().
 
 Create from existing List using constructor.
-
-🟡 Medium (Threading + Internals)
-Write a multi-threaded program that reads and writes to CopyOnWriteArrayList.
-
-Compare behavior with ArrayList when modified during iteration.
-
-Show that modifying the list during iteration does not throw ConcurrentModificationException.
-
-Count frequency of elements added from multiple threads.
-
-Remove elements conditionally in a thread-safe way.
-
-Benchmark read vs write performance.
-
-Demonstrate that iterator is weakly consistent.
-
-Reverse the list using threads.
-
-Merge two CopyOnWriteArrayLists.
-
-Replace all elements conditionally.
-
-🔴 Hard (Advanced Concepts)
-Implement a thread-safe cache using CopyOnWriteArrayList.
-
-Simulate a notification system where readers poll without locking.
-
-Design a snapshot system for read-only backups.
-
-Track online users list in multi-threaded environment.
-
-Real-time analytics using CopyOnWriteArrayList for logs (read-heavy).
-
-Multi-threaded stream filtering and removal.
-
-Show difference in memory usage vs ArrayList under large writes.
-
-Create a wrapper class to switch between ArrayList and CopyOnWriteArrayList based on load.
-
-Find top K frequent elements in concurrent scenario.
-
-Thread-safe live leaderboard where ranking updates occur rarely.
-
 
 
 
