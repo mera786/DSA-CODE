@@ -356,29 +356,9 @@ Output:
 ["Shape of You", "Blinding Lights", "Levitating", "Peaches"]
 
 
-🔴 Hard
-**********
-Implement basic LRU using LinkedHashSet + capacity check.
-
-Combine unique characters from two strings, preserving first appearance.
-
-Build an autocomplete list from ordered user input history.
-
-Preserve order of first unique substring in stream.
-
-Implement a simple memory cache with expiry logic.
-
-Detect first non-repeating character in a stream.
-
-Optimize storage for frequent lookup of recent inputs.
-
-Track browsing history with forward/back tracking using LinkedHashSet.
-
-Remove duplicates from large data set with minimal memory and order preservation.
-
-Use LinkedHashSet to model "unique navigation path" in UI testing.
 
 ✅ TreeSet Questions
+
 🟢 Easy
 Add elements to a TreeSet and print (observe sorting).
 
@@ -421,24 +401,5 @@ Build sorted list of words from a file.
 
 Implement task priority handler using TreeSet.
 
-🔴 Hard
-Merge multiple sorted arrays using TreeSet.
 
-Design price tracker with automatic sorting and duplicate skip.
-
-Use TreeSet for range sum queries.
-
-Remove all elements below a threshold.
-
-Maintain rolling sorted window of elements.
-
-Design auto-suggest sorted word system.
-
-Real-time stock ticker sorted by price.
-
-Custom object sorting by multiple fields (e.g., name, then ID).
-
-Implement interval tree logic with TreeSet.
-
-Simulate a min priority queue with dynamic priority updates.
 
