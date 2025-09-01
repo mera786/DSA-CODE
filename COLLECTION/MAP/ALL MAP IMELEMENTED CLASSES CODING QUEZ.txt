@@ -281,26 +281,6 @@ Reorder a map based on custom access order logic.
 
 Save order-sensitive game state using map.
 
-🔴 Hard
-Fully implement LRU cache using LinkedHashMap with eviction logic.
-
-Multi-threaded request tracker with ordered keys.
-
-Track session IDs and last access timestamps.
-
-Design a time-sensitive leaderboard.
-
-Implement undo feature using LinkedHashMap.
-
-Use as ordered dependency tracker.
-
-Merge log events from multiple sources by timestamp.
-
-Simulate navigation history with unique entries and recent order.
-
-Maintain recent login IPs per user (user → LinkedHashMap of IPs).
-
-Custom serialization of ordered entries to file.
 
 ✅ TreeMap Questions
 🟢 Easy
@@ -344,24 +324,3 @@ Find the next closest deadline.
 Reverse the order using descendingMap().
 
 Schedule priority tasks based on time.
-
-🔴 Hard
-Implement a Range Map (e.g., price slabs) with TreeMap.
-
-Store employee data sorted by salary, then by name.
-
-Build an interval tree using TreeMap keys.
-
-Track dynamic inventory with range queries.
-
-Implement auto-suggest sorted by frequency.
-
-Range-based discount mapping (order total → discount).
-
-Create custom ranking system.
-
-Maintain transaction history sorted by timestamps.
-
-Use TreeMap for a version control system.
-
-Merge two TreeMaps with range overlap handling.
