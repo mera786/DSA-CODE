@@ -272,6 +272,24 @@ List<Employee> employees = Arrays.asList(Arrays.asList(),)
                                                                          ✅ LinkedList Questions
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+NOTE: ABOUT LINKEDLIST :=>
+-> Variable size ( means not fixed size, size can be varry no limit, unless computer has memory sapce)
+-> non-contigeous Memory
+-> insert in O(1)
+-> search in O(n) 
+
+Node :=  A node is the building block of the list. Each node has two parts like, Data/Value (ex: 1, 2, 3) and Reference/Pointer to the next node.
+
+Head Node:- first node
+Tail Node:- lastNode
+
+There are 3 types of linkedList :
+(a) Singly Linked List : Each node has data + pointer to next node. Traversal only forward
+(b) Doubly Linked List : Each node has data + pointer to next + pointer to previous. Can move forward and backward
+(c) Circular Linked List. : Last node points back to first node instead of null. Can be singly or doubly circular
+
+
+
 🟢 Easy
 ***********
 
