@@ -67,7 +67,7 @@ HashSet<String> fruits = new HashSet<>();
 fruits.add("Apple");
 fruits.add("Banana");
 fruits.add("Mango");
-Output: 3
+Output: 3 
 
 (5) How to convert a HashSet to an ArrayList in Java?
 Input:
