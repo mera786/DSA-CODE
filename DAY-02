@@ -1,0 +1,74 @@
+                                                                                        STARTED VIDEO =  12/10/2025
+                                                                                        #############################
+1. What is a Programming Language?
+  - To communicate with a person, we need a specific language.
+  - Similarly, to communicate with computers, programmers need a Programming Language.
+  - Definition: A programming language is a set of instructions written in a specific syntax that a computer can understand and execute.
+
+2. Types of Programming Languages (Based on Abstraction)
+    - A. Machine Language :
+              - Lowest level programming language.
+              - Consists of binary code (0s and 1s).
+              - No translation needed; CPU executes it directly.
+              - Characteristics:
+                        - Fast execution
+                        - Hard to read and debug
+              - Example: 10110000 01100001
+    - B. Assembly Language
+              - Low-level language designed for a specific processor.
+              - Uses symbols and mnemonics to represent machine instructions.
+              - Requires an assembler to convert it to machine language.
+              - Characteristics:
+                        - Easier to read than machine language
+                        - Still hardware-dependent
+              - Example: MOV AL, 61h
+    - C. High-Level Language
+              - Developer-friendly language closer to human language.
+              - Needs a compiler or interpreter to convert code into machine language.
+              - Easier to read, write, and maintain.
+              - Examples: C, C++, Java, Python
+Subtypes of High-Level Languages:
+  a. Procedural Programming Language :
+          - Executes instructions step by step.
+          - Divides a program into functions or procedures.
+          - Also called Structured Programming.
+          - Examples: C, FORTRAN
+  b. Functional Programming Language
+          - Treats computation as mathematical functions.
+          - Focuses on logic and evaluation instead of step-by-step execution.
+          - Examples: Python (functional features), Haskell
+  c. Object-Oriented Programming Language (OOP)
+          - Based on objects that combine data and functions.
+          - Encourages code reuse and modular design.
+          - Examples: Java, C++
+ d. Scripting Language
+          - High-level, interpreted one command at a time.
+          - Easier to learn and faster to code.
+          - Often used for automation, web development, and small tasks.
+          - Examples: Python, JavaScript, PHP
+
+3. Types of Languages Based on Typing :
+     - A. Statically Typed Language
+                   - Performs type checking at compile-time.
+                   - Data types must be declared explicitly.
+                   - Examples: C, C++, Java
+     - B. Dynamically Typed Language
+                   - Performs type checking at run-time.
+                   - No need to declare data types explicitly.
+                   - Examples: Python, JavaScript, Ruby
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
