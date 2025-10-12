@@ -1,0 +1,22 @@
+1. What is a flowchart? 
+It is a diagram that represents a workflow or process. It is nothing but a diagrammatic representation of an algorithm, a step-by-step approach to solving a task.
+
+2. What are components of a flowchart?
+It shows the steps as boxes of various kinds, and their order by connecting the boxes with arrows.
+Some Important symbols (boxes) are:
+   -  🔵Oval - It marks the Start/End of the flow.
+   -  ➡️Arrow - Connector which shows the flow of relationship between various symbols.
+   -  ⏺️Parallelogram - It represents input and output.
+   -  ⏹️Rectangle - It represents a process.
+   -  🔶Diamond - It is used in decision formation.
+
+
+3. What is Process? 
+A process is the instance of a computer program that is being executed.
+
+4. What is a Algorithm? 
+An algorithm is a procedure or set of rules that defines how a program is to be executed. In the algorithm, plain text is used. The algorithm does not follow any rules
+
+5. What is a Pseudocode? 
+It is the mimic of a code. Represents code-like structure of a algorithm.
+
