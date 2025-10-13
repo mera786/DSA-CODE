@@ -28,3 +28,17 @@ Note: Higher in the table → higher precedence → evaluated first
 | 15         | `?:`                                                                        | Ternary conditional                           | Right → Left         |              |
 | 16         | `=`, `+=`, `-=`, `*=`, `/=`, `%=` , `&=`, `^=`, `                           | =`, `<<=`, `>>=`, `>>>=`                      | Assignment operators | Right → Left |
 | 17         | `,`                                                                         | Comma operator (used to separate expressions) | Left → Right         |              |
+
+
+
+Extra : in java lang package is by default imported so you don't have to do anything.
+
+Access Modifier and non-access modifier ?
+| Type                    | Modifiers                                                                                    | Usage                              |
+| ----------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------- |
+| **Access Modifier**     | `public`, `private`, `protected`, default                                                    | Control **visibility**             |
+| **Non-Access Modifier** | `final`, `abstract`, `static`, `synchronized`, `native`, `strictfp`, `transient`, `volatile` | Provide **behavior or properties** |
+
+
+
+
