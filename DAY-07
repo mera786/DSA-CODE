@@ -1,0 +1,30 @@
+🔹 What is Operator Precedence?
+     - Precedence defines which operator is evaluated first in an expression.
+     - Associativity defines the order of evaluation if two operators have the same precedence.
+     - 📘 Example:
+int x = 5 + 3 * 2; // * has higher precedence than + → evaluated first
+// Result: 5 + (3*2) = 11
+
+⚡ Java Operator Precedence & Associativity Table :
+Note: Higher in the table → higher precedence → evaluated first
+| Precedence | Operator(s)                                                                 | Description                                   | Associativity        |              |
+| ---------- | --------------------------------------------------------------------------- | --------------------------------------------- | -------------------- | ------------ |
+| 1          | `()`                                                                        | Parentheses (Grouping)                        | Left → Right         |              |
+| 2          | `[]`                                                                        | Array subscript                               | Left → Right         |              |
+| 2          | `.`                                                                         | Member access (dot)                           | Left → Right         |              |
+| 2          | `()`                                                                        | Method call                                   | Left → Right         |              |
+| 3          | `++` (postfix), `--` (postfix)                                              | Post-increment, post-decrement                | Left → Right         |              |
+| 4          | `++` (prefix), `--` (prefix), `+` (unary plus), `-` (unary minus), `!`, `~` | Unary operators                               | Right → Left         |              |
+| 5          | `*`, `/`, `%`                                                               | Multiplication, division, modulus             | Left → Right         |              |
+| 6          | `+`, `-`                                                                    | Addition, subtraction                         | Left → Right         |              |
+| 7          | `<<`, `>>`, `>>>`                                                           | Shift operators                               | Left → Right         |              |
+| 8          | `<`, `<=`, `>`, `>=`, `instanceof`                                          | Relational operators                          | Left → Right         |              |
+| 9          | `==`, `!=`                                                                  | Equality operators                            | Left → Right         |              |
+| 10         | `&`                                                                         | Bitwise AND                                   | Left → Right         |              |
+| 11         | `^`                                                                         | Bitwise XOR                                   | Left → Right         |              |
+| 12         | `\|`                                                                        | Bitwise OR                                    | Left → Right         |              |
+| 13         | `&&`                                                                        | Logical AND                                   | Left → Right         |              |
+| 14         | `\|\|`                                                                      | Logical OR                                    | Left → Right         |              |
+| 15         | `?:`                                                                        | Ternary conditional                           | Right → Left         |              |
+| 16         | `=`, `+=`, `-=`, `*=`, `/=`, `%=` , `&=`, `^=`, `                           | =`, `<<=`, `>>=`, `>>>=`                      | Assignment operators | Right → Left |
+| 17         | `,`                                                                         | Comma operator (used to separate expressions) | Left → Right         |              |
