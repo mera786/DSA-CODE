@@ -1,1 +1,53 @@
-gjh
+
+(1) What is a Literal?
+   - A literal is a fixed value that we write directly in the program.
+   - It represents constant data that doesn’t change.
+   - Example: 
+int x = 10;      // 10 is a literal
+char ch = 'A';   // 'A' is a literal
+
+(2) Types of Literals in Java ?
+Java supports different types of literals based on data types:
+- a. Integral Literals (byte, short, int, long) :
+| Type           | Example              | Base    | Note                |
+| -------------- | -------------------- | ------- | ------------------- |
+| a) Decimal     | `int x = 101;`       | Base 10 | Normal numbers      |
+| b) Octal       | `int x = 0146;`      | Base 8  | Must start with `0` |
+| c) Hexadecimal | `int x = 0x123Face;` | Base 16 | Use `0x` or `0X`    |
+| d) Binary      | `int x = 0b1111;`    | Base 2  | Use `0b` or `0B`    |
+Note: 
+  - By default, every integer literal is of int type.
+  - To make it long, add L or l.  : long num = 1234L; 
+  - You cannot directly declare byte or short literals —but if the value fits their range, the compiler allows it automatically.
+- b. Floating-Point Literals (float, double) :
+         - Used for decimal or fractional numbers.
+         - Can only be written in decimal form (not octal or hexadecimal).
+         - Examples:
+double d = 123.456;
+float f = 101.23f;
+Notes:
+         - By default, floating numbers are double type.
+         - Add f or F for float type.
+         - Add d or D for double type (optional).
+- c. Character Literals (char) :
+There are 4 ways to represent character literals:
+| Type               | Example               | Description        |
+| ------------------ | --------------------- | ------------------ |
+| a) Single quote    | `char ch = 'A';`      | Normal character   |
+| b) Unicode value   | `char ch = '\u0061';` | Unicode for ‘a’    |
+| c) Integral value  | `char ch = 97;`       | 97 = ‘a’ (ASCII)   |
+| d) Escape sequence | `char ch = '\n';`     | New line character |
+- d. String Literals :
+         - Any text written inside double quotes (" ").
+         - Strings are objects in Java.
+         - Example : String s = "Hello Java!";
+- e. Boolean Literals :
+         - Can only have two values: true or false.
+         - Example:
+boolean isJavaFun = true;
+boolean isCold = false;
+
+
+
+
+
