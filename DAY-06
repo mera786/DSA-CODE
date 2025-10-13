@@ -1,0 +1,120 @@
+🔹 What is an Operator?
+An operator is a special symbol in Java used to perform operations on variables and values.
+👉 Example:
+int a = 10, b = 5;
+int c = a + b; // '+' is an arithmetic operator
+
+🧩 Types of Operators in Java ?
+Java provides several types of operators:
+| No. | Operator Type       | Example               |
+| --- | ------------------- | --------------------- |
+| 1️⃣ | Unary Operator      | ++, --, !             |
+| 2️⃣ | Arithmetic Operator | +, -, *, /, %         |
+| 3️⃣ | Shift Operator      | <<, >>, >>>           |
+| 4️⃣ | Relational Operator | >, <, >=, <=, ==, !=  |
+| 5️⃣ | Bitwise Operator    | &, |, ^, ~            |
+| 6️⃣ | Logical Operator    | &&, ||, !             |
+| 7️⃣ | Ternary Operator    | ?:                    |
+| 8️⃣ | Assignment Operator | =, +=, -=, *=, /=, %= |
+
+1️⃣ Unary Operators :
+- Work with only one operand.Used to increment, decrement, or invert a value.
+| Operator | Meaning     | Example         |
+| -------- | ----------- | --------------- |
+| `++`     | Increment   | `a++` or `++a`  |
+| `--`     | Decrement   | `b--` or `--b`  |
+| `!`      | Logical NOT | `!true → false` |
+EX- 
+int x = 5;
+System.out.println(++x); // 6
+System.out.println(--x); // 5
+
+2️⃣ Arithmetic Operators
+ - Used for basic mathematical operations.
+| Operator | Description         | Example | Output |
+| -------- | ------------------- | ------- | ------ |
+| `+`      | Addition            | 10 + 5  | 15     |
+| `-`      | Subtraction         | 10 - 5  | 5      |
+| `*`      | Multiplication      | 10 * 5  | 50     |
+| `/`      | Division            | 10 / 5  | 2      |
+| `%`      | Modulus (remainder) | 10 % 3  | 1      |
+EX-
+int a = 10, b = 3;
+System.out.println(a + b); // 13
+System.out.println(a % b); // 1
+
+3️⃣ Shift Operators
+ - Used to shift bits of a number to left or right.
+| Operator | Description          | Example   | Result                |
+| -------- | -------------------- | --------- | --------------------- |
+| `<<`     | Left shift           | 10 << 2   | 40                    |
+| `>>`     | Right shift          | 10 >> 2   | 2                     |
+| `>>>`    | Unsigned right shift | -10 >>> 2 | Large positive number |
+📘 Note: >> and >>> are the same for positive numbers.For negative numbers, >>> fills leftmost bits with 0.
+
+4️⃣ Relational Operators 
+Used to compare two values.Result is always true or false.
+| Operator     | Description                                                                     | Example                 | Output        |
+| ------------ | ------------------------------------------------------------------------------- | ----------------------- | ------------- |
+| `==`         | Equal to                                                                        | `5 == 5`                | true          |
+| `!=`         | Not equal to                                                                    | `5 != 3`                | true          |
+| `>`          | Greater than                                                                    | `10 > 3`                | true          |
+| `<`          | Less than                                                                       | `2 < 8`                 | true          |
+| `>=`         | Greater or equal                                                                | `5 >= 5`                | true          |
+| `<=`         | Less or equal                                                                   | `4 <= 5`                | true          |
+| `instanceof` | Checks whether an **object** is an **instance of a specific class or subclass** | `obj instanceof String` | true or false |
+
+
+5️⃣ Bitwise Operators
+ - Used to manipulate individual bits of numbers.
+| Operator | Description | Example | Result |   |
+| -------- | ----------- | ------- | ------ | - |
+| `&`      | AND         | 5 & 3   | 1      |   |
+| `        | `           | OR      | 5 | 3  | 7 |
+| `^`      | XOR         | 5 ^ 3   | 6      |   |
+| `~`      | NOT         | ~5      | -6     |   |
+Note: 📘 Works only on integer types (byte, short, int, long, char).
+
+6️⃣ Logical Operators
+Used to combine multiple conditions.Works only on boolean values.
+| Operator | Description | Example            | Output            |         |   |         |                     |
+| -------- | ----------- | ------------------ | ----------------- | ------- | - | ------- | ------------------- |
+| `&&`     | Logical AND | (a > b) && (a > c) | true if both true |         |   |         |                     |
+| `        |             | `                  | Logical OR        | (a > b) |   | (a < c) | true if one is true |
+| `!`      | Logical NOT | !(a > b)           | reverses result   |         |   |         |                     |
+EX-
+int a = 10, b = 20;
+System.out.println(a > b && a < b); // false
+System.out.println(a > b || a < b); // true
+
+7️⃣ Ternary Operator
+A short form of if-else statement.
+Syntax: condition ? value_if_true : value_if_false;
+EX-
+int a = 10, b = 20;
+int min = (a < b) ? a : b; // returns 10
+
+8️⃣ Assignment Operators
+Used to assign values to variables. 
+| Operator | Example | Meaning      |
+| -------- | ------- | ------------ |
+| `=`      | a = 5   | Assign value |
+| `+=`     | a += 2  | a = a + 2    |
+| `-=`     | a -= 2  | a = a - 2    |
+| `*=`     | a *= 2  | a = a * 2    |
+| `/=`     | a /= 2  | a = a / 2    |
+| `%=`     | a %= 2  | a = a % 2    |
+EX-
+int x = 10;
+x += 5;  // 15
+x *= 2;  // 30
+
+
+
+
+
+
+
+
+
+
