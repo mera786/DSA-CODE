@@ -99,5 +99,14 @@ Java provides three types of control flow statements:
 
 
 
+ASSIGNMENT :
+
+1. take number as input from user .
+2. keep dividing number bY 2 , till it becmes 0 .
+3. if the numbers becomes even at any point then skip the iteration.
+4. if the numbers of times you have divided becomes 5 or more , then break the loop .
+5. print the odd numbers.
+
+
 
                   
