@@ -67,6 +67,100 @@ Step 5️⃣
             ❌ Not Palindrome
 
 
+Q4. print all divisors of a number ?
+A divisor of a number n is any number that divides n completely (without leaving a remainder).
+Example:
+6 → divisors: 1, 2, 3, 6
+12 → divisors: 1, 2, 3, 4, 6, 12
+36 → divisors: 1, 2, 3, 4, 6, 9, 12, 18, 36
+Step-by-Step Logic to Print All Divisors :
+Let's take an example → 36
+Step 1️⃣
+   - Take the number → num = 36
+Step 2️⃣
+   - Initialize a counter → counter = 1
+ Step 3️⃣
+   - Calculate the square root of the number → sqroot = (int) Math.sqrt(num)
+Step 4️⃣
+   - Start a loop while counter <= sqroot
+Step 5️⃣
+   - In each iteration, check if num % counter == 0
+        - If yes, it means counter is a divisor
+        - Also calculate the paired divisor → otherNumber = num / counter
+Step 6️⃣
+   - Print both divisors:  counter + " , " + otherNumber + " are divisors of " + num
+Step 7️⃣
+   - Increment the counter → counter++
+Step 8️⃣
+   - Repeat until counter exceeds sqroot
+
+
+
+Q5. Check if a Number is prime or not ?
+A prime number is a number greater than 1 that has exactly two divisors: 1 and itself.
+Properties of Prime Numbers:
+   - Greater than 1:
+          - Prime numbers are always greater than 1.
+          - 0 and 1 are not prime.
+Only two divisors:
+          - A prime number can only be divided evenly by 1 and itself.
+          - Example: 5 → divisors: 1, 5
+Cannot be negative:
+          - Prime numbers are always positive integers.
+The smallest prime number:
+          - 2 is the smallest prime and the only even prime number.
+Odd primes:
+          - Except 2, all other prime numbers are odd.
+          - Example: 3, 5, 7, 11…
+Step-by-Step Logic to Check Prime Number :
+Let's take an example → 29
+Step 1️⃣
+  - Take the number → num = 29
+Step 2️⃣
+  - If num <= 1 → Not prime (because prime numbers are > 1)
+Step 3️⃣
+  - Initialize a flag → isPrime = true (assume it’s prime)
+Step 4️⃣
+  - Loop from i = 2 to i <= √num
+            - Why √num? → If a number has a factor greater than √num, it must also have a factor smaller than √num.
+            - This makes the check faster.
+Step 5️⃣
+In each iteration, check:  if (num % i == 0) → num is not prime → set isPrime = false → break the loop
+Step 6️⃣
+After the loop, check the flag:
+       - isPrime == true → ✅ Prime Number
+       - isPrime == false → ❌ Not Prime
+
+
+Q6. 🧮 Sieve of Eratosthenes  ?
+The Sieve of Eratosthenes is an easy and fast method to find all prime numbers up to a given number n. Instead of checking each number one by one, 
+we cross out (remove) all multiples of each prime number.
+Example:  Find all prime numbers up to 30.
+Start with numbers:  2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... 30
+1️⃣ First prime is 2.
+          → Cross out all multiples of 2: 4, 6, 8, 10, 12, ...
+2️⃣ Next unmarked number is 3.
+          → Cross out all multiples of 3: 6, 9, 12, 15, ...
+3️⃣ Next is 5.
+          → Cross out multiples of 5: 10, 15, 20, 25, ...
+4️⃣ Continue this until √n.
+          → All numbers that are not crossed out are prime numbers ✅
+Step-by-Step Logic to Implement
+Let’s say we want all prime numbers up to n = 30.
+Step 1️⃣
+       Create a boolean array isPrime[n+1] and fill all entries as true in array using (Arrays.fill(arr, true    -> built-in function).
+Step 2️⃣
+       Mark index[0] and index[1] as false because 0 and 1 are not prime.
+Step 3️⃣
+       Start from i = 2 (the first prime number).
+Step 4️⃣
+      If index[i] == true, then mark all multiples of i (like i*i, i*i+i, i*i+2*i, … up to n) as false.
+Step 5️⃣
+      Repeat Step 4 for all i from 2 to √n.
+Step 6️⃣
+      After the loop ends, all indexes that are still true in the array are prime numbers.
+
+
 
 
 
