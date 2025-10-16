@@ -75,6 +75,11 @@ follow these steps:
 
 
 (4) follow up question : reverse the number 5701 , output : 1075
+Steps :
+    - When you reverse a number, you repeatedly:
+                              - extract the last digit (num % 10),
+                              - add last digit to the result after multiplying by 10 into result,
+                              - and then remove the last digit from num.
 
 
 
