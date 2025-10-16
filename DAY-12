@@ -1,0 +1,81 @@
+(1) Count the Digits of a number lets say number is : 4567 ?
+Steps to solve :
+           - Take a number → say num = 4567
+           - Initialize a counter → count = 0
+           - Repeat while num > 0:
+                    - Remove the last digit using num = num / 10
+                    - Increase the counter → count++
+           - When the loop finishes, count will have the total number of digits.
+Note:- to handle specail condition like 0 for input : use if condition and directly print 1 .
+
+
+(2) Check if a Number is armstrong or not. ?
+👉 Short Definition:
+A number is called an Armstrong number if the sum of each of its digits raised to the power of total digits equals the number itself.
+Example: Let’s take 153
+                  → It has 3 digits                 
+                  → So we do:  1³ + 5³ + 3³ = 1 + 125 + 27 = 153
+🌟 Properties of ArmStrong number :
+                   - All single-digit numbers (0–9) are Armstrong numbers.
+                       👉 Because for example: 5 = 5¹ ✅
+                   - Permutations of an Armstrong number are not always Armstrong
+                       ❌ (e.g., 153 is Armstrong but 531 is not!)
+                   - Armstrong numbers are not always palindromes.
+                     ❌ For example, 153 ≠ 351 , Only a few are plindrome also (like 1, 0, to 9.).
+                   - The sum of two Armstrong numbers is usually not an Armstrong number.
+                     ❌ For example, 153 + 370 = 523,   5^3+2^3+3^3 =125+8+27 =160 !=523
+Step-by-Step Logic to Check Armstrong Number :
+                                - Take a number → e.g. 153
+                                - Count how many digits it has → 3
+                                - Extract each digit one by one
+                                - Raise each digit to the power of total digits
+                                - Add them together
+                                - Compare the sum with the original number
+                                                                 - If equal → ✅ Armstrong
+                                                                 - Else → ❌ Not Armstrong
+
+
+(3) check if a number is palindrome ?
+👉 Short Definition:
+A palindrome number is a number that remains the same when its digits are reversed.
+Example :
+        121 → reverse is 121 → same → Palindrome  
+        123 → reverse is 321 → not same → Not Palindrome
+🌟 Properties of Palindrome Numbers :
+      - All single-digit numbers (0–9) are palindromes.
+                👉 Because reversing them gives the same number.
+      - A palindrome number reads the same both ways.
+                Example: 1221 → same from left and right.
+      - Palindromes can also appear in strings (like “madam”, “level”) — not only in numbers.
+Step-by-Step Logic to Check Palindrome Number :
+Let’s take an example → 121
+Step 1️⃣
+  - Take the number and store it → original_num = 121
+Step 2️⃣
+  - Initialize reversed_num = 0
+Step 3️⃣
+    - Extract the last digit using num % 10
+                       → Add it to reversed_num after multiplying by 10
+                       → Remove the last digit from num using num = num / 10
+Step 4️⃣
+    - Repeat this until the number becomes 0.
+Step 5️⃣
+    - Compare:
+             if (original_num == reversed_num)
+            ✅ Palindrome
+            else
+            ❌ Not Palindrome
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
