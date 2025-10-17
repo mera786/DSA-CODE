@@ -161,6 +161,33 @@ Step 6️⃣
       After the loop ends, all indexes that are still true in the array are prime numbers.
 
 
+Q7. HCF / GCD — Highest Common Factor / Greatest Common Divisor ?
+Defination :
+- HCF or GCD means the largest same divisor of two or more numbers.that means no remainder is left.
+💡 Example:  For numbers 12 and 18:
+                       - The numbers that divide 12 are → 1, 2, 3, 4, 6, 12
+                       - The numbers that divide 18 are → 1, 2, 3, 6, 9, 18
+                       - 👉 Common numbers = 1, 2, 3, 6
+                       - 👉 Highest common number = 6
+                       - ✅ So, HCF (or GCD) of 12 and 18 is 6.
+Follow-up Question :
+Wrtie code for finding GCD of 24 and 36 there are two numbers?
+
+
+Q8. LCM / Least Common Multiple (or Smallest Common Multiple)
+Easy Definition:
+  - LCM means the smallest same multiple of two or more numbers. (with no remainder).
+💡 Example:  For numbers 4 and 6:
+                       - Multiples of 4 → 4, 8, 12, 16, 20, 24, ...
+                       - Multiples of 6 → 6, 12, 18, 24, 30, ...
+                       - 👉 Common multiples = 12, 24, ...
+                       - 👉 Smallest common multiple = 12
+                       - ✅ So, LCM of 4 and 6 is 12.
+Follow-up Question :
+Wrtie code for finding GCD of 24 and 36 there are two numbers?
+
+
+
 
 
 
