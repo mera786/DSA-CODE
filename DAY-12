@@ -186,6 +186,84 @@ Easy Definition:
 Follow-up Question :
 Wrtie code for finding GCD of 24 and 36 there are two numbers?
 
+Note:- Relationships between GCD and LCM ?
+GCD×LCM=Product of the numbers
+🔹 Example:  Let’s take a = 12 and b = 18
+GCD(12, 18) = 6
+LCM(12, 18) = 36
+Now check the relationship:
+👉 6 × 36 = 216
+👉 12 × 18 = 216 ✅
+
+
+Q9. 🧮 Euclidean Algorithm For Finding GCD ?
+The Euclidean Algorithm is an easy way to find the GCD (Greatest Common Divisor) of two numbers.
+    - Subtract or divide the smaller number from the bigger number again and again.
+    - When the remainder becomes 0, the last non-zero remainder is the GCD.
+Two ways to find GCD using the Euclidean Algorithm
+🔸 1. Subtraction Method (old/original form)
+    - Subtract the smaller number from the bigger one repeatedly
+    - Stop when both numbers become equal — that number is the GCD.
+Example:
+Find GCD of 60 and 48
+60 − 48 = 12
+48 − 12 = 36
+36 − 12 = 24
+24 − 12 = 12
+✅ When both become 12 → GCD = 12
+🔸 2. Division Method (modern and faster form)
+    - Divide the bigger number by the smaller one
+    - Take the remainder
+    - Replace the bigger number with the smaller one, and the smaller one with the remainder
+    - Repeat until remainder = 0
+    - The last non-zero remainder is the GCD
+Example:
+Find GCD of 60 and 48
+1️⃣ 60 ÷ 48 → remainder 12
+2️⃣ 48 ÷ 12 → remainder 0
+✅ GCD = 12
+
+
+Q10. Lcm of two numbers if you already know GCD of two numbers ?
+Formula :
+if a and b are two numbers, then lcm(a,b) * gcd(a,b) = a*b
+
+
+Q11. 🧮 What is Modular Arithmetic?
+Modular Arithmetic is math with remainders.
+When we divide a number by another number, the remainder is the result in modular arithmetic.
+We write it as:
+👉 a mod m → means remainder when a is divided by m
+🔹 Example:
+10 mod 3 = 1
+(because 10 ÷ 3 = 3 remainder 1)
+15 mod 5 = 0
+(because 15 ÷ 5 = 3 remainder 0)
+🧩 Some Useful Rules (in easy words) :
+| Rule                                          | Meaning (in simple words)                                                              |
+| --------------------------------------------- | -------------------------------------------------------------------------------------- |
+| (a + b) mod m = ((a mod m) + (b mod m)) mod m | You can take remainders first, then add                                                |
+| (a − b) mod m = ((a mod m) − (b mod m)) mod m | You can take remainders first, then subtract                                           |
+| (a × b) mod m = ((a mod m) × (b mod m)) mod m | You can take remainders first, then multiply                                           |
+| (a % m) % m = a % m                           | Taking mod twice doesn’t change the answer                                             |
+| m % m = 0 ✅                                   | Any number divided by itself gives remainder 0 (your note had 1, but correct is **0**) |
+
+Note:- 🧠 Modular Multiplicative Inverse :
+The modular inverse of a number a is another number a⁻¹ such that:
+                                                          (a×a^−1)modm=1
+That means —
+when you multiply a and its inverse, and take the remainder with m,
+you get 1.
+🔹 Example:
+Let’s find the modular inverse of 3 mod 11.
+We need a number x such that
+(3 × x) mod 11 = 1
+Try values of x:
+3×4 = 12 → 12 mod 11 = 1 ✅
+So the modular inverse of 3 mod 11 is 4
+
+
+
 
 
 
