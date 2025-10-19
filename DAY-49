@@ -1,0 +1,142 @@
+🧩 String in Java — Common Methods :
+
+1️⃣ toLowerCase()  ?
+👉 Definition: Converts all characters in a string to lowercase.
+📘 Example:
+"HELLO".toLowerCase();  // "hello"
+✅ Used for case-insensitive comparison or formatting text.
+
+2️⃣ toUpperCase()
+👉 Definition: Converts all characters in a string to uppercase.
+📘 Example:  
+"java".toUpperCase();  // "JAVA"
+
+
+3️⃣ charAt(int index)
+👉 Definition: Returns the character at a specific index (0-based).
+📘 Example:
+"Meraz".charAt(2);  // 'r'
+⚠️ Throws StringIndexOutOfBoundsException if index is invalid.
+
+4️⃣ indexOf(String str)
+👉 Definition: Returns the first index where the given substring/character is found.
+📘 Example:
+"banana".indexOf("a");  // 1
+
+
+5️⃣ lastIndexOf(String str)
+👉 Definition: Returns the last index where the given substring/character is found.
+📘 Example:
+"banana".lastIndexOf("a");  // 5
+
+6️⃣ length()
+👉 Definition: Returns the number of characters in the string.
+📘 Example:
+"Hello".length();  // 5
+
+7️⃣ toCharArray()
+👉 Definition: Converts a string into a character array.
+📘 Example:
+"Java".toCharArray();  // ['J', 'a', 'v', 'a']
+
+8️⃣ == (Double Equals Operator)
+👉 Definition: Checks if two string references point to the same object.
+📘 Example:
+String a = "Hi";
+String b = "Hi";
+a == b;  // true (same object in String Pool)
+
+
+9️⃣ equals(Object obj)
+👉 Definition: Checks if two strings have the same content.
+📘 Example:
+"Hi".equals("hi");  // false (case-sensitive)
+
+🔟 equalsIgnoreCase(String another)
+👉 Definition: Compares two strings ignoring case differences.
+📘 Example:
+"Java".equalsIgnoreCase("JAVA");  // true
+
+1️⃣ compareTo(String anotherString)
+👉 Definition: Compares two strings lexicographically (alphabetical order).
+📘 Example:
+"apple".compareTo("banana");  // negative (because 'a' < 'b')
+Returns:
+       0 → if equal
+       <0 → if current string < another
+       >0 → if current string > another
+
+2️⃣ toString()
+👉 Definition: Returns the string representation of the object.
+📘 Example:
+String s = "Hello";
+System.out.println(s.toString());  // "Hello"
+All String objects already return themselves.
+
+3️⃣ trim()
+👉 Definition: Removes leading and trailing spaces.
+📘 Example:
+"  Java  ".trim();  // "Java"
+
+4️⃣ chars()
+👉 Definition: Returns an IntStream of Unicode values of characters.
+📘 Example:
+"ABC".chars().forEach(System.out::println);
+// Output: 65 66 67
+
+5️⃣ startsWith(String prefix)
+👉 Definition: Checks if a string begins with the specified prefix.
+📘 Example:
+"Hello".startsWith("He");  // true
+
+6️⃣ endsWith(String suffix)
+👉 Definition: Checks if a string ends with the specified suffix.
+📘 Example:
+"Hello".endsWith("lo");  // true
+
+7️⃣ substring() — Overloaded Methods
+👉 Definition: Extracts a portion (subpart) of a string.
+                                  🔸 (1) substring(int beginIndex)
+                                         Returns substring from given index to end.
+                                         "Hello".substring(2);  // "llo"
+                                  🔸 (2) substring(int beginIndex, int endIndex)
+                                         Returns substring between two indexes (endIndex is exclusive).
+                                         "Hello".substring(1, 4);  // "ell"
+
+8️⃣ split(String regex)
+👉 Definition: Splits a string into parts using a pattern (regex) and returns an array.
+📘 Example:
+"Java,Python,C++".split(",");  
+// ["Java", "Python", "C++"]
+
+
+9️⃣ Is there a reverse() method in String?
+❌ No, String class does not have a reverse() method (because it’s immutable).
+✅ You can reverse using:
+         StringBuilder or StringBuffer, which have reverse() method.
+Example:
+new StringBuilder("Meraz").reverse();  // "zareM"
+
+
+🧱 StringBuffer vs StringBuilder ?
+Both are mutable (you can modify their content directly).
+| Feature     | **StringBuffer**     | **StringBuilder** |
+| ----------- | -------------------- | ----------------- |
+| Thread Safe | ✅ Yes (synchronized) | ❌ No           |
+| Performance | Slower               | Faster            |
+| Introduced  | JDK 1.0              | JDK 1.5           |
+| Use When    | Multiple threads     | Single thread     |
+
+Most Used Methods of buffer and builder ?
+| Method                      | Description                     | Example                |
+| --------------------------- | ------------------------------- | ---------------------- |
+| `append()`                  | Adds text at the end            | `sb.append("Java")`    |
+| `insert(int, String)`       | Inserts at a position           | `sb.insert(2, "X")`    |
+| `delete(int, int)`          | Removes characters in range     | `sb.delete(1,3)`       |
+| `replace(int, int, String)` | Replaces part of string         | `sb.replace(0,4,"Hi")` |
+| `reverse()`                 | Reverses characters             | `sb.reverse()`         |
+| `capacity()`                | Returns current buffer capacity | `sb.capacity()`        |
+| `length()`                  | Returns number of characters    | `sb.length()`          |
+
+
+follow up question ?  given a email like sahil@gmail.com from it i want only company name like, output gmail ?
