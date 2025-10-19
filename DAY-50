@@ -1,0 +1,35 @@
+🧩 concat() Method ?
+✅ Definition (One-liner):
+The concat() method in Java is used to join two strings together and return a new combined string.
+🔹 Example:
+String s1 = "Hello";
+String s2 = "World";
+String result = s1.concat(" ").concat(s2);
+System.out.println(result);
+🔹 Important Notes:
+| Point            | Description                                                                     |
+| ---------------- | ------------------------------------------------------------------------------- |
+| 🔸 Immutability  | Original strings (`s1`, `s2`) remain unchanged.                                 |
+| 🔸 Null Handling | If you pass `null` to `concat()`, it will throw **NullPointerException**.       |
+| 🔸 Efficiency    | For multiple concatenations, use **StringBuilder** or **StringBuffer** instead. |
+| 🔸 Alternative   | `String.join()` or `String.format()` can also be used for more flexibility.     |
+
+🧩 What is String.format() in Java?
+✅ Definition (One-liner):
+String.format() is a built-in Java method that allows you to create formatted strings — i.e., 
+to insert variables or values into a string in a controlled and readable way, similar to printf formatting in C.
+🔹 Example:
+String name = "Meraz";
+int age = 27;
+String formatted = String.format("My name is %s and I am %d years old.", name, age);
+System.out.println(formatted);
+🔹 Common Format Specifiers :
+| Specifier | Description     | Example                           | Output           |
+| --------- | --------------- | --------------------------------- | ---------------- |
+| `%s`      | String          | `String.format("Hi %s", "Meraz")` | Hi Meraz         |
+| `%d`      | Integer         | `String.format("%d", 100)`        | 100              |
+| `%f`      | Floating number | `String.format("%.2f", 45.678)`   | 45.68            |
+| `%c`      | Character       | `String.format("%c", 'A')`        | A                |
+| `%b`      | Boolean         | `String.format("%b", true)`       | true             |
+| `%n`      | New line        | `String.format("Line1%nLine2")`   | Line1 <br> Line2 |
+
