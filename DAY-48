@@ -1,1 +1,44 @@
+1️⃣ What is a String?
+A String in Java is an object that represents a sequence of characters.like a word, sentence, or text stored in memory that you can use in your program.
+Example: "Hello", "Java123", "Meraz Alam"
+
+2️⃣ How many ways to create a String?
+There are two main ways:
+       - Way 1: Using String Literal   : String s1 = "Hello";
+                           - Stored in String Pool (special area in memory).
+                           - If the same literal already exists, Java reuses it (memory become efficient).
+       - Way 2: Using new keyword   :    String s2 = new String("Hello");
+                           - Always creates a new object in heap memory (even if the same content exists).
+
+3️⃣ Difference between == and .equals() ?
+| Operator/Method | Meaning                                                                | Example                                       |
+| --------------- | ---------------------------------------------------------------------- | --------------------------------------------- |
+| `==`            | Checks **if two references point to the same object** (memory address) | `s1 == s2` → false (if created with `new`)    |
+| `.equals()`     | Checks **if two strings have the same content**                        | `s1.equals(s2)` → true (contents are "Hello") |
+
+
+4️⃣ What happens when we create a String using new keyword?
+suppose , String s = new String("Hello");
+                - "Hello" is created in the String Pool (if not already present).
+                - new String("Hello") creates a new object in heap memory.
+                - So now two objects exist:
+                             - One in String Pool ("Hello")
+                             - One in Heap (new String("Hello"))
+
+5️⃣ Immutability of Strings
+Immutable means: once a String object is created, its content cannot be changed.
+String s = "Hello";
+s = s + " Java";
+         - "Hello" exists in the String Pool.
+         - "Hello Java" is a new String object created in the pool or heap.
+         - s now points to "Hello Java"; the original "Hello" remains unchanged.
+Key point: Every “change” creates a new String object.
+
+6️⃣ Where are String Literals stored?
+        - String Pool (part of Heap memory)
+        - Purpose: memory optimization
+        - Example:
+String s1 = "Hello";
+String s2 = "Hello";  // points to the same object in String Pool
+
 
