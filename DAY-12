@@ -264,6 +264,90 @@ So the modular inverse of 3 mod 11 is 4
 
 
 
+Q12. Factorial of a Number ?
+  - Factorial means multiplying a number by all the whole numbers less than it down to 1.
+  - It is shown using a “!” (exclamation mark).
+💡 Example:
+For number 5,
+👉 5! = 5 × 4 × 3 × 2 × 1 = 120
+More examples:
+4! = 4 × 3 × 2 × 1 = 24
+3! = 3 × 2 × 1 = 6
+1! = 1 (by rule)
+0! = 1 (special rule)
+💡 Rule of Factorial:  n!=n×(n−1)!
+🧩 Example using the rule:
+Let’s take 5!
+5!=5×(5−1)!   5!=5×4!
+Now, 4!=4×3×2×1=24
+So, 5!=5×24=120✅
+📘 Special Rules:
+1! = 1
+0! = 1 (by definition — special mathematical rule)
+
+
+Q13. Find trailing zeros in a factorial ?
+             
+ a. How many zeros are at the end of N! ?
+Trailing zeros in a number come from factors of 10. Each 10 = 2 × 5.
+So every pair of a 2 and a 5 in the prime factors of N! contributes one trailing zero.
+
+ b. Key insight (why we only count 5s)
+    In N! = 1 × 2 × 3 × ... × N, there are far more factors of 2 than 5 (even numbers give lots of 2s).
+    Therefore the limiting factor is how many 5s appear in the prime factorization of N!.
+    So: number of trailing zeros = number of times 5 divides N! (i.e., count of factors 5).
+
+c. Counting 5s (the formula) :
+Formula :  zeros=⌊N/5​⌋+⌊N/5^2​⌋+⌊N/5^3​⌋+...
+Stop when 5^k  > N
+Explanation in words:
+⌊N/5⌋ counts numbers divisible by 5 (each contributes at least one 5).
+⌊N/25⌋ counts numbers divisible by 25 (they contribute an extra 5).
+⌊N/125⌋  counts numbers divisible by 125 (they contribute yet another 5), and so on.
+
+ d. Step-by-step method (beginner steps)
+     - Take your input N.
+     - Set count = 0.
+     - Set p = 5.
+     - While p <= N:
+            - Add floor(N / p) to count.
+            Multiply p by 5 (next power of 5).
+When loop ends, count is the number of trailing zeros in N!.
+
+Example 1 — small (N = 30) — show arithmetic clearly
+Compute:
+     - ⌊30/5⌋=6 (numbers: 5,10,15,20,25,30)
+     - ⌊30/25⌋=1 (25 gives an extra 5)
+     - ⌊30/125⌋=0 stop here
+Sum = 6+1=7
+So 30! has 7 trailing zeros. (Matches your example.)
+
+Example 2 — large (N = 456700442000) — show first divisions
+We use the same process. I’ll show the divisions step-by-step (floor results):
+⌊N/5⌋=91,340,088,400
+⌊N/25⌋=18,268,017,680
+⌊N/125⌋=3,653,603,536
+⌊N/625⌋=730,720,707
+⌊N/3125⌋=146,144,141
+⌊N/15625⌋=29,228,828
+⌊N/78125⌋=5,845,765
+⌊N/390625⌋=1,169,153
+⌊N/1,953,125⌋=233,830
+⌊N/9,765,625⌋=46,766
+⌊N/48,828,125⌋=9,353
+⌊N/244,140,625⌋=1,870
+⌊N/1,220,703,125⌋=374
+⌊N/6,103,515,625⌋=74
+⌊N/30,517,578,125⌋=14
+⌊N/152,587,890,625⌋=2
+Next power =762,939,453,125>𝑁 so stop.
+Add them all up: 114,175,110,493
+So 456,700,442,000! has 114,175,110,493 trailing zeros.
+
+
+
+
+
 
 
 
