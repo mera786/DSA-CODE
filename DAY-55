@@ -1,0 +1,50 @@
+LeetCode Q. 242 : Valid Anagram  ?
+
+
+💡 What is an Anagram? (Beginner Definition) ?
+👉 Two strings are called anagrams if they contain the same letters,
+but the letters are arranged in a different order.
+
+🔹 Method 1: Using Sorting (Easy Way)
+🪜 Steps:
+       - Convert both strings to lowercase (so that 'A' and 'a' are same).
+       - Remove any spaces if needed (optional).
+       - Check if their lengths are same — if not, they can’t be anagrams.
+       - Convert both strings to character arrays.
+       - Sort both arrays.
+       - Compare both arrays —
+                      - if they are same → it’s an anagram ✅
+                      - if not → not an anagram ❌
+
+🔹 Method 2: Using Character Frequency (Efficient Way)
+🪜 Steps:
+       - Check if both strings have the same length.
+       - Create an array of size 26 (for letters a–z).
+       - For every character in the first string → increase its count.
+       - For every character in the second string → decrease its count.
+       - If all counts become 0 → it’s an anagram ✅
+         else → not an anagram ❌
+
+
+🔹 Method 3: Using HashMap (Flexible & General)
+🪜 Steps :
+       - Normalize the strings (optional but recommended)
+                              - Convert both strings to the same case (e.g., toLowerCase()) so 'A' and 'a' are treated the same.
+                              - Remove spaces if you want to ignore spaces (e.g., "anagram" vs "a nag ram").
+       - Quick length check
+                              - If s1.length() != s2.length() → immediately return false. (If you removed spaces, check lengths after removal.)
+       - Create an empty HashMap<Character, Integer>
+                              - The key = character, value = count (frequency).
+       - Loop through s1 and increase counts
+                              - For each character c in s1: map.put(c, map.getOrDefault(c, 0) + 1);
+       - Loop through s2 and decrease counts
+                              - For each character c in s2:
+                                               - If map does not contain c → return false (because s2 has a character not in s1).
+                                               - Otherwise decrement: map.put(c, map.get(c) - 1);
+                                               - Optionally remove the key if count becomes 0 (map.remove(c)), which keeps map small.
+       - Final check
+                              - If you removed zeros during step 5 → check map.isEmpty() → if empty → true, else false.
+                              - If you didn't remove zeros → iterate over map.values() and ensure every value is 0.
+       - Return result
+                              - If all counts matched → return true (anagram). Else false.
+
