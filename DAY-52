@@ -1,0 +1,17 @@
+(1) follow up question :
+       reverse string by creating result variable ?
+ input : "abc";
+ output : "cba";
+
+
+(2) follow up question :
+Approach -1 :  reverse string by using string builder + reverse () ?
+Approach -2 :  reverse string by using string builder + setCharAt() ?
+  input : "abc";
+  output : "cba";
+
+(3) follow up question :
+         reverse string by converting to char array and then swap ?
+  input : "abc";
+  output : "cba"; 
+
