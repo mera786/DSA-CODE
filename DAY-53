@@ -1,0 +1,34 @@
+Q1. 🧩 1️⃣ What is a Palindrome?
+👉 A palindrome is a word, number, phrase, or sequence of characters that reads the same forward and backward.
+Example :
+| Input                           | Palindrome or Not                   |
+| ------------------------------- | ----------------------------------- | 
+| `"madam"`                       | ✅ Yes                              |
+| `"racecar"`                     | ✅ Yes                              |
+| `"hello"`                       | ❌ No                               |
+| `"121"`                         | ✅ Yes                              |
+| `"A man a plan a canal Panama"` | ✅ Yes (if we ignore spaces & case) |
+
+⚙️ Steps to Check Palindrome in Java :
+Step 1️⃣
+    - Take an input string. like, String str = "madam";
+Step 2️⃣
+    - Convert the string to a char array (optional)    
+    - or use indexes to compare characters directly.
+Step 3️⃣
+Use two pointers:
+    - i → start (0)
+    - j → end (length - 1)
+Compare characters:
+    - if at any point they differ → not palindrome
+    - otherwise keep moving inward (i++, j--)
+Step 4️⃣
+    - If all characters matched → it’s a palindrome ✅
+5️⃣ Version That Ignores Case & Spaces (for sentences) :
+str = str.replaceAll("\\s+", "").toLowerCase(); // remove spaces & lowercase
+
+
+Q2. follow up question ?
+         check string like, "Madam" is palindrome or not ?
+
+
