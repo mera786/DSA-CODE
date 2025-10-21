@@ -1,1 +1,26 @@
 
+Q1. 🧩 1️⃣ What is a Substring?
+👉 A substring is a smaller part (or piece) of a larger string.
+It is formed by taking continuous characters from the original string.
+🔹 Example:
+String str = "Hello";
+All possible substrings are:
+                            H, e, l, l, o,
+                            He, Hel, Hell, Hello,
+                            el, ell, ello,
+                            ll, llo,
+                            lo
+🧮 2️⃣ Formula for Substring Count
+If the length of string = n,
+then the total number of substrings (excluding empty string) is:
+                                                         Total substrings= n × (n + 1) / 2 ;
+
+
+Q2. Follow up question :
+    print substring of "abc "  ?
+output Like,
+a ab abc 
+b bc 
+c
+                                                        
+
