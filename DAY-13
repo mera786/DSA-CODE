@@ -1,3 +1,17 @@
+TABLE OF BINARY NUMBER :
+| Decimal | Binary |
+| ------- | ------ |
+| 1       | 0001   |
+| 2       | 0010   |
+| 3       | 0011   |
+| 4       | 0100   |
+| 5       | 0101   |
+| 6       | 0110   |
+| 7       | 0111   |
+| 8       | 1000   |
+| 9       | 1001   |
+| 10      | 1010   |
+
 Q1. What is Bit (Binary Digit ) ?
  - A bit is the smallest unit/box of data in a computer.
  - It can have only two possible values — 0 or 1.
@@ -63,7 +77,7 @@ Binary confusion without 2’s complement :
                     - Computers cannot directly do addition/subtraction if negative numbers are not in a consistent format.
 here, How 2’s complement solves this :
 
-Q3. 🧠 1️⃣ What is 1’s Complement and 2’s Complement?
+🧠 1️⃣ What is 1’s Complement and 2’s Complement?
 These are methods to represent negative numbers in binary.
 🔹 1’s Complement
          - Take the binary of the positive number.
@@ -74,6 +88,98 @@ These are methods to represent negative numbers in binary.
                        -   −5 (1’s complement) → invert all bits → 1010
          - Problem with 1’s complement:
                             - There are two representations for 0: 0000 (+0) and 1111 (−0) → confusing
+🔹 2’s Complement
+         - Take the binary of the positive number.
+         - Invert all bits → then add 1 to the result.
+         - This is now the negative number.
+         - Example (4 bits):
+                 -     +5 → 0101
+                 -     Step 1: invert all bits → 1010
+                 -     Step 2: add 1 → 1010 + 1 = 1011
+                 -     So −5 = 1011
+Advantages of 2’s complement:
+         - Only one 0 (0000)
+         - Addition and subtraction work naturally
+         - Most computers use 2’s compleme
+
+
+Q3. Bit Subtraction
+Step 1: Write both numbers in binary
+        - Make sure both numbers have the same number of bits (add leading zeros if needed).
+        - Example: Subtract 5 − 3 using 4-bit binary :
+                                            num1 = 5 → 0101
+                                            num2 = 3 → 0011
+Step 2: Find 2’s complement of num2 :
+        - Invert all bits (0 → 1, 1 → 0) → this is 1’s complement
+        - Add 1 to the result → this is 2’s complement
+        - Example :
+                  num2 = 3 → 0011
+                  Step 1: Invert bits → 1100
+                  Step 2: Add 1 → 1100 + 1 = 1101
+Step 3: Add num1 and 2’s complement of num2 :
+               Example :
+                      0101  (num1 = 5)
+                    + 1101  (2’s complement of num2 = 3)
+                      -------
+                      10010
+Step 4: Handle carry (if fixed number of bits) :
+          - We are using 4-bit binary, so discard the 5th bit (overflow).
+Step 5: Convert binary result to decimal :
+          0010 → 2 ✅ correct
+
+
+Q4. Bitwise Operators  ?
+
+1️⃣ AND (&)
+Definition: 
+Compares each bit of two numbers and returns 1 if both bits are 1, otherwise 0.
+Example : 
+5 & 3 → 0101 & 0011 = 0001 → 1
+
+2️⃣ OR (|)
+Definition:
+Compares each bit of two numbers and returns 1 if any one of the bits is 1, otherwise 0.
+Example :
+5 | 3 → 0101 | 0011 = 0111 → 7
+
+3️⃣ XOR (^)
+Definition:
+Compares each bit and returns 1 if bits are different, otherwise 0.
+Example:
+5 ^ 3 → 0101 ^ 0011 = 0110 → 6
+
+4️⃣ NOT (~)
+Definition: 
+Flips all bits (0 → 1, 1 → 0).
+Example :
+~5 → ~0101 = 1010 → -6 (in 2’s complement for signed numbers)
+
+5️⃣ Left Shift (<<)
+Definition:
+Shifts all bits to the left by n positions, filling with 0s on the right.
+Example:
+5 << 1 → 0101 << 1 = 1010 → 10
+
+6️⃣ Right Shift (>>)
+Definition: 
+Shifts all bits to the right by n positions.
+  - For signed numbers, MSB (sign) is copied.
+  - Example:
+5 >> 1 → 0101 >> 1 = 0010 → 2
+
+
+7️⃣ Unsigned Right Shift (>>>) (Java specific)
+Definition:
+Shifts bits to the right, filling 0s on the left, ignoring sign.
+Example:
+-5 >>> 1 → fills left bits with 0 → large positive number
+
+
+
+
+
+
+
 
 
 
