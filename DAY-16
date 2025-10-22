@@ -1,0 +1,94 @@
+Q1. What is Datastructure ?
+A data structure is a 'simple way to keep and arrange data' in the computer so we can 'use it easily'.
+
+
+                                  Data Structure
+                                       |
+                 -------------------------------------------------
+                 |                                               |
+              Linear                                         Non-Linear
+                 |                                               |
+        ----------------------                         ----------------------
+        |                    |                         |                    |
+      Static              Dynamic                     Tree                Graph
+        |                    |
+      Array       ------------------------
+                   |          |           |
+              Linked List   Stack       Queue
+
+
+Note:-
+There are two types of data structures: primitive and non-primitive. Non-primitive data structures are again divided into linear and non-linear. and so on.....
+
+
+Q2. 🧩 What is an Array?
+        - An array is a group of elements that are stored together in one place in memory.
+        - All the elements in an array are of the same data type (like all integers or all strings).
+🎯 Purpose of an Array
+        - The main purpose of an array is to store many values in a single variable instead of creating many separate variables.
+        - Example:
+Instead of writing
+int a1 = 10;
+int a2 = 20;
+int a3 = 30;
+You can use an array:
+int[] arr = {10, 20, 30};
+💡 Why Arrays are Used
+        - To store multiple values of the same type easily.
+        - To access elements quickly using an index (like arr[0], arr[1]).
+        - To save memory and reduce code length.
+        - To process large data efficiently using loops.
+
+Note:-
+👉 In an array, each index is connected (mapped) to the memory address of its element.
+For example, if the first element is stored at address 3000, and each element takes 4 bytes,
+then the next element will be at 3004, the next at 3008, and so on.
+👉 The array variable stores the memory address of the first element.
+That’s why we say the array name points to the first element of the array.
+Example :
+int[] arr = {10, 20, 30};
+If the first element 10 is stored at memory address 3000,
+then:
+       arr[0] → address 3000
+       arr[1] → address 3004
+       arr[2] → address 3008
+And arr itself holds the address 3000 (the first element’s address).
+
+
+Array Index to Memory Address Mapping ?
+   - Formula to Find Memory Address of Any Element :
+        If:
+             Base_Address = address of first element (arr[0])
+             i            = index of the element you want
+             Size         = size of each element in bytes
+       Then the memory address of arr[i] is:    Address of arr[i] = Base_Address + i × Size_of_element
+       Example
+Suppose:
+int arr[5] = {10, 20, 30, 40, 50};
+Base address of arr[0] = 3000
+Size of int = 4 bytes
+Now, memory addresses:
+| Index `i` | Element | Memory Address Calculation | Address |
+| --------- | ------- | -------------------------- | ------- |
+| 0         | 10      | 3000 + 0 * 4               | 3000    |
+| 1         | 20      | 3000 + 1 * 4               | 3004    |
+| 2         | 30      | 3000 + 2 * 4               | 3008    |
+| 3         | 40      | 3000 + 3 * 4               | 3012    |
+| 4         | 50      | 3000 + 4 * 4               | 3016    |
+
+Ways to Declare an Array  ?
+Way 1: Declare and Then Initialize :
+int[] arr;         // Declaration
+arr = new int[5];  // Initialization with size 5
+
+Way 2: Declare and Initialize Together
+int[] arr = new int[5];  // Declaration + Initialization
+// Or directly with values
+int[] arr2 = {10, 20, 30, 40, 50};  // Size is automatically 5
+
+
+
+
+
+
+
