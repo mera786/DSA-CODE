@@ -1,5 +1,5 @@
 Q1. What is Bit (Binary Digit ) ?
- - A bit is the smallest unit of data in a computer.
+ - A bit is the smallest unit/box of data in a computer.
  - It can have only two possible values — 0 or 1.
 💡 Think of it like a simple switch:
 0 means OFF
@@ -8,6 +8,77 @@ Computers use bits to store and process all kinds of information — numbers, le
 Example:
 1 bit → can represent 2 values → 0 or 1
 2 bits → can represent 4 values → 00, 01, 10, 11
+3 bits → can represent 8 values → 000 , 001 , 010 , 011 , 100 , 101, 110 , 111    
+
+Note:-
+    - if there is n bits so The maximum number you can represent starting from 0  to  2^ⁿ − 1
+    - If you have n bits, they can form 2ⁿ unique combinations of 0s and 1s.
+    - 👉 Each combination is one distinct pattern that represents one value.
+    - Example :
+               - 4 bits = a group of 4 binary digits (like 0000 or 1101).
+               - 5 bits = a group of 5 binary digits (like 00000 or 10110).
+
+🧠 1️⃣ Bit Positions – MSB and LSB :
+| Term    | Full Form             | Meaning                               | Example (for 8-bit number `10110100`) |
+| ------- | --------------------- | ------------------------------------- | ------------------------------------- |
+| **MSB** | Most Significant Bit  | Leftmost bit (highest value position) | **1**0110100                          |
+| **LSB** | Least Significant Bit | Rightmost bit (lowest value position) | 1011010**0**                          |
+
+structure :
+👉 MSB -------- LSB
+Example:
+1 0 1 1 0 1 0 0
+⬆️ MSB      ⬇️ LSB
+
+🧩 2️⃣ Signed vs Unsigned Numbers :
+| Type                | Sign Information                                  | MSB Role                                        | Value Range Formula   | Example (4 bits)       |
+| ------------------- | ------------------------------------------------- | ----------------------------------------------- | --------------------- | ---------------------- |
+| **Unsigned Number** | ❌ No sign (only positive values)                  | MSB is just another value bit                   | [0, (2ⁿ − 1)]         | 0 to 15 (0000 to 1111) |
+| **Signed Number**   | ✅ MSB shows the sign (0 = positive, 1 = negative) | MSB denotes sign, remaining bits show magnitude | [−(2ⁿ⁻¹ − 1), (2ⁿ⁻¹ − 1)] | −7 to +7           |
+Note:-
+2’s complement allows one extra negative number (−8) compared to positive (+7) so formula will be :
+[−(2ⁿ⁻¹), (2ⁿ⁻¹ − 1)]
 
 
-START 13 NUM VIDEO FROM 9 MINUTES.
+Q2. 🧠 Bit Addition (Binary Addition) ?
+In binary, we only have two digits:
+👉 0 and 1
+So, when we add bits, we follow four simple rules 👇
+| Bit 1 | Bit 2 | Sum | Carry                      |
+| ----- | ----- | --- | -------------------------- |
+| 0 + 0 | →     | 0   | 0                          |
+| 0 + 1 | →     | 1   | 0                          |
+| 1 + 0 | →     | 1   | 0                          |
+| 1 + 1 | →     | 0   | 1 (carry 1 to next column) |
+
+Binary confusion without 2’s complement :
+                    - Suppose we try to store −1 and +5 in binary without a proper system.
+                    - If you just use sign bit only (0 = +, 1 = −) and remaining bits for value:
+                    - Example 3-bit numbers:     
+                                 -    +5 → ??? (3 bits can't store 5 properly, max is 3 bits → 0 to 7)
+                    - So let’s use 4 bits for simplicity:
+                                 -    +5 → 0101
+                                 -    −1 → ???  (if we just invert bits: 1110? or 101?) → confusion arises
+                    - You see, without a systematic method, −1 could look similar to another positive number.
+                    - Computers cannot directly do addition/subtraction if negative numbers are not in a consistent format.
+here, How 2’s complement solves this :
+
+Q3. 🧠 1️⃣ What is 1’s Complement and 2’s Complement?
+These are methods to represent negative numbers in binary.
+🔹 1’s Complement
+         - Take the binary of the positive number.
+         - Invert all bits (0 → 1, 1 → 0).
+         - The result is the negative number.
+         - Example (4 bits):
+                       -    +5 → 0101
+                       -   −5 (1’s complement) → invert all bits → 1010
+         - Problem with 1’s complement:
+                            - There are two representations for 0: 0000 (+0) and 1111 (−0) → confusing
+
+
+
+
+
+
+
+
