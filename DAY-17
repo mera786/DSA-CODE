@@ -1,0 +1,30 @@
+
+Q1. 🔍 What is Linear Search?
+Linear search is a basic searching technique in which we check each element one by one in a list or array until we find the target value (or reach the end).
+🧩 Example:
+Array = [10, 20, 30, 40, 50]
+Target = 30
+We check:
+       10 → not match
+       20 → not match
+       30 → ✅ match found at index 2
+Note: In Linear Search, the order of elements does not matter — you can search in unsorted or sorted arrays.
+
+Q2. Follow up question :
+find maximum value in the array ?
+arr = {1,-2,-9,11,15,4,8};
+hint :
+1. -> consider first index at maximum and then compare 
+or
+2. -> intialize with possible mimum value ?
+
+
+
+Q3. Follow up question :
+find minimum value in the array ?
+arr = {1,-2,-9,11,15,4,8};
+hint :
+1. -> consider first index at minimum and then compare 
+or
+2. -> intialize with possible maximum value ?
+ 
