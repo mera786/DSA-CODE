@@ -2,23 +2,23 @@ Q1. What is Datastructure ?
 A data structure is a 'simple way to keep and arrange data' in the computer so we can 'use it easily'.
 
 
-                                  Data Structure
-                                       |
-                 -------------------------------------------------
-                 |                                               |
-              Linear                                         Non-Linear
-                 |                                               |
-        ----------------------                         ----------------------
-        |                    |                         |                    |
-      Static              Dynamic                     Tree                Graph
-        |                    |
-      Array       ------------------------
-                   |          |           |
-              Linked List   Stack       Queue
-
-
-Note:-
-There are two types of data structures: primitive and non-primitive. Non-primitive data structures are again divided into linear and non-linear. and so on.....
+                             Data Structure
+                                   |
+            -------------------------------------------------
+            |                                               |
+       Primitive                                       Non-Primitive
+            |                                               |
+   ----------------------                       ------------------------------
+   |        |        |                          |                            |
+ Integer  Float   Character                Linear                       Non-Linear
+                                             |                                |
+                                 ----------------------           ----------------------
+                                 |                    |           |                    |
+                              Static              Dynamic       Tree                Graph
+                                 |                    |
+                              Array       ------------------------
+                                            |          |           |
+                                       Linked List   Stack       Queue
 
 
 Q2. 🧩 What is an Array?
@@ -77,14 +77,79 @@ Now, memory addresses:
 | 4         | 50      | 3000 + 4 * 4               | 3016    |
 
 Ways to Declare an Array  ?
-Way 1: Declare and Then Initialize :
+
+👉 Way 1: Declare and Then Initialize :
 int[] arr;         // Declaration
 arr = new int[5];  // Initialization with size 5
 
-Way 2: Declare and Initialize Together
+👉 Way 2: Declare and Initialize Together
 int[] arr = new int[5];  // Declaration + Initialization
 // Or directly with values
 int[] arr2 = {10, 20, 30, 40, 50};  // Size is automatically 5
+
+Note:- above line is actually a shortcut for:    int[] arr2 = new int[]{10, 20, 30, 40, 50};
+compiler does it for you automatically when you use {} initialization.
+
+
+Ways to Traverse on Array ?
+| Method        | Syntax                              | Can use index? | Version |
+| ------------- | ----------------------------------- | -------------- | ------- |
+| For loop      | `for (int i=0; i< arr.length; i++)` | ✅ Yes          | All     |
+| For-each loop | `for (int x : arr)`                 | ❌ No           | Java 5+ |
+| While loop    | `while(i < arr.length)`             | ✅ Yes          | All     |
+| Do-while loop | `do { ... } while(i < arr.length);` | ✅ Yes          | All     |
+| Stream API    | `Arrays.stream(arr).forEach(...)`   | ❌ No           | Java 8+ |
+
+Note:-
+Using Arrays.toString() :  Not a traversal but useful for debugging.
+System.out.println(Arrays.toString(arr));
+
+
+
+Q1. follow up question insertion at any specific position?
+    you have 7 size array having elements only 6 elements now you have to insert a particular elements at given index x ?
+   input : 1,2,3,5,6,7 ? index x = 3? elements e = 4 ?
+Note:- first check index is within range/valid or not
+
+
+Q2. Follow up question delete element at any specific position ?
+    you have 7 size array having elements only 7 elements now you have to delete a particular elements at given index x ?
+   input : 1,2,3,4,5,6,7 ? index x = 3?  output : 1,2,3,5,6,7,0
+Note:- first check index is within range/valid or not
+
+
+🧩 Difference Between Size and Capacity in a Dynamic Array
+Size:
+→ The number of elements that are currently stored in the array.
+(Example: If an array contains 5 elements, its size = 5.)
+Capacity:
+→ The maximum number of elements the array can hold before it needs to grow (resize).
+(Example: If the array can hold up to 10 elements, its capacity = 10.)
+Note:
+👉 The concepts of size and capacity apply only to dynamic arrays,
+because a static array has a fixed size that cannot change after creation.
+
+
+🧩 Difference Between 1D and Multi-dimensional Array ?
+| Feature               | 1D Array (One-Dimensional)              | Multi-Dimensional Array                                                |
+| --------------------- | --------------------------------------- | ---------------------------------------------------------------------- |
+| **Definition**        | A list of elements in a **single row**. | An array within an array.                                              |
+| **Structure**         | Linear (single line)                    | Table-like (matrix) or cube-like (3D)                                  |
+| **Example**           | `int[] arr = {1, 2, 3, 4, 5};`          | `int[][] arr = {{1,2,3},{4,5,6}};`                                     |
+| **Accessing Element** | Using **one index**: `arr[2]`           | Using **two or more indices**: `matrix[1][2]`                          |
+| **Visualization**     | [1, 2, 3, 4, 5]                         | [[1,2,3], [4,5,6]] (like a table)                                      |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
