@@ -149,6 +149,7 @@ also write code for printing it . output :
 1 2
 3 4
 5 6
+Note:- in 2D array if you want to deal with all elements (rows and columns) then 2 loops are required.
 
 
 
