@@ -1,1 +1,63 @@
+Q1. 🔍 What is Searching?
+Searching means finding something in a list or collection.
+
+🧩 Types of Searching
+There are mainly two main types of searching in programming:
+  1. Linear Search (Sequential Search)
+         👉 Check each element one by one until you find the target.
+         Example:
+              List: 5, 8, 2, 9, 1
+              Search for: 9
+         Steps:
+                Check 5 ❌
+                Check 8 ❌
+                Check 2 ❌
+                Check 9 ✅ Found it!
+         Time complexity: O(n)
+   2. Binary Search :
+                 👉 Works only on sorted lists either in ascending or descending.It’s much faster than linear search.
+       For Ascending How it works:
+                             Find the middle element
+                             If it’s the number → ✅ Found
+                             If the number is smaller, search in left half
+                             If bigger, search in right half
+                  Example:
+                         Sorted list: 1, 3, 5, 7, 9, 11, 13
+                         Search: 9
+                  Steps:
+                        Middle = 7 → 9 is bigger → search right side
+                        Right side: 9, 11, 13 → middle = 11 → 9 is smaller → search left
+                        Found 9 ✅
+         Time complexity: O(log n)
+Note:-
+for finding mid ,
+👉 Formula: mid = (lowIndx + highIndx) / 2;   -> might cause integer overflow (go beyond integer limit). so below formula use
+👉 Safe Formula:  mid = lowIndx + (highIndx - lowIndx) / 2;
+
+
+Follow up question :
+ Q1. write binary search on ascending array find target and return it's index else -1  where 
+     int arr [] = {1,2,3,4,5,67);
+     int tar = 3;
+     output : 2 index
+
+ Q2. write binary search on descending array find target and return it's index else -1  where 
+     int [] arr = {91,6,4,2,2,1};
+     int tar = 6;
+     output : 1 index
+
+Q. Order-agnostic binary search means ?
+a binary search that works on both ascending and descending sorted arrays — without knowing the order in advance.
+⚙️ Steps :
+         Check first and last element
+                            - If first < last → array is ascending
+                            - Else → array is descending
+         Then use binary search rules for that order.
+
+Q3. write binary search on sorted array find target and return it's index else -1 without knowing the order of sorted array so which one binary sort logic to be used where 
+     int [] arr = {91,6,4,2,2,1};
+     int tar = 6;
+     output : 1 index
+ Note:- use Order-agnostic binary search.
+
 
