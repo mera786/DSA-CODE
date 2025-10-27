@@ -1,0 +1,17 @@
+Leetcode 34 : Q1. give an array in ascending order  and target you have to find first occurrence and last occurrence and return their index if exist or return -1 ?
+Input :
+        int [] arr = {2,2,4,4,4,4,4,8,12,16};
+        int tar = 4; 
+Output : first occurrence at index 2
+         last occurrence at index 6
+
+
+Q2. given an array find the occrrence of elements using binary search return counts if exist or return -1 ?
+Input :
+        int [] arr = {2,2,4,4,4,4,4,8,12,16};
+        int tar = 4; 
+Output: first occurrence 5 times
+
+
+
+
