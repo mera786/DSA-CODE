@@ -8,9 +8,43 @@ Output : first occurrence at index 2
 
 Q2. given an array find the occrrence of elements using binary search return counts if exist or return -1 ?
 Input :
-        int [] arr = {2,2,4,4,4,4,4,8,12,16};
+        int [] arr = {2,2,4,4,4,4,4,8,10,12,16};
         int tar = 4; 
 Output: first occurrence 5 times
+
+
+
+Q3. You are given a sorted array of integers arr[] (in ascending order) and an integer x.
+Your task is to find:
+                   - Floor of x:  x se chhota ya barabar sabse bada number
+                   🔹 Example: 
+                               arr = [2, 4, 6, 8, 10]
+                               x = 7
+                       Ab hum x = 7 ke liye floor dhoondhna chahte hain. 7 se chhote ya barabar numbers kaun se hain?
+                                  → 2, 4, 6
+                                 Inme se sabse bada number kaun sa hai?
+                                       → 6
+                                   🟩 So, floor = 6
+                   - Ceiling of x:  x se bada ya barabar sabse chhota number
+                   🔹 Example:
+                               arr = [2, 4, 6, 8, 10]
+                               x = 7
+                      Ab hum x = 7 ke liye ceiling dhoondhna chahte hain. 7 se bade ya barabar numbers kaun se hain?
+                                  → 8, 10
+                                  Inme se sabse chhota number kaun sa hai?
+                                  → 8
+                                  🟩 So, Ceiling = 8
+
+
+LeetCode: Q744. Find Smallest Letter Greater Than Target ?
+Input: 
+     letters = ["c","f","j"],
+     target = "a"
+Output: "c"
+
+
+
+
 
 
 
