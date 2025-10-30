@@ -6,7 +6,7 @@ Steps to solve :
                     - Remove the last digit using num = num / 10
                     - Increase the counter → count++
            - When the loop finishes, count will have the total number of digits.
-Note:- to handle specail condition like 0 for input : use if condition and directly print 1 .
+Note:- to handle specail condition like 0 for input : use if condition and directly print 1 . 
 
 
 (2) Check if a Number is armstrong or not. ?
