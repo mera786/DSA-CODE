@@ -1,48 +1,42 @@
 Example for understanding pass by reference as pass by value :
+---------------------------------------------------------------
 
-class Student {
-    int marks;
+💡 Shortcut to Remember
+                      Java = “Pass by value of the reference” (means reference ka copy jaata hai, reference khud nahi).
 
-    // Method to set marks
-    void setMarks(int m) {
-        marks = m;
-    }
 
-    // Display method
-    void show() {
-        System.out.println("Marks: " + marks);
-    }
+class A {
+    int val;
 }
 
-public class Test {
-    // Method that modifies the object's field
-    static void changeMarks(Student s) {
-        s.marks = s.marks + 10; // modify existing object's field
-        System.out.println("Inside changeMarks(): " + s.marks);
-    }
-
-    // Method that tries to reassign the reference
-    static void changeReference(Student s) {
-        s = new Student();  // new object created
-        s.marks = 100;
-        System.out.println("Inside changeReference(): " + s.marks);
-    }
-
-    public static void main(String[] args) {
-        // create two objects (without constructor)
-        Student s1 = new Student();
-        Student s2 = new Student();
-
-        // initialize using method
-        s1.setMarks(50);
-        s2.setMarks(70);
-
-        System.out.println("Before changeMarks(): s1.marks = " + s1.marks);
-        changeMarks(s1);  // modifies the same object
-        System.out.println("After changeMarks(): s1.marks = " + s1.marks);
-
-        System.out.println("\nBefore changeReference(): s2.marks = " + s2.marks);
-        changeReference(s2);  // tries to change the reference
-        System.out.println("After changeReference(): s2.marks = " + s2.marks);
-    }
+void modify(A obj) {
+    obj.val = 100;
 }
+
+public static void main(String[] args) {
+    A a = new A();
+    a.val = 50;
+    modify(a);
+    System.out.println(a.val);
+}
+
+Output: 100
+
+🧩 Explanation:
+              - Yahan bhi pass by value hi hua, par value ka matlab hai object reference ka copy.
+              - Method me obj aur a dono same object ko point karte hain.
+              - Isliye object ke andar ka data change ho gaya.
+👉 Par agar method ke andar hum reference ko reassign kar dein, to original par effect nahi hoga:
+
+void modify(A obj) {
+    obj = new A(); // new object
+    obj.val = 200;
+}
+
+A a = new A();
+a.val = 50;
+modify(a);
+System.out.println(a.val);
+ Output : 50
+
+
