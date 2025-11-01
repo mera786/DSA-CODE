@@ -132,7 +132,7 @@ After the loop, check the flag:
        - isPrime == false → ❌ Not Prime
 
 
-Q6. 🧮 Sieve of Eratosthenes  ?
+Q6. 🧮 Sieve of Eratosthenes (ए-रा-टॉस-थ-नीज़) ?
 The Sieve of Eratosthenes is an easy and fast method to find all prime numbers up to a given number n. Instead of checking each number one by one, 
 we cross out (remove) all multiples of each prime number.
 Example:  Find all prime numbers up to 30.
@@ -161,7 +161,7 @@ Step 6️⃣
       After the loop ends, all indexes that are still true in the array are prime numbers.
 
 
-Q7. HCF / GCD — Highest Common Factor / Greatest Common Divisor ?
+Q7. HCF / GCD — Highest Common Factor / Greatest Common Divisor ? ***
 Defination :
 - HCF or GCD means the largest same divisor of two or more numbers.that means no remainder is left.
 💡 Example:  For numbers 12 and 18:
