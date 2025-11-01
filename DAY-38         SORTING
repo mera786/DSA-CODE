@@ -1,0 +1,111 @@
+Q1. 🧩 What is the meaning of sorted?
+Sorted means arranged in a specific order. sorted happens in two ways :
+-> ascending order (smallest to largest) : 1, 2, 3, 5, 8
+-> descending order ( largest to smalles ) : 8, 5, 3, 2, 1
+
+
+Types of Sorting :
+------------------
+
+1. Bubble Sort :- 
+👉 Compares two numbers at a time and swaps them if they are in the wrong order.
+It keeps doing this again and again until everything is sorted.
+Example:
+List: 5, 3, 2
+         Compare 5 & 3 → swap → 3, 5, 2
+        Compare 5 & 2 → swap → 3, 2, 5
+        Compare 3 & 2 → swap → 2, 3, 5
+✅ Final: 2, 3, 5
+             🔹 Steps: To Implement Bubble Sort.
+                                             1️⃣ Run the outer loop from 0 to n-1.  (It ensures all passes happen.)
+                                             2️⃣ Inside it, run an inner loop from 0 to n-i-1. (Each pass pushes the largest element to the end.)
+                                             3️⃣ Compare adjacent elements:
+                                                                    If arr[j] > arr[j+1], then swap them.
+                                             4️⃣ Repeat until the entire array is sorted.
+follow up question :
+int [] arr = {5,3,2,1,9,8}; // 1,2,3,5,8,9
+
+
+
+
+2. Selection Sort :- 
+👉 Finds the smallest number in the list and puts it in the first position,
+then repeats for the rest.
+Example:
+List: 4, 2, 1, 3
+             Smallest is 1 → put it first → 1, 2, 4, 3
+            Next smallest is 2 → already in place
+            Next smallest is 3 → swap with 4
+✅ Final: 1, 2, 3, 4
+               ⚙️ Steps to Implement Selection Sort :  UN-IDIRECTIONAL 
+                                              1️⃣ Start outer loop →
+                                                        Run i from 0 to n-2 to fix each element’s correct position one by one.
+                                              2️⃣ Assume current index as minimum →
+                                                        Set min = i, assuming the first unsorted element is the smallest.
+                                              3️⃣ Search for smaller element →
+                                                        Run inner loop j from i+1 to n-1 to find the actual smallest element’s index.
+                                              4️⃣ Update minimum index →
+                                                        If any arr[j] < arr[min], update min = j.
+                                              5️⃣ Swap if needed →
+                                                        After the inner loop, swap arr[i] with arr[min] if min != i.
+                                              6️⃣ Repeat the process →
+                                                        Continue until all elements are placed in their correct positions.
+                                              7️⃣ Result →
+                                                        Array becomes sorted in ascending order.
+               ⚙️ Steps to Implement Selection Sort :  BI-IDIRECTIONAL 
+
+
+
+
+
+
+
+
+
+
+
+
+3. Insertion Sort
+👉 Takes one number at a time and inserts it in the correct place among the sorted ones.
+Example:
+List: 3, 1, 2
+         Start with 3 (already sorted)
+         Insert 1 before 3 → 1, 3
+         Insert 2 between 1 and 3 → 1, 2, 3
+✅ Final: 1, 2, 3
+         🧩 Step-by-Step Implementation Explanation :
+                                           Step 1: Start with the second element :
+                                                             - We assume the first element of the array is already sorted.
+                                                             - So, we start from index 1 (the second element).
+                                           Step 2: Store the current element :
+                                                             - Take the current element (say temp = arr[i]) from the unsorted part.
+                                                             - This is the element we want to insert into the sorted part.
+                                           Step 3: Compare and shift :
+                                                             - Initialize a pointer j = i - 1 (the last index of the sorted part).
+                                                             - While j >= 0 and arr[j] > temp:
+                                                                                      Shift the element arr[j] one position to the right (arr[j + 1] = arr[j]).
+                                                                                      Decrease j by 1 to continue checking previous elements.
+                                           Step 4: Insert the element :
+                                                             - When the correct position is found (loop stops), insert the temp element at that position:  arr[j + 1] = temp.
+                                           Step 5: Repeat :
+                                                             - Move to the next element in the array (i++) and repeat steps until all elements are sorted.
+follow up question :
+ int [] arr = {8,4,1,5,9,2}; //  1 2 4 5 8 9 
+
+
+
+
+
+
+
+
+4. Merge Sort
+👉 Splits the list into smaller parts, sorts each part, and then merges them together.
+Example idea:
+[5, 2, 1, 4]
+           → Split into [5, 2] and [1, 4]
+           → Sort each → [2, 5], [1, 4]
+           → Merge → [1, 2, 4, 5]
+
+5. Quick Sort
+👉 Picks one number as a pivot, puts smaller numbers to the left, bigger ones to the right, and then sorts both sides again.
