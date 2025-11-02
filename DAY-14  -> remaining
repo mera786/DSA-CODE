@@ -1,0 +1,10 @@
+
+Note:-
+-> in even number like, 4(100) least significant bit (LSB) is always 0.
+-> in odd number like, 9(1001) least significant bit (LSB) is always 1.
+
+{
+odd + odd = even 
+even + odd = odd
+even + even = even 
+}
