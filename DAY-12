@@ -161,7 +161,7 @@ Step 6️⃣
       After the loop ends, all indexes that are still true in the array are prime numbers.
 
 
-Q7. HCF / GCD — Highest Common Factor / Greatest Common Divisor ? ***
+Q7. HCF / GCD — Highest Common Factor / Greatest Common Divisor ?
 Defination :
 - HCF or GCD means the largest same divisor of two or more numbers.that means no remainder is left.
 💡 Example:  For numbers 12 and 18:
@@ -183,6 +183,10 @@ Easy Definition:
                        - 👉 Common multiples = 12, 24, ...
                        - 👉 Smallest common multiple = 12
                        - ✅ So, LCM of 4 and 6 is 12.
+STEPS :
+      -> find GCD first,
+      -> do n1 * n2 / gcd. you will find the result.
+
 Follow-up Question :
 Wrtie code for finding GCD of 24 and 36 there are two numbers?
 
@@ -196,7 +200,7 @@ Now check the relationship:
 👉 12 × 18 = 216 ✅
 
 
-Q9. 🧮 Euclidean Algorithm For Finding GCD ?
+Q9. 🧮 Euclidean (यूक-ली-डियन) Algorithm For Finding GCD ?
 The Euclidean Algorithm is an easy way to find the GCD (Greatest Common Divisor) of two numbers.
     - Subtract or divide the smaller number from the bigger number again and again.
     - When the remainder becomes 0, the last non-zero remainder is the GCD.
@@ -229,7 +233,7 @@ Formula :
 if a and b are two numbers, then lcm(a,b) * gcd(a,b) = a*b
 
 
-Q11. 🧮 What is Modular Arithmetic?
+Q11. 🧮 What is Modular Arithmetic?              ___________________________________________START_________________________________________________
 Modular Arithmetic is math with remainders.
 When we divide a number by another number, the remainder is the result in modular arithmetic.
 We write it as:
