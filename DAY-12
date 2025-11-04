@@ -233,7 +233,7 @@ Formula :
 if a and b are two numbers, then lcm(a,b) * gcd(a,b) = a*b
 
 
-Q11. 🧮 What is Modular Arithmetic?              ___________________________________________START_________________________________________________
+Q11. 🧮 What is Modular Arithmetic?
 Modular Arithmetic is math with remainders.
 When we divide a number by another number, the remainder is the result in modular arithmetic.
 We write it as:
@@ -290,7 +290,7 @@ So, 5!=5×24=120✅
 0! = 1 (by definition — special mathematical rule)
 
 
-Q13. Find trailing zeros in a factorial ?
+Q13. Find trailing zeros in a factorial ?              ___________________________________________START_________________________________________________
              
  a. How many zeros are at the end of N! ?
 Trailing zeros in a number come from factors of 10. Each 10 = 2 × 5.
