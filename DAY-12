@@ -233,6 +233,22 @@ Formula :
 if a and b are two numbers, then lcm(a,b) * gcd(a,b) = a*b
 
 
+Q10.1  What is Fast Exponentiation (Binary Exponentiation)  ?
+Fast Exponentiation is a smarter and faster way to compute powers — it reduces the number of multiplications by using a mathematical trick.
+It works based on this idea:
+   - If the exponent n is even:  num^pow = (num^(pow/2)) × (num^(pow/2))    => num= num * num ;   pow=pow/2;
+   - If the exponent n is odd:   num^pow = num × (num^(pow-1)) 
+Example :
+Let’s compute 2¹⁰ step by step:
+2¹⁰ = (2⁵) × (2⁵)
+We need 2⁵, so we calculate that:
+2⁵ = 2 × (2⁴)
+and
+2⁴ = (2²) × (2²)
+and
+2² = (2¹) × (2¹)
+
+
 Q11. 🧮 What is Modular Arithmetic?
 Modular Arithmetic is math with remainders.
 When we divide a number by another number, the remainder is the result in modular arithmetic.
@@ -292,63 +308,51 @@ So, 5!=5×24=120✅
 
 Q13. Find trailing zeros in a factorial ?              ___________________________________________START_________________________________________________
              
- a. How many zeros are at the end of N! ?
-Trailing zeros in a number come from factors of 10. Each 10 = 2 × 5.
-So every pair of a 2 and a 5 in the prime factors of N! contributes one trailing zero.
+suppose you are given a number '456700442000' can you calculate the number of zeros in it? Yes, you can easily, 
+simply use the extraction and reduction method to extract the digits from the end and check if it is a non zero number.
+   1. if it is 0, add the count.
+   2. if it is non zero, break the loop.
+count is your answer, simple!
+But when you are asked to find trailing zeros from factorial of a number. There is a high chance that this number might exceed 
+the range of Integer/long and you can't store it! So, if you can't store it, how will you find it's trailing zeros? let's understand, 
+what brings zero at the end of a number!
+   1. Suppose the number is '68' lets find its factors-> 68 = 2217
+   2. Suppose the number is '70' lets find its factors-> 70 = 257
+   3. Suppose the number is '680' 680 = 222517
+   4. Suppose the number is '6800' 6800 = 22225517
+did you observe anything?
+yes,
+68 has zero pairs of 2 and 5. 
+70 has one pair of 2 and 5.
+680 has one pair of 2 and 5. 
+6800 has two pair of 2 and 5.
+Bs ho gya question solve! find all the pairs of 2 and 5.
+But but but... lets come back to factorial.
+!3 = 321 !7 = 7654321 (1 pair of 5,2) !12 = 12111098765432*1 (2 pair of 5,2)
+Observations->
+We can see that 2 will be there for every number greater than 1. (obviously) so be smart and calculate only 5's because 
+count of '2s' will always be greater than equal to count of '5s'.
+5 repeats in interval of 5. ex -> 5, 10, 15, and so on
+Therefore, floor of (N/5) will give the correct answer! But wait what about squares, cubes and so on? Like..
+'5' has one '5'
+'10' has one '5' (5*2)
+'15' has one '5'
+'20' has one '5'
+'25' has two '5' (5*5, square) ....
+'125' has three '5' (555, cube).
+conclusion->
+To handle the special condition we can say.
+for square case-> N/25 + N/5
+for cube case-> N/125 + N/25 + N/5
+and so on...
+Example -> !30 = 302928..2524*..20...1514*..109*..5*4..*1 (7 pairs of 5,2)
 
- b. Key insight (why we only count 5s)
-    In N! = 1 × 2 × 3 × ... × N, there are far more factors of 2 than 5 (even numbers give lots of 2s).
-    Therefore the limiting factor is how many 5s appear in the prime factorization of N!.
-    So: number of trailing zeros = number of times 5 divides N! (i.e., count of factors 5).
+Since 30 is greater than 25, -> 30 / 5 + 30 / 25 -> floor (6) + floor(1.2) -> 6 + 1 -> 7
 
-c. Counting 5s (the formula) :
-Formula :  zeros=⌊N/5​⌋+⌊N/5^2​⌋+⌊N/5^3​⌋+...
-Stop when 5^k  > N
-Explanation in words:
-⌊N/5⌋ counts numbers divisible by 5 (each contributes at least one 5).
-⌊N/25⌋ counts numbers divisible by 25 (they contribute an extra 5).
-⌊N/125⌋  counts numbers divisible by 125 (they contribute yet another 5), and so on.
-
- d. Step-by-step method (beginner steps)
-     - Take your input N.
-     - Set count = 0.
-     - Set p = 5.
-     - While p <= N:
-            - Add floor(N / p) to count.
-            Multiply p by 5 (next power of 5).
-When loop ends, count is the number of trailing zeros in N!.
-
-Example 1 — small (N = 30) — show arithmetic clearly
-Compute:
-     - ⌊30/5⌋=6 (numbers: 5,10,15,20,25,30)
-     - ⌊30/25⌋=1 (25 gives an extra 5)
-     - ⌊30/125⌋=0 stop here
-Sum = 6+1=7
-So 30! has 7 trailing zeros. (Matches your example.)
-
-Example 2 — large (N = 456700442000) — show first divisions
-We use the same process. I’ll show the divisions step-by-step (floor results):
-⌊N/5⌋=91,340,088,400
-⌊N/25⌋=18,268,017,680
-⌊N/125⌋=3,653,603,536
-⌊N/625⌋=730,720,707
-⌊N/3125⌋=146,144,141
-⌊N/15625⌋=29,228,828
-⌊N/78125⌋=5,845,765
-⌊N/390625⌋=1,169,153
-⌊N/1,953,125⌋=233,830
-⌊N/9,765,625⌋=46,766
-⌊N/48,828,125⌋=9,353
-⌊N/244,140,625⌋=1,870
-⌊N/1,220,703,125⌋=374
-⌊N/6,103,515,625⌋=74
-⌊N/30,517,578,125⌋=14
-⌊N/152,587,890,625⌋=2
-Next power =762,939,453,125>𝑁 so stop.
-Add them all up: 114,175,110,493
-So 456,700,442,000! has 114,175,110,493 trailing zeros.
-
-
+STEPS:
+ 1. doubl res = 0;
+ 2. for(int i = 5; i<=num; i= i * i){ res = res+Math.floor(num/i)}
+ 3. return res;
 
 
 
