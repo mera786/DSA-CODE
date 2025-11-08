@@ -1,4 +1,9 @@
 
+🧠 What is Bit Masking (Simple Definition)
+👉 Bit masking means using bitwise operators (like AND, OR, XOR, NOT) with a specific binary number (called a mask) to check, set, or clear certain bits of another number.
+💡 Think of it like this:
+A mask works like a filter — it “hides” or “shows” only the bits you want to work with.
+
 Note:-
 -> in even number like, 4(100) least significant bit (LSB) is always 0.
 -> in odd number like, 9(1001) least significant bit (LSB) is always 1.
