@@ -54,7 +54,7 @@ Example:
 | Type                | Sign Information                                  | MSB Role                                        | Value Range Formula   | Example (4 bits)       |
 | ------------------- | ------------------------------------------------- | ----------------------------------------------- | --------------------- | ---------------------- |
 | **Unsigned Number** | ❌ No sign (only positive values)                  | MSB is just another value bit                   | [0, ((2ⁿ) − 1)]         | 0 to 15 (0000 to 1111) |
-| **Signed Number**   | ✅ MSB shows the sign (0 = positive, 1 = negative) | MSB denotes sign, remaining bits show magnitude | [−(2ⁿ⁻¹ − 1), (2ⁿ⁻¹ − 1)] | −7 to +7           |
+| **Signed Number**   | ✅ MSB shows the sign (0 = positive, 1 = negative) | MSB denotes sign, remaining bits show magnitude | [−(2ⁿ⁻¹ - 1), (2ⁿ⁻¹ − 1)] | −7 to +7           |
 
 
 Q2. 🧠 Bit Addition (Binary Addition) ?
@@ -74,17 +74,11 @@ Note in both addition when sum of two numbers/digits become two digits like 9+2 
 Q3. Bit Subtraction  ?
 👇
 Binary confusion without 2’s complement :
-                    - Suppose we try to store Decimal negative num −1 and Decimal positive num +5 in binary without a proper system.
-                    - If you just use sign bit only (0 = +, 1 = −) and remaining bits for value:
-                    - Example 3-bit numbers:     
-                                 - Decimal num +5 → ??? (3 bits can't store 5 properly, max is 3 bits → 0 to 7)
-                    - So let’s use 4 bits for simplicity:
-                                 -    +5 → 0101
-                                 -    −1 → ???  (if we just invert bits: 1110? or 101?) → confusion arises
-                    - You see, without a systematic method, −1 could look similar to another positive number.
-                    - Computers cannot directly do addition/subtraction if negative numbers are not in a consistent format.
-here, How 2’s complement solves this :
-
+                    - Suppose we try to store Decimal negative num −1 and Decimal positive num +5 in binary without a proper system. where
+                            1 : 0 0 1 
+                           -1 : 1 0 1 (binary)
+                           +5 : 1 0 1
+    so look -1 binary and +5 binary looking same so how will you know which one is this . that's why 2's complement introduce to solve this problem.
 🧠 1️⃣ What is 1’s Complement and 2’s Complement?
 These are methods to represent negative numbers in binary.
 🔹 1’s Complement
@@ -95,20 +89,20 @@ These are methods to represent negative numbers in binary.
                        - decimal num +5 → 0101 (binary)
                        - decimal num  −5 (1’s complement) → invert all bits → 1010 (binary)
          - Problem with 1’s complement:
-                            - There are two representations for 0: 0000 (+0) and 1111 (−0) → confusing
+                            - There are two representations for 0: 0000 (+0) and 1111 (−0) → confusing which does not make any sense because +0 and -0 bat same hai eventually hai to 0 hee
 🔹 2’s Complement
-         - Take the binary of the positive number.
-         - Invert all bits → then add 1 to the result.
+         - Take the 1's complement number.
+         - then add 1 to the result.
          - This is now the negative number.
          - Example (4 bits):
-                 -     +5 → 0101
-                 -     Step 1: invert all bits → 1010
-                 -     Step 2: add 1 → 1010 + 1 = 1011
-                 -     So −5 = 1011
-Advantages of 2’s complement:
-         - Only one 0 (0000)
-         - Addition and subtraction work naturally
-         - Most computers use 2’s complement
+                 -     +5 → 0 1 0 1 (bache hue position pe 0)
+                 -     Step 1: invert all bits → 1 0 1 0
+                 -     Step 2: add 1 → 
+                                     1 0 1 0 
+                                         + 1 
+                                   ------------
+                                     1 0 1 1
+                 -     So −5 = 1 0 1 1
 
 Step 1: Write both numbers in binary
         - Make sure both numbers have the same number of bits (add leading zeros if needed).
@@ -134,13 +128,9 @@ Step 5: Convert binary result to decimal :
           0010 → 2 ✅ correct
 
 
-🧠 What is Bit Masking (Simple Definition)
-👉 Bit masking means using bitwise operators (like AND, OR, XOR, NOT) with a specific binary number (called a mask) to check, set, or clear certain bits of another number.
-💡 Think of it like this:
-A mask works like a filter — it “hides” or “shows” only the bits you want to work with.
 
-
-
+BIT MANUPULATION
+_________________________________
 
 Q4. Bitwise Operators  ?
 
@@ -179,7 +169,7 @@ Output(0110) → 6
 
 4️⃣ NOT (~)
 Definition: 
-Flips all bits (0 → 1, 1 → 0).
+Flips all bits (0 → 1, 1 → 0). used for 1's complement
 Example :
 ~5 → 
    ~ 0 1 0 1 
@@ -216,6 +206,8 @@ Definition:
 Shifts bits to the right, filling 0s on the left, ignoring sign.
 Example:
 -5 >>> 1 fills left bits with 0 → large positive number
+
+
 
 
 
