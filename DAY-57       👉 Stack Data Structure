@@ -1,1 +1,173 @@
+Q1. What is a Stack?
+A stack is a linear data structure that follows the Last In First Out (LIFO) principle. It means the last element that was added to the stack will be the first one to be removed. 
+Imagine a stack of books; the last book that was added to the pile will be the first book to be removed. Similarly, in a stack data structure, 
+the last element added will be the first one to be removed.
+
+
+Q2. Stack Operations :
+Push():
+This operation adds an element to the top of the stack. 
+
+Pop(): 
+This operation removes the top element from the stack. In addition to these basic operations
+
+Peek(): 
+This operation retrieves the top element from the stack without removing it. 
+
+isEmpty(): 
+This operation checks if the stack is empty or not.
+
+size(): 
+This operation returns the number of elements currently present in the stack
+
+
+
+Q3. Types of Stack Implementation:
+- Fixed Size Stack :
+A fixed size stack is a stack that has a pre-defined maximum size, and once it is reached, it cannot accept any more elements. This type of stack is useful when 
+the maximum number of elements that can be stored is known in advance, and there is no need to add more elements than the pre-defined size. 
+Fixed size stacks are implemented using arrays.
+                    - Fixed size stacks have the following advantages:
+                                               - They are simple and easy to implement.
+                                               - They are efficient in terms of memory usage because the size is fixed.
+                                               - They are faster than dynamic size stacks because they do not have to check for resizing.
+                    - fixed size stacks have a few disadvantages:
+                                               - They are limited in size and cannot accept more elements than the pre-defined size.
+                                               - They may waste memory if the stack is not completely full.
+                                               - They cannot be resized once the maximum size is reached.
+🧩 Fixed-size Stack Implementation (using array)
+STEPS: 1
+Create below variables :
+     1. stach[]             : To store stack elements 
+     2. Top pointer (index) : To track the top element’s position
+     3. Capacity (size)     : Maximum number of elements stack can hold
+STEPS 2 :
+Initalize variables using constructor :
+STEPS 3 :
+Develop methods as per requirements Methods like,
+     -  push(), 
+     -  pop(), 
+     -  peek(), 
+     -  isEmpty(), 
+     -  size(),
+     -  isFull()
+
+- Dynamic Size Stack :
+A dynamic size stack, also known as a resizable stack, is a stack that can grow or shrink in size as needed. 
+Dynamic size stacks are implemented using dynamic arrays, such as ArrayLists in Java or LinkedList.
+                    - Dynamic size stacks have the following advantages:
+                                               - They can grow or shrink in size as needed, making them more flexible than fixed size stacks.
+                                               - They do not waste memory because they can resize dynamically.
+                                               - They can accept any number of elements, unlike fixed size stacks.
+                    - dynamic size stacks also have a few disadvantages:
+                                               - They may be slower than fixed size stacks because of the overhead involved in resizing.
+                                               - They may cause memory fragmentation if elements are frequently added and removed.
+                                               - They may not be as memory-efficient as fixed size stacks for small data sets.
+
+
+
+
+
+
+
+
+
+
+ ********************************************* CODE *****************************************************************
+
+import java.util.Stack;
+
+public class MyStack {
+
+    int stack[];
+    int topIndx ;
+    int maxCapacity;
+
+   public MyStack(int maxCapacity){
+        stack=new int[maxCapacity];
+        topIndx=-1;
+        this.maxCapacity=maxCapacity;
+    }
+
+    public void  push(int element){
+       if(topIndx>=maxCapacity-1){
+           System.out.println("stack is full -overflow");
+           return;
+       }
+       topIndx++;
+       stack[topIndx]=element;
+    }
+
+    public boolean isEmpty(){
+       if(topIndx<=-1){
+           return true;
+       }
+       return false;
+    }
+
+    public int size(){
+      return topIndx+1;
+    }
+
+    public int peek(){
+       if(isEmpty()){
+           return Integer.MIN_VALUE;
+       }
+       return stack[topIndx];
+    }
+
+    public int pop(){
+       int val = peek();
+       if(val!=Integer.MIN_VALUE){
+           topIndx--;
+       }
+       return val;
+    }
+
+    public int get(int indx){
+       if(topIndx<=-1){
+          return Integer.MIN_VALUE;
+       }
+        return stack[indx];
+    }
+
+    public void printStack(){
+       for (int i=0; i<=topIndx; i++){
+           System.out.print(stack[i]+" ");
+       }
+
+    }
+
+    public static void main(String[] args) {
+     MyStack myStack = new MyStack(5);
+     myStack.push(8);
+     myStack.push(4);
+     myStack.push(9);
+     myStack.push(5);
+     myStack.push(88);
+     
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
