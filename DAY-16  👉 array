@@ -19,6 +19,7 @@ A data structure is a 'simple way to keep and arrange data' in the computer so w
                               Array       ------------------------
                                             |          |           |
                                        Linked List   Stack       Queue
+Note:- All collection framework classes (List, Set, Queue, Map, etc.) can grow or shrink at runtime —So they are dynamic data structures by behavior.
 
 
 Q2. 🧩 What is an Array?
