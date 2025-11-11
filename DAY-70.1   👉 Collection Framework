@@ -188,7 +188,6 @@ Iterator vs Iterable
 7. This interface allows us to retrieve or remove elements from a collection during the iteration.
 
 
-
 1. Represents a collection that can be iterated over using a for-each loop	1. Represents an interface that can be used to iterate over a collection
 2. When implementing an Iterable, we need to override the iterator() method	2. When implementing an Iterator, we need to override the hasNext() and next() methods
 3. Doesn't store the iteration state							3. Stores the iteration state
