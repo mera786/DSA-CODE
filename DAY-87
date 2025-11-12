@@ -1,0 +1,48 @@
+What is LinkedList  ?
+linkedlist is a linear data structure which is in the form of nodes in memory where one node knows the address of another nodes and
+they are linked through this address
+int linkedlist there are two parts :
+a. store address
+b. data (data can be one variable,two variable, three varible... , can be custom structure,cutom class anything)
+
+first node called head of the linkedlist
+last node called tail of the linkedlist
+
+realworld example : music player
+-> where can be go one step either one step forward or backward but at a time one step only
+
+web browser :
+-> suppose you have opened one by one you are opening multiple pages same way one one step you can go back on previous page
+
+types of linkedlist :
+                    singly linkedlist :
+                      /         \
+                     /           \
+                 circuler      non-circuler
+                 doubly linkedlist :
+                      /         \
+                     /           \
+                 circuler      non-circuler
+
+What is node ?
+-> in java normally node is class(which manually we create) which is such entity which holds linkedlist data as well as address
+how to create node ?
+step 1 :
+create class Node
+step 2:
+int rollNum (here we are creating node of rollnum)
+Node next
+
+how to implement linkedlist ?
+step 1 :
+required node
+step 2 :
+
+
+insertion in linkedlist are :
+ 3 
+either insert at head, at specific possition or at tail
+
+
+
+
