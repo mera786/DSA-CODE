@@ -1,4 +1,4 @@
-                                                                       START VIDEO FROM 39:00 minutes
+                                                                       START VIDEO FROM 56:00 minutes
 What is a Module?
 Is the smallest piece of software.
 A module is a set of methods or functions ready to be used somewhere else.
@@ -179,20 +179,24 @@ its return type is an Iterator interface
 
 
 Iterator vs Iterable
-1.Iterable interface belongs to the java.lang package. It represents a data structure that can be iterated over. 
-2.Iterable interface provides a method that produces an Iterator.
-3. When using an Iterable, we cannot get an element by index. 
-4. Similarly, we cannot get the first or the last elements from the data structure as well.
-5. Iterator is a member of the Java Collections Framework. 
-6. It belongs to the java.util package. 
-7. This interface allows us to retrieve or remove elements from a collection during the iteration.
-
-
-1. Represents a collection that can be iterated over using a for-each loop	1. Represents an interface that can be used to iterate over a collection
-2. When implementing an Iterable, we need to override the iterator() method	2. When implementing an Iterator, we need to override the hasNext() and next() methods
-3. Doesn't store the iteration state							3. Stores the iteration state
-4. Removing elements during the iteration isn't allowed				4. Removing elements during the iteration is allowed
-
+🧩 Iterable
+   1. Belongs to the java.lang package
+   2. Represents a data structure that can be iterated over
+   3. Provides a method that produces an Iterator
+   4. Cannot get an element by index
+   5. Cannot get the first or last elements directly
+   6. Represents a collection that can be iterated using a for-each loop
+   7. When implementing, override the iterator() method
+   8. Doesn’t store the iteration state
+   9. Removing elements during iteration isn’t allowed
+🧩 Iterator
+   1. Belongs to the java.util package
+   2. Member of the Java Collections Framework
+   3. Allows retrieving or removing elements during iteration
+   4. Represents an interface used to iterate over a collection
+   5. When implementing, override hasNext() and next() methods
+   6. Stores the iteration state
+   7. Removing elements during iteration is allowed
 
 ARRAYLIST :
  Note :- prefered core java notes for theory.             
@@ -257,6 +261,8 @@ public class MyArrayList<T> {
         return size;
     }
 }
+
+
 
 
 
