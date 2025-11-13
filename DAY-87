@@ -1,47 +1,155 @@
-What is LinkedList  ?
-linkedlist is a linear data structure which is in the form of nodes in memory where one node knows the address of another nodes and
-they are linked through this address
-int linkedlist there are two parts :
-a. store address
-b. data (data can be one variable,two variable, three varible... , can be custom structure,cutom class anything)
+🧩 What is a LinkedList?
+A LinkedList is a linear data structure in which elements are stored in nodes where one node knows the address of another nodes and
+they are linked through this address where,
+Each node contains:
+     a. Data → (can be a variable, object, or even a custom class)
+     b. Address (Reference) → pointing to the next node in the list.
+Note:- Unlike arrays, linked lists do not store elements in continuous memory locations — they are linked through references (addresses).
 
-first node called head of the linkedlist
-last node called tail of the linkedlist
+🧠 Structure of a Node ?
+A Node is the basic building block of a LinkedList.
+class Node<T> {
+    T data;         // stores data
+    Node next;     // stores reference to next node
+}
 
-realworld example : music player
--> where can be go one step either one step forward or backward but at a time one step only
+🪄 Important Terminology ?
+| Term     | Meaning                                             |
+| -------- | --------------------------------------------------- |
+| **Head** | First node of the linked list                       |
+| **Tail** | Last node of the linked list (its `next` is `null`) |
+| **Node** | A structure that holds data + next node address     |
+| **Null** | Indicates the end of the list                       |
 
-web browser :
--> suppose you have opened one by one you are opening multiple pages same way one one step you can go back on previous page
+🎵 Real-world Examples ?
+     - Music Player → You can move one song forward or backward.
+     - Web Browser History → You can move to the previous or next page.
 
-types of linkedlist :
-                    singly linkedlist :
+🌿 Types of LinkedList ?
+1️⃣ Singly LinkedList :
+           - Each node points only to the next node.
+           - Traversal: Forward direction only.
+Ex - Head → [Data|Next] → [Data|Next] → null
+           - Singly LinkedList can be:
+                    singly linkedlist 
                       /         \
                      /           \
                  circuler      non-circuler
-                 doubly linkedlist :
+                          - Non-Circular → last node points to null
+                          - Circular → last node points back to head
+
+2️⃣ Doubly LinkedList
+           - Each node points to both previous and next nodes.
+           - Traversal: Forward and backward.
+Ex - null ← [Prev|Data|Next] ↔ [Prev|Data|Next] ↔ null
+           - Doubly LinkedList can also be:
+                 doubly linkedlist 
                       /         \
                      /           \
                  circuler      non-circuler
+                          - Non-Circular → ends with null
+                          - Circular → last node connects back to head
 
 What is node ?
 -> in java normally node is class(which manually we create) which is such entity which holds linkedlist data as well as address
-how to create node ?
+How to create node ?
 step 1 :
 create class Node
 step 2:
 int rollNum (here we are creating node of rollnum)
 Node next
 
-how to implement linkedlist ?
-step 1 :
-required node
-step 2 :
+⚙️ Steps to Implement a LinkedList ?
+Step 1: Create Node class
+class Node<T> {
+    T data;
+    Node next;
+ Node() {
+        this.next = null;
+  }
+    Node(T data) {
+        this.next = null;
+        this.data = data;
+  }
+}
+
+Step 2: Create LinkedList class
+class LinkedList {
+    Node<Integer> head;  // start of list
+}
 
 
-insertion in linkedlist are :
- 3 
-either insert at head, at specific possition or at tail
+
+➕ Insertion Operations ?
+
+You can insert a node in three main ways:
+1️⃣ Insert at Head :
+Add a new node at the beginning of the list.
+public void addFirst(int data){
+        Node<Integer> newNode = new Node<>(data);
+        if (head==null){
+            head=newNode;
+            return;
+        }
+        newNode.next= head;
+        head=newNode;
+    }
+
+2️⃣ Insert at Specific Position :
+Add a new node after a certain position.
+void insertAtPosition(int position, int data) {
+    if (position == 0) {
+        insertAtHead(data);
+        return;
+    }
+
+    Node newNode = new Node(data);
+    Node temp = head;
+    for (int i = 0; i < position - 1 && temp != null; i++) {
+        temp = temp.next;
+    }
+
+    if (temp == null) return; // invalid position
+
+    newNode.next = temp.next;
+    temp.next = newNode;
+}
+
+
+3️⃣ Insert at Tail :
+Add a new node at the end of the list.
+public void addLast(int data){
+    Node<Integer> newNode = new Node<>(data);
+    if (head==null){
+        head=newNode;
+        return;
+    }
+    Node currNode = head;
+    while (currNode.next!=null){
+        currNode=currNode.next;
+    }
+    currNode.next=newNode;
+}
+
+
+4️⃣ Print LinkedList :
+public void print(){
+        if(head==null){
+            System.out.println("list is empty");
+            return;
+        }
+    Node currNode = head;
+    while (currNode!=null){
+        System.out.print(currNode.data+" -> ");
+        currNode=currNode.next;
+    }
+    System.out.println("null");
+}
+
+5️⃣ remove removeFirst() :
+6️⃣ removeLast()
+
+ 
 
 
 
