@@ -130,7 +130,7 @@ Capacity:
 (Example: If the array can hold up to 10 elements, its capacity = 10.)
 Note:
 👉 The concepts of size and capacity apply only to dynamic arrays,
-because a static array has a fixed size that cannot change after creation.
+because a static array has a fixed size that cannot change after creation.                                 1:07:00
 
 
 🧩 Difference Between 1D and Multi-dimensional Array ?
@@ -143,6 +143,22 @@ because a static array has a fixed size that cannot change after creation.
 | **Visualization**     | [1, 2, 3, 4, 5]                         | [[1,2,3], [4,5,6]] (like a table)                                      |
 
 
+Ways to create 2D Array :
+
+way 1 : 
+int [][] arr = new int [3][2];
+Note:- 
+      - First one like,  [3] → tells Number of rows , Yaani array me 3 rows hongi.
+      - second one like, [2] → tells Number of columns in each row , Har row ke andar 2 elements honge.
+
+way 2 :
+int [][] arr = { ↓0  ↓1 <- column
+      rows -> 0  {1,2},   
+      rows -> 1  {4,5},
+      rows -> 2  {8,9}
+                       };
+
+
 Follow up Question :
 Write a Java program to create a 2D integer array with 3 rows and 2 columns.
 Take integer input from the user to fill the array and then print all the elements.
@@ -153,14 +169,6 @@ also write code for printing it . output :
 3 4
 5 6
 Note:- in 2D array if you want to deal with all elements (rows and columns) then 2 loops are required.
-
-Ways to create 2D Array :
-
-way 1 : 
-int [][] arr = new int [3][2];
-
-way 2 :
-int [][] arr = {{1,2,3},{4,5,6},{7,8,9}};
 
 follow up Question :
 Write a program to input a square-matrix (2D array: rows & columns equals numbers = square-matrix)  and print the sum of left and right diagonal elements ?
