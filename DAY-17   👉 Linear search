@@ -47,6 +47,18 @@ Q1. given an 2D array like,
                                };
   Qa. find first occurrence in 2D where target = 4 ?
    Hint: intialize two variable rowIndex = -1; , columnIndex = -1; and then use 2 loops then using condition compare target also exiting from both loop use labelled?
+   Qb. find all occurrences in 2D array where target = 2 ? 
+   Hint : find column size, based on column size create 2D array , use two loops .
+
+Q2. find maximum sub-array sum  ?
+ int [][] arr = {
+                  {2,4,1,5,1},
+                  {6,7,3,4,2},
+                  {8,1,2,2,3},
+                  {5,5,5,8,4},
+                               };
+ Hint : use two loops, two variable maxSum and currSum then compare .
+ 
 
 
 
