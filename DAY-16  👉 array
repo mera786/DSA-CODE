@@ -130,7 +130,7 @@ Capacity:
 (Example: If the array can hold up to 10 elements, its capacity = 10.)
 Note:
 👉 The concepts of size and capacity apply only to dynamic arrays,
-because a static array has a fixed size that cannot change after creation.                                 1:07:00
+because a static array has a fixed size that cannot change after creation.                                 
 
 
 🧩 Difference Between 1D and Multi-dimensional Array ?
@@ -171,6 +171,16 @@ also write code for printing it . output :
 Note:- in 2D array if you want to deal with all elements (rows and columns) then 2 loops are required.
 
 ******* ALSO DO THE SAME FOR PRINTING / INSERTING / DELETING AT SPECIFIC POSITION JUST BY REFERING 1D ARRAY LOGIC FROM 2D ARRAY.**********
+
+follow up Question :
+What is jagged array ?
+in 2 dimentional array, 2nd dimension length is variable like,
+        int[][] jagged = new int[3][]; // 3 rows
+
+        jagged[0] = new int[]{1, 2};
+        jagged[1] = new int[]{3, 4, 5};
+        jagged[2] = new int[]{6};
+
 
 follow up Question :
 Write a program to input a square-matrix (2D array: rows & columns equals numbers = square-matrix)  and print the sum of left and right diagonal elements ?
