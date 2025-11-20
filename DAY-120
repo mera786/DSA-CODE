@@ -1,0 +1,12 @@
+Q1. Max Sum Subarray of size k ?
+given an array of integers arr of size N and a number k , return the maximum sum of a subarray of size k ?
+      int []  arr = {100,200,50,0,200,20,100};
+      int n = 7;
+      int  k = 3;
+output = 350
+Hint:
+ 1. intialize pre compute sum of k element using loops till k 
+ 2. update max sum with precompute sum 
+ 3. now use sliding window and also compare max sum .
+
+end..
