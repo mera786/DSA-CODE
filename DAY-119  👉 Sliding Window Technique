@@ -1,0 +1,32 @@
+Q1.  What is Sliding Window Technique ?
+⭐ Sliding Window Technique :
+Sliding Window is a technique used to solve problems on arrays or strings by using a small window (range) that moves (slides) from left to right.
+Instead of checking all possible subarrays (which is slow), we create a window and:
+         - Expand the window by moving the right pointer.
+         - Shrink the window by moving the left pointer.
+         - Keep track of something inside the window (sum, max, unique elements, etc.)
+This helps convert O(n²) brute-force loops into O(n) efficient solutions.
+⭐ When to Use Sliding Window?
+Use it when the problem involves:
+✔ Subarrays
+✔ Substrings
+✔ Consecutive elements
+✔ Fixed size or variable-size ranges
+✔ Conditions like: “longest”, “smallest”, “maximum sum”, “length”, “at most K distinct elements”
+
+⭐ There are two types of sliding windows :
+    - fixed size : here we are talking about fixed size window like k=3;
+    - variable size: variable size works into two phase :
+                                                      - expansion phase (badhna) :- adding into the window.
+                                                      - shrinking phase (sheekudna) :- deleting from window.
+
+⭐ How to solve any sliding window problem ?
+STEPS for fixed size:
+1.  intialize the window (k=3) so first calculate sum of three elements.
+2.  solve for other elements
+3.  calculate your answer (like, max, sumofsubarray,logestsubstringlength)
+STEPS for variable size:
+1.  directly goes to loop
+2.  calculate your answer (like, max, sumofsubarray,logestsubstringlength)
+
+
