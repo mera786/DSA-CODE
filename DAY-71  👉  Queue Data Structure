@@ -1,0 +1,180 @@
+Q1. What is a Queue Data Structure?
+A Queue is a linear data structure that stores elements in order.
+It follows a rule:
+👉 FIFO — First In, First Out
+Means:
+      - The element that enters first comes out first.
+      - Like people standing in a line.
+🔧 Queue Operations like,:
+              - enqueue(x) → Add element at the back
+              - dequeue() → Remove element from the front
+              - peek() → View front element
+              - isEmpty() → Check if queue is empty
+                                                                                  ______________
+                                                                                 |   ATM        |
+                                 ↑   ↑    ↑    ↑    ↑    ↑    ↑    ↑      ↑      |______________|
+Rear side (insert/enqueue/offer) -------------------------------------------- Front side (deletion / dequeue / poll)
+Note:- 
+   a. always insert from rear side and delete from front side 
+   b. in collection enqueue known as offer and dequeue known as poll
+
+⭐ How many ways can a Queue be implemented?
+mainly in three standard ways:
+1️⃣ Using Array
+2️⃣ Using LinkedList
+3️⃣ Using Two Stacks
+
+1️⃣ Queue Using Array :
+STEPS 1: intialize these variables Using constructor
+    int rear;
+    int front;
+    int size;
+    int capacity;
+    int [] queue;
+STEPS 2 : develops all required methods like,
+     isEmpty(),
+     isFull(),
+     peek(),
+
+❌ Drawback of Normal Queue (Linear Queue) ?
+Problem: Memory Wastage
+When we use a queue with an array, the front pointer keeps moving forward after every dequeue.
+Example:
+Index:   0  1  2  3  4
+Queue:   10 20 30 -- --
+front → 0
+rear  → 2
+After removing two elements:
+Index:   0   1   2  3  4
+Queue:   --  --  30 -- --
+front → 2
+rear  → 2
+Now insert:
+rear → 3, 4
+Queue becomes full:
+--  --  30  40  50
+front→2
+rear →4
+But index 0 and 1 are empty, still we get Queue is FULL.👉 This unused memory is the biggest drawback.
+⭐ Solution → Circular Queue :
+Circular Queue solves this problem by making the array circular: 
+
+
+
+
+
+
+
+
+******************************************************* code ****************************************************************************************
+public class MyQueue {
+
+    int rear;
+    int front;
+    int size;
+    int capacity;
+    int [] queue;
+
+    public MyQueue(int capacity){
+        queue = new int[capacity];
+        this.capacity=capacity;
+        size=0;
+        front=-1;
+        rear=-1;
+    }
+
+    public boolean isEmpty(){
+        if (rear==-1 || front==-1){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isFull(){
+        if (rear==capacity-1){
+            return true;
+        }
+        return false;
+    }
+
+    public int peek(){
+        if (isEmpty()){
+            System.out.println("queue is empty ");
+            return -1;
+        }
+        return queue[front];
+    }
+
+
+    public void enqueue(int val){
+        if(isFull()){
+            System.out.println("queue is full");
+            return;
+        }
+        if(isEmpty()){
+            rear=0;
+            front=0;
+            queue[rear]=val;
+        }else {
+            rear++;
+            queue[rear]=val;
+        }
+        size++;
+    }
+
+ public int dequeue(){
+     if (isEmpty()){
+         System.out.println("queue is empty ");
+         return -1;
+     }
+
+     int val = queue[front];
+     if(rear==front){
+         rear=-1;
+         front=-1;
+     }else {
+         front++;
+     }
+     size--;
+      return val;
+    }
+
+    public void printQueue(){
+        if(isEmpty()){
+            System.out.println("queue is empty");
+        }
+
+        for (int i=front; i<=rear; i++){
+            System.out.print(queue[i]);
+            if(i!=rear){
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+    }
+
+    public int size(){
+        return size;
+    }
+
+
+    public static void main(String[] args) {
+    MyQueue m = new MyQueue(3);
+        System.out.println(m.isEmpty()); // true
+        System.out.println(m.isFull()); // false
+        m.enqueue(3);
+        m.enqueue(2);
+        m.enqueue(5);
+        System.out.println(m.isEmpty()); // false
+        System.out.println(m.isFull()); // true
+        int dequeue = m.dequeue();
+        System.out.println(dequeue);
+        m.printQueue();
+
+        System.out.println(m.size());
+
+    }
+}
+
+
+
