@@ -1,0 +1,70 @@
+Q1. What is a Class?
+A class is like a blueprint or template used to create objects.
+⚡ Think of a class as a design that describes:
+                   - what things (variables/properties) an object will have
+                   - what actions (methods/functions) an object can do
+Example (Real Life)
+Class → Car
+       - Properties → color, model, price
+       - Actions → start(), stop(), accelerate()
+A class does not represent a real car… it is only the design for making cars.
+
+Q2. What is an Object?
+An object is the real thing created from a class.
+⚡ Think of an object as the actual car built using the blueprint.
+Example:
+From the Car class, you can create objects N numbers time there is no restriction:
+     - Car c1 = Red Maruti
+     - Car c2 = Blue Honda
+Each object has:
+     - its own data (color, model)
+     - and can perform actions (start(), stop())
+
+Note:- 
+a. Default constructor:- isme phle se jo class ki attribute hoti hai usko intialize krte hai taki user agr kuch na pasand kre to hum usko apne mrji se whi dikhaye jo apna rule hai
+or ye bina kisi argumenet ka object ke liye hota hai 
+b. Parametrized constructor :-  isme user apna object bnate time argument deta hai uske according hum apne class ke attribute ko set krte hai .
+c. CopyConstructor :- Copy constructor ek aisa constructor hota hai jo same class ke ek object ki values ko dusre object me copy karta hai.
+
+
+Deep Copy  Vs Shallow Copy :
+
+public class Test {
+
+    int wheel;
+    int speed;
+    String name;
+
+    Test(int wheel){
+       this.wheel=wheel;
+    }
+
+    Test(Test test){
+      this.wheel=test.wheel;
+      this.speed=test.speed;
+      this.name=test.name;
+    }
+
+    public static void main(String[] args) {
+       Test test = new Test(4);
+        System.out.println(test.wheel); // 4
+
+        // deep copy :- to copy the values
+       Test test1 = new Test(test);
+        System.out.println(test1.wheel); // 4
+        test.wheel=6;
+        System.out.println(test.wheel); // 6
+        System.out.println(test1.wheel); // 4
+
+        test.wheel= 18;
+
+        // same reference -> shallow copy : to copy the reference
+        Test test2 = test;
+        System.out.println(test.wheel); // 18
+        System.out.println(test2.wheel); // 18
+
+
+    }
+}
+
+
