@@ -101,7 +101,33 @@ Q15. draw this pattern ?
 Note:- use this formula , value = ((row + column) % n) + 1
 is used whenever you want numbers to rotate after reaching the maximum value.
 
-Q16. 
+Q16. draw this pattern ?
+   *
+  * *
+ *   *
+*     *
+ *   *
+  * *
+   *
+
+Q17. draw this pattern ?
+*              *
+**            **
+***          ***
+****        ****
+*****      *****
+******    ******
+*******  *******
+****************
+****************
+*******  *******
+******    ******
+*****      *****
+****        ****
+***          ***
+**            **
+*              *
+
 
 
 
