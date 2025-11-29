@@ -44,3 +44,49 @@ Why?
 Note:- isme hum data ko hee hide kr dete hai or apne according decide krte hai acess control.
 
 
+2️⃣ What is Abstraction ?
+Abstraction is hiding the complex implementation details and showing only the essential features(like, Start/Stop engine,Accelerate / Brake without knowing how to start...)  to the user.
+Think of it like: when you drive a car, you use the steering, brake, and accelerator without knowing how the engine works inside.
+Why?
+✔ To reduce complexity
+✔ To show only necessary details
+✔ To improve code maintainability
+✔ To define a blueprint for other classes
+🧩 How to Achieve Abstraction in Java
+There are 2 main ways to achieve abstraction:
+1️⃣ Using Abstract Classes 
+2️⃣ Using Interfaces
+🌟Difference Between Abstract Class and Interface ?
+| Feature                          | Abstract Class                                                                    | Interface                                                                                                                |
+| -------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Object Creation**              | Cannot create object directly                                                     | Cannot create object directly                                                                                            |
+| **Methods**                      | Can have **abstract methods** (without body) and **concrete methods** (with body) | All methods are **abstract by default** (before Java 8). From Java 8+, can have **default and static methods with body** |
+| **Fields (Variables)**           | Can have **instance variables** of any type; can be non-final                     | Variables are **public, static, final by default** (constants)                                                           |
+| **Constructors**                 | Can have constructors                                                             | Cannot have constructors                                                                                                 |
+| **Multiple Inheritance**         | Supports **single inheritance only** (extends one class)                          | Supports **multiple inheritance** (a class can implement multiple interfaces)                                            |
+| **Access Modifiers for Methods** | Can use `private`, `protected`, `public`                                          | Methods are **public by default** (cannot use private for abstract methods before Java 9)                                |
+| **Inheritance**                  | `extends` keyword is used                                                         | `implements` keyword is used                                                                                             |
+| **Purpose**                      | To provide **partial abstraction** + some shared code                             | To provide **full abstraction / contract** for classes                                                                   |
+| **When to Use**                  | When classes are closely related and share **common code**                        | When classes are **unrelated** but must follow the same **rules/contract**                                               |
+| **Default Implementation**       | Can provide **default method body**                                               | Java 8+ allows **default methods**; Java < 8, **no method body allowed**                                                 |
+| **Static Methods**               | Can have static methods                                                           | Can have static methods (Java 8+)                                                                                        |
+
+🌟Difference Between Encapsulation and Abstraction ?
+| Feature                   | Encapsulation                                                                                                 | Abstraction                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Definition**            | Wrapping **data (variables) + methods** together and controlling access                                       | Hiding **implementation details** and showing only essential features                                 |
+| **Focus**                 | Focuses on **data protection**                                                                                | Focuses on **hiding complexity**                                                                      |
+| **Access Control**        | Achieved by **access modifiers** (`private`, `protected`, `public`) and **getters/setters**                   | Achieved by **abstract classes** or **interfaces**                                                    |
+| **Implementation Detail** | Does **not hide implementation**, just restricts access                                                       | **Hides implementation**, shows only functionality                                                    |
+| **What it hides**         | Hides **data** (variables)                                                                                    | Hides **logic/implementation** (how something works)                                                  |
+| **Purpose**               | To **protect data** and provide controlled access                                                             | To **define a blueprint** and reduce complexity                                                       |
+
+
+
+
+
+
+
+
+
+
