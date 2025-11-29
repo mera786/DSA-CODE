@@ -98,6 +98,8 @@ Q15. draw this pattern ?
 2 3 4 5 1
 3 4 5 1 2
 4 5 1 2 3
+Note:- use this formula , value = ((row + column) % n) + 1
+is used whenever you want numbers to rotate after reaching the maximum value.
 
 Q16. 
 
