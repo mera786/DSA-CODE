@@ -8,7 +8,7 @@ int c = a + b; // '+' is an arithmetic operator
 Java provides several types of operators:
 | No. | Operator Type       | Example               |
 | --- | ------------------- | --------------------- |
-| 1️⃣ | Unary Operator      | ++, --, !             |
+| 1️⃣ | Unary Operator      | ++, --, !(condition)  |
 | 2️⃣ | Arithmetic Operator | +, -, *, /, %         |
 | 3️⃣ | Shift Operator      | <<, >>, >>>           |
 | 4️⃣ | Relational Operator | >, <, >=, <=, ==, !=  |
