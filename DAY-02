@@ -5,10 +5,27 @@ It is a diagram that represents a workflow or process. It is nothing but a diagr
 It shows the steps as boxes of various kinds, and their order by connecting the boxes with arrows.
 Some Important symbols (boxes) are:
    -  🔵Oval - It marks the Start/End of the flow.
+      Example :-   +--------+
+                   | Start  |
+                   +--------+
    -  ➡️Arrow - Connector which shows the flow of relationship between various symbols.
+      Example :-       |
+                       v
    -  ⏺️Parallelogram - It represents input and output.
+      Example :-     /--------/
+                    /  Input /
+                   /--------/
    -  ⏹️Rectangle - It represents a process.
+      Example :-   +----------------+
+                   |   Process      |
+                   +----------------+
    -  🔶Diamond - It is used in decision formation.
+      Example :-        /----\
+                       / Yes? \
+                       \ No?  /
+                        \----/
+
+Note:- Most of the time we use pseudocode to solve question rather than follow chart .
 
 
 3. What is Process? 
@@ -27,7 +44,6 @@ START
        PRINT "Even number"
   ELSE
        PRINT "Odd number"
-  ENDIF
 END
 
 
