@@ -82,6 +82,10 @@ STEP-1:
 STEP-2:
 - use loops for repeated work like while(binaryNum>0)
 STEP-3:
-- inside loop, find lastDigit 
+- inside loop, find lastDigit like, (binaryNum % 10) 
 STEP-4:
--
+- in ans variable add multiplication of lastDigit * pow like, ans+=lastDigit * pow; 
+STEP-5:
+- remove lastDigit like binaryNum /=10;
+STEP-6:
+- update power like pow= pow * 2;
