@@ -67,16 +67,21 @@ STEP-5:
   - then update pow with 10 multiplication like, pow=pow*10 because here we want our remainder value in backward direction.
 
 
-(5)  Steps to convert Binary To Decimal Number ?
-
-
-
-
-
-
-(4) follow up question : reverse the number 5701 , output : 1075
+(5) follow up question : reverse the number 5701 , output : 1075
 Steps :
     - When you reverse a number, you repeatedly:
                               - extract the last digit (num % 10),
                               - add last digit to the result after multiplying by 10 into result,
                               - and then remove the last digit from num.
+
+(6)  Steps to convert Binary To Decimal Number ?
+Note:- in binary, binary num ka right side se left side ke trf 2^0 krte hai pure number ke liye ek ek pow badhate hue. uske bad hr 2 ki pow , 2 ke sath multiply hoti hai or uske bad sare multiplication
+ko ek sath add kr dete hai .
+STEP-1:
+- take input like (101010) which decimal 42
+STEP-2:
+- use loops for repeated work like while(binaryNum>0)
+STEP-3:
+- inside loop, find lastDigit 
+STEP-4:
+-
