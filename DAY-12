@@ -120,28 +120,31 @@ STEPS TO IMPLEMENT :
 STEP-1 :
 - take two number like num1 = 24, num2=36
 STEP-2 :
-- due to repeated work use loop like while( num1 !=0 && num2 !=0)
+- due to repeated work use loop like while( num1 !=0 && num2 !=0), here if anyone become 0 then loop will break.
 STEP-3 :
 - now check which one is greate if(num1 > num2 ) then do substraction from num1-num2 else vise versa
 STEP-4 :
-- after loop completation check which number is greater print that one.
+- after loop completation check (num1==0) return num2 which number is non-zero print that one.
 
 🔸 2. Division Method (modern and faster form)
-    - Divide the bigger number by the smaller one
-    - Take the remainder
-    - Replace the bigger number with the smaller one, and the smaller one with the remainder
-    - Repeat until remainder = 0
-    - The last non-zero remainder is the GCD
+STEPS TO IMPLEMENT :
+STEP-1 :
+- take two number like num1 = 24, num2=36
+STEP-2 :
+- due to repeated work use loop like while( num1 !=0 && num2 !=0), here if anyone become 0 then loop will break.
+STEP-3 :
+- now check which one is greate if(num1 > num2 ) then do modulo from num1=num1%num2 else vise versa
+STEP-4 :
+- after loop completation check (num1==0) return num2 which number is non-zero print that one.
 Example:
 Find GCD of 60 and 48
 1️⃣ 60 ÷ 48 → remainder 12
 2️⃣ 48 ÷ 12 → remainder 0
 ✅ GCD = 12
 
-
 Q7. LCM / Least Common Multiple (or Smallest Common Multiple)
 Easy Definition:
-  - LCM means the smallest same multiple of two or more numbers. (with no remainder).
+  - 👉 Matlab do (4,6) ya zyada numbers(4,6,9..) ke aise sabse chhote number (36) ko LCM bolte hain jo sabhi numbers (4,6,9) se completely divide (exactly divide) ho jaye.
 💡 Example:  For numbers 4 and 6:
                        - Multiples of 4 → 4, 8, 12, 16, 20, 24, ...
                        - Multiples of 6 → 6, 12, 18, 24, 30, ...
@@ -164,7 +167,7 @@ Now check the relationship:
 
 Q10. Lcm of two numbers if you already know GCD of two numbers ?
 Formula :
-if a and b are two numbers, then lcm(a,b) * gcd(a,b) = a*b
+if a and b are two numbers, then lcm =n1 * n2 / gcd.
 
 
 Q5. Check if a Number is prime or not ?
@@ -232,20 +235,7 @@ Step 6️⃣
       After the loop ends, all indexes that are still true in the array are prime numbers.
 
 
-Q10.1  What is Fast Exponentiation (Binary Exponentiation)  ?
-Fast Exponentiation is a smarter and faster way to compute powers — it reduces the number of multiplications by using a mathematical trick.
-It works based on this idea:
-   - If the exponent n is even:  num^pow = (num^(pow/2)) × (num^(pow/2))    => num= num * num ;   pow=pow/2;
-   - If the exponent n is odd:   num^pow = num × (num^(pow-1)) 
-Example :
-Let’s compute 2¹⁰ step by step:
-2¹⁰ = (2⁵) × (2⁵)
-We need 2⁵, so we calculate that:
-2⁵ = 2 × (2⁴)
-and
-2⁴ = (2²) × (2²)
-and
-2² = (2¹) × (2¹)
+
 
 
 Q11. 🧮 What is Modular Arithmetic?
