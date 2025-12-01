@@ -74,7 +74,60 @@ Steps :
                               - add last digit to the result after multiplying by 10 into result,
                               - and then remove the last digit from num.
 
-(6)  Steps to convert Binary To Decimal Number ?
+(6) follow up question : write program to find a=2 to the power b=3 ?
+Steps :
+   - run loop till b times 
+   - declare one ans variable intializing with 1, inside loop do multiplication ans = ans * a;
+
+
+(7) What is Fast Exponentiation /Binary Exponentiation ?
+Fast Exponentiation Algorithm is one of the most efficient ways to calculate large powers. like, a^b where normal way time complexity will be O(b), but using algorithm time complexity O(log b)
+It works based on this idea:
+🔥 Key Rules:
+- Agar power even ho →
+                      a^n = (a^(n/2)) * (a^(n/2))
+- Agar power odd ho →
+                     a^n = a * (a^(n-1))
+Example :
+2^50
+50 even → 2^50 = (2^25) * (2^25)
+
+2^25
+25 odd → 2^25 = 2 * (2^24)
+
+2^24
+24 even → 2^24 = (2^12) * (2^12)
+
+2^12
+12 even → 2^12 = (2^6) * (2^6)
+
+2^6
+6 even → 2^6 = (2^3) * (2^3)
+
+2^3
+3 odd → 2^3 = 2 * (2^2)
+
+2^2
+2 even → 2^2 = (2^1) * (2^1)
+
+2^1
+Base Case → 2
+STEPS TO IMPLEMENT :
+ int rest = 1;
+        while (pow > 0){
+            if(pow % 2 !=0){
+                rest = rest * num;
+                pow = (pow-1)/2;
+            }else {
+                pow = pow/2;
+            }
+            num = num * num;
+        }
+
+        return rest;
+
+
+(8)  Steps to convert Binary To Decimal Number ?
 Note:- in binary, binary num ka right side se left side ke trf 2^0 krte hai pure number ke liye ek ek pow badhate hue. uske bad hr 2 ki pow , 2 ke sath multiply hoti hai or uske bad sare multiplication
 ko ek sath add kr dete hai .
 STEP-1:
@@ -89,3 +142,6 @@ STEP-5:
 - remove lastDigit like binaryNum /=10;
 STEP-6:
 - update power like pow= pow * 2;
+
+
+
