@@ -101,8 +101,9 @@ Now, memory addresses:
 | 3         | 40      | 3000 + 3 * 4               | 3012    |
 | 4         | 50      | 3000 + 4 * 4               | 3016    |
 
-Ways to Declare an Array  ?
 
+Ways to Declare an Array  ?
+------------------------------
 👉 Way 1: Declare and Then Initialize :
 int[] arr;         // Declaration
 arr = new int[5];  // Initialization with size 5
@@ -165,28 +166,76 @@ because a static array has a fixed size that cannot change after creation.
 | **Visualization**     | [1, 2, 3, 4, 5]                         | [[1,2,3], [4,5,6]] (like a table)                                      |
 
 
-Ways to create 2D Array :
+🧩 2D Array — Declaration + Initialization Rules :
+--------------------------------------------------
+👉 Way 1: Declare and Then Initialize
+int[][] arr;                 // Declaration
+        arr = new int[3][4];   // Initialization with size 3x4
 
-way 1 : 
+👉 Way 2: Declare + Initialize Together 
 int [][] arr = new int [3][2];
 Note:- 
       - First one like,  [3] → tells Number of rows , Yaani array me 3 rows hongi.
       - second one like, [2] → tells Number of columns in each row , Har row ke andar 2 elements honge.
 
-way 2 :
+👉 Way 3: Directly Assign Values (Shortcut using {})
 int [][] arr = { ↓0  ↓1 <- column
       rows -> 0  {1,2},   
       rows -> 1  {4,5},
       rows -> 2  {8,9}
                        };
+Note:- This is actually shortcut for:  int[][] arr = new int[][] {
+                                                                    {10, 20},
+                                                                    {30, 40},
+                                                                    {50, 60}
+                                                                             };
+                                                                     Compiler automatically adds: new int[][]
 
 
-Follow up Question :
+🧩 Ways to Traverse a 2D Array :
+---------------------------------
+
+📌 1. Normal For Loop (Nested Loops) :
+for (int i = 0; i < arr.length; i++) {            // row
+    for (int j = 0; j < arr[i].length; j++) {     // column
+        System.out.println(arr[i][j]);
+    }
+}
+
+📌 2. For-Each Loop :
+for (int[] row : arr) {
+    for (int value : row) {
+        System.out.println(value);
+    }
+}
+
+📌 3. While Loop :
+int i = 0;
+while (i < arr.length) {
+    int j = 0;
+    while (j < arr[i].length) {
+        System.out.println(arr[i][j]);
+        j++;
+    }
+    i++;
+}
+
+📌 5. Stream API (Java 8+) :
+A. Printing each row :
+                  Arrays.stream(arr).forEach(row -> System.out.println(Arrays.toString(row)));
+B. Printing each element :
+                          Arrays.stream(arr)
+                                .flatMapToInt(Arrays::stream)
+                                .forEach(System.out::println);
+
+
+Q3. Follow up Question :                                                               START FROM HERE..............................................................................
 Write a Java program to create a 2D integer array with 3 rows and 2 columns.
 Take integer input from the user to fill the array and then print all the elements.
 Expected Input :
 1 2 3 4 5 6
-also write code for printing it . output :
+also write code for printing it . 
+output :
 1 2
 3 4
 5 6
@@ -271,6 +320,19 @@ input :   int [][] arr =    {
                               {8,1,2,2,3},
                               {5,5,5,8,4}
                                           };
+
+
+
+Q LEETCode: 79. word search in grid .  (asked in ERIKSon sector- 15) ?  Backtracking
+given an m * n grid of characters board and a string word, return true if word exists in the grid. the word can be constructed from letters of sequentially adjacent cells, 
+where aadjacent cells are horizentally or vertically neighboring. the same letter cell may not be used more than once. 
+Input board : [
+                ["A","B","C","E"],
+                ["S","F","C","S"],
+                ["A","D","E","E"]
+              ] 
+word = "ABCCED" 
+output = true
 
 
 
