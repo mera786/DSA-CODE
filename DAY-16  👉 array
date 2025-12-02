@@ -20,6 +20,28 @@ A data structure is a 'simple way to keep and arrange data' in the computer so w
                                             |          |           |
                                        Linked List   Stack       Queue
 Note:- All collection framework classes (List, Set, Queue, Map, etc.) can grow or shrink at runtime —So they are dynamic data structures by behavior.
+# Primitive Data Structures :
+                         Primitive data structures are the basic built-in data types in a programming language.
+                Key Points :
+                         - Stored directly in memory.
+                         - Very fast to process.
+                         - Hold a single value.
+                         - Size is fixed.
+# Non-Primitive Data Structures :
+                               Non-primitive data structures are complex data types built using primitive types. They can store multiple values or objects, and can grow in size.
+                     🔹 Linear :
+                                Array
+                                Linked List
+                                Stack
+                                Queue
+                     🔹 Non-Linear
+                                Tree
+                                Graph
+                     Key Points
+                                Created by the programmer.
+                                Slower compared to primitive.
+                                Can store multiple values.
+                                Size may be dynamic or flexible.
       ✅ Linear Data Structure (LDs) :  A data structure in which elements are arranged in a straight line (one after another).
       ❌ Non-Linear Data Structure (NLDs)  : A data structure where elements are not arranged in a straight line.Instead, one element can connect to many elements.
 
@@ -116,7 +138,7 @@ Note:- first check index is within range/valid or not
 
 
 Q2. Follow up question delete element at any specific position ?
-    you have 7 size array having elements only 7 elements now you have to delete a particular elements at given index x ?
+    you have 7 size array having elements 7 elements now you have to delete a particular elements at given index x ?
    input : 1,2,3,4,5,6,7 ? index x = 3?  output : 1,2,3,5,6,7,0
 Note:- first check index is within range/valid or not
 
