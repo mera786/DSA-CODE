@@ -236,7 +236,7 @@ Q11. Lcm of two numbers if you already know GCD of two numbers ?
 Formula :
 if a and b are two numbers, then lcm =n1 * n2 / gcd.
 
-                                                                                 ___________________________________________START_________________________________________________
+
 Q12. 🧮 What is Modular Arithmetic?
 Modular Arithmetic is math with remainders.
 When we divide a number by another number, the remainder is the result in modular arithmetic.
@@ -250,7 +250,7 @@ We write it as:
 🧩 Some Useful Rules (in easy words) :
 | Rule                                          | Meaning (in simple words)                                                              |
 | --------------------------------------------- | -------------------------------------------------------------------------------------- |
-| (a + b) mod m = ((a mod m) + (b mod m)) mod m | You can take remainders first, then add                                                |
+| (a + b) mod m = ((a mod m) + (b mod m)) mod m | You can take remainders first, then add                                                | Note:- modulo limit will be given like,1000 (10^3)
 | (a − b) mod m = ((a mod m) − (b mod m)) mod m | You can take remainders first, then subtract                                           |
 | (a × b) mod m = ((a mod m) × (b mod m)) mod m | You can take remainders first, then multiply                                           |
 | (a % m) % m = a % m                           | Taking mod twice doesn’t change the answer                                             |
@@ -293,7 +293,7 @@ So, 5!=5×24=120✅
 1! = 1
 0! = 1 (by definition — special mathematical rule)
 
-
+                                                                                 ___________________________________________START_________________________________________________
 Q13. Find trailing zeros in a factorial ?             
              
 suppose you are given a number '456700442000' can you calculate the number of zeros in it? Yes, you can easily, 
@@ -304,10 +304,10 @@ count is your answer, simple!
 But when you are asked to find trailing zeros from factorial of a number. There is a high chance that this number might exceed 
 the range of Integer/long and you can't store it! So, if you can't store it, how will you find it's trailing zeros? let's understand, 
 what brings zero at the end of a number!
-   1. Suppose the number is '68' lets find its factors-> 68 = 2217
-   2. Suppose the number is '70' lets find its factors-> 70 = 257
-   3. Suppose the number is '680' 680 = 222517
-   4. Suppose the number is '6800' 6800 = 22225517
+   1. Suppose the number is '68' lets find its factors-> 68 = 2*2*17
+   2. Suppose the number is '70' lets find its factors-> 70 = 2*5*7
+   3. Suppose the number is '680' 680 = 2*2*2*5*17
+   4. Suppose the number is '6800' 6800 = 2*2*2*2*5*5*17
 did you observe anything?
 yes,
 68 has zero pairs of 2 and 5. 
