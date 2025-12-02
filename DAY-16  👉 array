@@ -144,6 +144,15 @@ Q2. Follow up question delete element at any specific position ?
 Note:- first check index is within range/valid or not
 
 
+Q3. Update a specific index position value in an array
+Input: 
+arr = {10,20,30,40,50}
+index x = 2 
+newValue = 100
+Output: 10,20,100,40,50
+
+
+
 🧩 Difference Between Size and Capacity in a Dynamic Array
 Size:
 → The number of elements that are currently stored in the array.
@@ -229,7 +238,7 @@ B. Printing each element :
                                 .forEach(System.out::println);
 
 
-Q3. Follow up Question :                                                               START FROM HERE..............................................................................
+Q3. Follow up Question :                                                              
 Write a Java program to create a 2D integer array with 3 rows and 2 columns.
 Take integer input from the user to fill the array and then print all the elements.
 Expected Input :
@@ -241,9 +250,57 @@ output :
 5 6
 Note:- in 2D array if you want to deal with all elements (rows and columns) then 2 loops are required.
 
-******* ALSO DO THE SAME FOR PRINTING / INSERTING / DELETING AT SPECIFIC POSITION JUST BY REFERING 1D ARRAY LOGIC FROM 2D ARRAY.**********
+Q4. INSERTION AT SPECIFIC POSITION ?
+Create a 2D array of size 3 × 3. Fill it with user input (9 values). 
+Input:
+1 2 3
+4 5 6
+7 8 9
+Then ask the user:
+       Enter row number  / Insert row: 1 
+       Enter column number  / Insert column: 2
+       Enter value to insert  / Insert value: 99
+Expected Output :
+1 2 3
+4 5 99
+7 8 9
 
-follow up Question :
+
+Q5. DELETION AT SPECIFIC POSITION ?
+Create a 3×3 array, take 9 input values. Ask user to enter row and column position to delete.
+Input:
+1 2 3
+4 5 6
+7 8 9
+Delete row: 1
+Delete column: 1
+Output:
+
+Q6. Delete a Specific Row from 3×3 Matrix ? 
+Create a 3×3 integer matrix. Take 9 input values.Ask the user for a row index to delete.Remove the entire row and reduce the matrix size to 2×3.
+Input:
+1 2 3
+4 5 6
+7 8 9
+Row to delete: 1
+Output:
+1 2 3
+7 8 9
+
+Q7.Delete a Specific Column from 3×3 Matrix ?
+Create a 3×3 integer matrix. Take 9 input values.Ask the user for a column index to delete.Remove the entire column and reduce matrix size to 3×2. 
+Input:
+1 2 3
+4 5 6
+7 8 9
+Column to delete: 1
+Output:
+1 3
+4 6
+7 9
+
+
+Q8. follow up Question :
 What is jagged array ?
 in 2 dimentional array, 2nd dimension length is variable like,
         int[][] jagged = new int[3][]; // 3 rows
@@ -253,7 +310,7 @@ in 2 dimentional array, 2nd dimension length is variable like,
         jagged[2] = new int[]{6};
 
 
-follow up Question :
+Q9. follow up Question :
 Write a program to input a square-matrix (2D array: rows & columns equals numbers = square-matrix)  and print the sum of left and right diagonal elements ?
 Note: Diagonal elements :-
 Diagonal ek line hoti hai jo matrix ke opposite corners ko join karti hai. 2D array ya square matrix me do main diagonals hote hain:
@@ -288,7 +345,7 @@ Example :
 -> rightDiagonalSum = 8
 
 
-Q Followup question :
+Q10. Followup question :
 Write java program to interchange the diagonals of a 2D array ?
 input : 
 ---------------------------------
@@ -312,7 +369,7 @@ Output :
 ---------------------------------
 
 
-Q Follow up question :
+Q11. Follow up question :
 find maximum sum of subArray of 2D and also return subarray index which has maximum sum?
 input :   int [][] arr =    {
                               {2,4,1,5,1},
