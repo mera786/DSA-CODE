@@ -43,8 +43,98 @@ Why?
                                                        | `public`    | Accessible by everyone                      |
 Note:- isme hum data ko hee hide kr dete hai or apne according decide krte hai acess control.
 
+2️⃣ What is Inheritance ?
+A mechanism where a subclass inherits properties and methods from a superclass, promoting code reusability and creating an IS-A relationship.
+Child = Subclass / Derived class
+Parent = Superclass / Base class
+Example:
+Dog is-a Animal 🐶 → inherits legs, eat(), sleep() from Animal.
+🔷 Why?
+✔ Code reusability
+✔ Avoid duplication
+✔ Easy maintenance
+✔ Supports polymorphism
+✔ Extends functionality of existing class
+🔷 Types of Inheritance :
+| Type         | Description                            | Supported in Java?                                              | Example                                              |
+| ------------ | -------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------- |
+| Single       | 1 parent → 1 child                     | ✔ Supported                                                     | Animal → Dog                                         |
+| Multilevel   | Parent → Child → Grandchild            | ✔ Supported                                                     | Animal → Dog → Puppy                                 |
+| Hierarchical | One parent, many children              | ✔ Supported                                                     | Animal → Dog, Cat                                    |
+| Multiple     | 1 child inherits from multiple parents | ❌ **Class level not allowed**✔ Allowed using **interfaces**    |class C extends A,B ❌<br>class C implements I1, I2 ✔|
+| Hybrid       | Combination structure                  | ✔ Using interface + classes                                     | (Mix of above)                                       |
+🔷 Access in Inheritance :
+| Parent Member | Child Accessible?                             | Notes                 |
+| ------------- | --------------------------------------------- | --------------------- |
+| `private`     | ❌ Not directly                                | Only by getter/setter |
+| (default)     | ✔ Same package only                           | Outside package ❌     |
+| `protected`   | ✔ Same package + Child class in other package | Best for inheritance  |
+| `public`      | ✔ Everywhere                                  | Full access           |
+🔷 Constructor Rules :
+| Concept                 | Rule                                                                 |
+| ----------------------- | -------------------------------------------------------------------- |
+| Parent constructor call | Always happens **first**                                             |
+| Keyword                 | `super()` must be **first line** in child constructor                |
+| Inheritance             | Only constructor **cannot** be inherited, but accessible via super() |
+| Default constructor     | Auto-called if parent has default constructor                        |
+🔷 IS-A vs HAS-A Relationship :
+| Type      | Meaning                   | Example              |
+| --------- | ------------------------- | -------------------- |
+| **IS-A**  | Inheritance               | Dog **is-a** Animal  |
+| **HAS-A** | Composition / Aggregation | Car **has-a** Engine |
+🔥 Limitations of Inheritance:
+✔ Use only when strict IS-A relationship exists
 
-2️⃣ What is Abstraction ?
+
+3️⃣ What is Polymorphism ?
+it is one of the principle of oops , in which Same thing behaves differently in different situations.
+🔷 Types of Polymorphism :
+| Type                          | When?                    | How?               | Also called          |
+| ----------------------------- | ------------------------ | ------------------ | -------------------- |
+| **Compile-time Polymorphism** | Compile time decide hota | Method Overloading | Static Polymorphism  |
+| **Runtime Polymorphism**      | Runtime decide hota      | Method Overriding  | Dynamic Polymorphism |
+🔷 Why?
+✔ Code flexibility
+✔ Behavior change allowed
+✔ Achieves loose coupling (after abstraction)
+✔ Improves scalability & maintainability
+🅰️ Method Overloading (Compile-time Polymorphism) :
+Same method name → different parameters(Count, Type, or Order)
+✔ Return type may differ,
+❌ Only return type change → Not allowed (parameters must differ).
+🅱️ Method Overriding (Runtime Polymorphism)
+Child class changes parent’s method behavior
+✔ Same name
+✔ Same parameters
+✔ Same return type
+✔ Must be in different classes with inheritance
+🔥 Runtime Polymorphism Example (Object Reference Game!) :
+class Animal {
+    void sound(){ System.out.println("Animal sound"); }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound(){ System.out.println("Bark"); }
+}
+----------------------------
+Animal a = new Dog();
+a.sound(); // Bark
+Reference type = Animal
+Object type = Dog ⇒ Run-time pe Decide hota hai
+📌 Overriding Rules :
+| Concept         | Rule                                                           |
+| --------------- | -------------------------------------------------------------- |
+| Access Modifier | Child ka method **weaker** access nahi rakh sakta,or more open |
+| Exception       | Checked exception → same or narrower                           |
+| Static methods  | ❌ Override nahi hote → **method hiding** hoti hai             |
+| Private methods | ❌ Override nahi hote                                          |
+| Final methods   | ❌ Override nahi hote                                          |
+| Constructors    | ❌ Override nahi hote                                          |
+
+
+
+4️⃣ What is Abstraction?
 Abstraction is hiding the complex implementation details and showing only the essential features(like, Start/Stop engine,Accelerate / Brake without knowing how to start...)  to the user.
 Think of it like: when you drive a car, you use the steering, brake, and accelerator without knowing how the engine works inside.
 Why?
