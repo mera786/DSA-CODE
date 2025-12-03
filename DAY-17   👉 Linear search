@@ -9,7 +9,7 @@ We check:
        20 → not match
        30 → ✅ match found at index 2
 Note: In Linear Search, the order of elements does not matter — you can search in unsorted or sorted arrays that's the reason it's benificial for this scinario.
-
+n
 
 Q2. given an array like, arr = {3,1,3,4,5,3}; now you have to do following questions :
     Qa. find first occurrence of 3 and return it's index ?
@@ -17,7 +17,7 @@ Q2. given an array like, arr = {3,1,3,4,5,3}; now you have to do following quest
     Qc. find last occurrence of 3 and return it's index ?
 
 
-Q2. Follow up question :
+Q3. Follow up question :  ****
 find maximum value in the array ?
 arr = {1,-2,-9,11,15,4,8};
 hint :
@@ -27,7 +27,7 @@ or
 
 
 
-Q3. Follow up question :
+Q4. Follow up question :
 find minimum value in the array ?
 arr = {1,-2,-9,11,15,4,8};
 hint :
