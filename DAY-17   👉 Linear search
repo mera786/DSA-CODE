@@ -17,7 +17,7 @@ Q2. given an array like, arr = {3,1,3,4,5,3}; now you have to do following quest
     Qc. find last occurrence of 3 and return it's index ?
 
 
-Q3. Follow up question :  ****
+Q3. Follow up question :
 find maximum value in the array ?
 arr = {1,-2,-9,11,15,4,8};
 hint :
@@ -25,15 +25,22 @@ hint :
 or
 2. -> intialize with possible mimum value ?
 
-
-
 Q4. Follow up question :
+find 2nd maximum value in the array ?
+arr = {1,-2,-9,11,15,4,8};
+
+
+Q5. Follow up question :
 find minimum value in the array ?
 arr = {1,-2,-9,11,15,4,8};
 hint :
 1. -> consider first index at minimum and then compare 
 or
 2. -> intialize with possible maximum value ?
+
+Q6. Follow up question :
+find 2nd minimum value in the array ?
+arr = {1,-2,-9,11,15,4,8};
 
 
 ****************************** LINEAR SEARCH ON MATRIX ***********************************************************
@@ -48,7 +55,7 @@ Q1. given an 2D array like,
   Qa. find first occurrence in 2D where target = 4 ?
    Hint: intialize two variable rowIndex = -1; , columnIndex = -1; and then use 2 loops then using condition compare target also exiting from both loop use labelled?
    Qb. find all occurrences in 2D array where target = 2 ? 
-   Hint : find column size, based on column size create 2D array , use two loops .
+   Hint : find column size, based on column size create 2D array , use two loops.
 
 Q2. find maximum sub-array sum  ?
  int [][] arr = {
