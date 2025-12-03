@@ -1,0 +1,190 @@
+Q1. Collect a list of integers into a List.? 
+Input:
+1, 2, 3, 4, 5
+Output:
+1 2 3 4 5
+
+Q2. Collect a list of strings into a comma-separated String.?
+Input:
+"apple", "banana", "cherry"
+Output:
+apple, banana, cherry 
+
+Q3. Collect a list of integers into a Set (removing duplicates).? 
+Input:
+1, 2, 2, 3, 3, 4, 5
+Output:
+1, 2, 3, 4, 5
+
+Q4. Count the number of elements in a list of integers? 
+Input:
+1, 2, 3, 4, 5
+Output:
+5
+
+Q5.Collect the sum of a list of integers.?
+Input:
+1, 2, 3, 4, 5
+Output:
+15
+
+Q6. Collect a list of strings into a List of uppercase strings.? 
+Input:
+"apple", "banana", "cherry"
+Output:
+APPLE, BANANA, CHERRY
+
+Q7. Collect a list of booleans and count how many are true.? 
+Input:
+true, false, true, true
+Output:
+3
+
+Q8. Find the maximum value in a list of integers.? 
+Input:
+1, 2, 3, 4, 5
+Output:
+5
+
+Q9. Collect the minimum value in a list of integers.?
+Input:
+5, 3, 9, 2, 8
+Output:
+2
+
+
+Q10. Join a list of characters into a single String.? 
+Input:
+'a', 'b', 'c'
+Output:
+abc
+                                                                                                    MEDIUM
+
+Q11.Given a list of integers, create a map that counts the occurrences of each integer.? 
+Input:  
+List<Integer> list = Arrays.asList(1, 2, 2, 3, 1); 
+Output:  
+k: 1 =  v : 2 
+k: 2 =  v : 2 
+k: 3 =  v : 1
+
+Q12. Given a map of key-value pairs, create a new map that inverts the keys and values.? 
+Input: 
+Map<Integer, String> originalMap = new HashMap<>(); 
+originalMap.put(1, "a"); 
+originalMap.put(2, "b"); 
+originalMap.put(3, "c"); 
+Output: 
+{a=1, b=2, c=3}
+
+Q13. Collect a list of integers into a comma-separated string.?
+Input:
+3, 5, 7, 9
+Output:
+3,5,7,9 
+
+Q14. Find the maximum value in a list of integers? 
+Input: 
+List<Integer> list = Arrays.asList(5, 12, 8, 21, 7); 
+Output:  21
+
+Q15. Remove duplicates from a list of integers? 
+Input: 
+List<Integer> list = Arrays.asList(3, 5, 7, 9, 5, 7); 
+Output: 
+[3, 5, 7, 9]
+
+Q16. Filter even numbers from a list.? 
+Input: 
+List<Integer> list = Arrays.asList(2, 3, 4, 5, 6); 
+Output: 
+[2, 4, 6]
+
+Q17. Find the frequency of characters in a string.? 
+Input: 
+String input = "banana"; 
+Output: 
+{b=1, a=3, n=2}
+
+Q18.Group words by their first character? 
+Input: 
+List<String> words = Arrays.asList("apple", "ant", "banana", "ball", "cat"); 
+Output: 
+{a=[apple, ant], b=[banana, ball], c=[cat]}
+
+Q19. Find the intersection of two lists.? 
+Input: 
+List<Integer> list1 = Arrays.asList(1, 2, 3, 4); 
+List<Integer> list2 = Arrays.asList(3, 4, 5, 6); 
+Output: [3, 4]
+
+Q20. Merge two maps by summing the values of common keys.? 
+Input:  
+Map<String, Integer> map1 = new HashMap<>(); 
+        map1.put("a", 3); 
+        map1.put("b", 5); 
+ 
+        // Initialize map2 
+        Map<String, Integer> map2 = new HashMap<>(); 
+        map2.put("b", 7); 
+        map2.put("c", 2); 
+Output: 
+{a=3, b=12, c=2} 
+
+Q21.Sort a map by its values.? 
+Input: 
+        Map<String,Integer> map = new HashMap<>(); 
+        map.put("apple", 3); 
+        map.put("banana", 5); 
+        map.put("cherry", 1); 
+Output: 
+{cherry=1, apple=3, banana=5}
+
+Q22. Partition a list of numbers into even and odd groups.? 
+Input: 
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6); 
+Output: 
+{even=[2, 4, 6], odd=[1, 3, 5]} 
+
+Q23. Count the length of each word in a list.? 
+Input: 
+List<String> words = Arrays.asList("java", "code", "stream"); 
+Output: 
+{java=4, code=4, stream=6}
+
+Q24. Concatenate all strings in a list.? 
+Input: 
+List<String> words = Arrays.asList("hello", "world"); 
+Output:  helloworld
+
+Q25. Find the first non-repeating character in a string.? 
+Input: 
+String input = "swiss"; 
+Output: w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
