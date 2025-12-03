@@ -251,30 +251,30 @@ output :
 Note:- in 2D array if you want to deal with all elements (rows and columns) then 2 loops are required.
 
 Q4. INSERTION AT SPECIFIC POSITION ?
-Create a 2D array of size 3 × 3. Fill it with user input (9 values). 
+Create a 2D array of size 2 × 3. Fill it with user input (5 values). 
 Input:
 1 2 3
-4 5 6
-7 8 9
+4 5 
 Then ask the user:
        Enter row number  / Insert row: 1 
-       Enter column number  / Insert column: 2
+       Enter column number  / Insert column: 1
        Enter value to insert  / Insert value: 99
 Expected Output :
 1 2 3
-4 5 99
-7 8 9
+4 99 5
+
 
 
 Q5. DELETION AT SPECIFIC POSITION ?
-Create a 3×3 array, take 9 input values. Ask user to enter row and column position to delete.
+Create a 2×3 array, take 6 input values. Ask user to enter row and column position to delete.
 Input:
 1 2 3
 4 5 6
-7 8 9
 Delete row: 1
 Delete column: 1
 Output:
+1 2 3
+4 6 0
 
 Q6. Delete a Specific Row from 3×3 Matrix ? 
 Create a 3×3 integer matrix. Take 9 input values.Ask the user for a row index to delete.Remove the entire row and reduce the matrix size to 2×3.
