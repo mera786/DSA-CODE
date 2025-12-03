@@ -342,6 +342,25 @@ STEPS:
  2. for(int i = 5; i<=num; i= i * i){ res = res+Math.floor(num/i)}
  3. return res;
 
+Q14. Write code for Fibonacci series using normal logic and recursion?
+Input: 
+int num = 15;
+output: 0 1 1 2 3 5 8 13.
+Note:- Fibonacci series is a sequence where each number is the sum of the previous two numbers.
+
+Q15. write code for first multiple of 5 and 7 ?
+Input :
+int num1=1;
+Output: 35
+
+Q16. find sum of first n natural number ?
+Input: 
+int num=3; 
+Output: 6
+Note: The sum of the first n natural numbers means adding all numbers from 1 to n.
+
+Q17. calculate sum of integers until invalid input given    invalid input: -1?
+
 
 
 
