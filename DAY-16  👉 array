@@ -276,7 +276,7 @@ Output:
 1 2 3
 4 6 0
 
-Q6. Delete a Specific Row from 3×3 Matrix ? 
+Q6. Delete a Specific Row from 3×3 Matrix ?    *****
 Create a 3×3 integer matrix. Take 9 input values.Ask the user for a row index to delete.Remove the entire row and reduce the matrix size to 2×3.
 Input:
 1 2 3
@@ -287,7 +287,15 @@ Output:
 1 2 3
 7 8 9
 
-Q7.Delete a Specific Column from 3×3 Matrix ?
+Q7. Delete Rows range ( 1 to 2 ) from 3×3 Matrix ?  
+Input:
+1 2 3
+4 5 6
+7 8 9
+Output:
+1 2 3
+
+Q8.Delete a Specific Column from 3×3 Matrix ?
 Create a 3×3 integer matrix. Take 9 input values.Ask the user for a column index to delete.Remove the entire column and reduce matrix size to 3×2. 
 Input:
 1 2 3
@@ -299,8 +307,17 @@ Output:
 4 6
 7 9
 
+Q9.Delete Columns range ( 1 to 2) from 3×3 Matrix ?
+Input:
+1 2 3
+4 5 6
+7 8 9
+Output:
+1
+4
+7
 
-Q8. follow up Question :
+Q10. follow up Question :
 What is jagged array ?
 in 2 dimentional array, 2nd dimension length is variable like,
         int[][] jagged = new int[3][]; // 3 rows
@@ -310,7 +327,7 @@ in 2 dimentional array, 2nd dimension length is variable like,
         jagged[2] = new int[]{6};
 
 
-Q9. follow up Question :
+Q11. follow up Question :
 Write a program to input a square-matrix (2D array: rows & columns equals numbers = square-matrix)  and print the sum of left and right diagonal elements ?
 Note: Diagonal elements :-
 Diagonal ek line hoti hai jo matrix ke opposite corners ko join karti hai. 2D array ya square matrix me do main diagonals hote hain:
@@ -345,7 +362,7 @@ Example :
 -> rightDiagonalSum = 8
 
 
-Q10. Followup question :
+Q12. Followup question :
 Write java program to interchange the diagonals of a 2D array ?
 input : 
 ---------------------------------
@@ -369,7 +386,7 @@ Output :
 ---------------------------------
 
 
-Q11. Follow up question :
+Q13. Follow up question :
 find maximum sum of subArray of 2D and also return subarray index which has maximum sum?
 input :   int [][] arr =    {
                               {2,4,1,5,1},
