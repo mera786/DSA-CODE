@@ -5,7 +5,6 @@ Input :
 Output : first occurrence at index 2
          last occurrence at index 6
 Hint: ask user to choose first or last occurrence. create an array to store indixes if presents
-     
 
 
 Q2. given an array find the occrrence of elements using binary search return counts if exist or return -1 ?
