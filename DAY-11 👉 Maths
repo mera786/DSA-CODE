@@ -54,6 +54,10 @@ Kyuki isme sirf 2 unique digits available hoti hain.
 
 
 (4) Steps to convert Decimal To Binary Number ?
+Input:
+10
+Output:
+1010 ?
 Note:- jis v base me convert krna hai us se repeated divide krna hoga apne number kro.
 STEP-1:
   - define the loop like, while(decNum > 0 ) because here we have to keep dividing nums unless our quotient become 0.
@@ -62,7 +66,7 @@ STEP-2:
 STEP-3:
   - now do the actual division of a decimalNum with same base in which you wanted to convert so that you can do half of num and get another num.
 STEP-4:
-  - now define ans variable and in which add, multiplication of remainder * pow, for pow define power variable intializing with 1 here pow=1 is nothing but 10^0=1
+  - now define ans variable intializing with ans=0 and in which add, multiplication of remainder * pow, for pow define power variable intializing with 1 here pow=1 is nothing but 10^0=1
 STEP-5:
   - then update pow with 10 multiplication like, pow=pow*10 because here we want our remainder value in backward direction.
 
@@ -128,6 +132,10 @@ STEPS TO IMPLEMENT :
 
 
 (8)  Steps to convert Binary To Decimal Number ?
+Input:
+1010
+Output:
+10
 Note:- in binary, binary num ka right side se left side ke trf 2^0 krte hai pure number ke liye ek ek pow badhate hue. uske bad hr 2 ki pow , 2 ke sath multiply hoti hai or uske bad sare multiplication
 ko ek sath add kr dete hai .
 STEP-1:
