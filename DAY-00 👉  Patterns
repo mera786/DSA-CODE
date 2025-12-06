@@ -75,33 +75,40 @@ Q12. draw floyd's triangle pattern ?
 4 5 6 
 7 8 9 10 
 
-Q12. draw this pattern ?
+Q13. draw this pattern ?
 A 
 B C
 D E F
 G H I J
 
-Q13. draw this pattern ?
+Q14. draw this pattern ?
+1 1 1 1 
+2 2 2 
+3 3 
+4 
+
+Q15. draw this pattern ?
 1 1 1 1
   2 2 2
     3 3
       4
 
-Q14. draw this pattern ?
+Q16. draw this pattern ?
 AAAA
  BBB
   CC
    D
 
-Q15. draw this pattern ?
+Q17. draw this pattern ?
 1 2 3 4 5
 2 3 4 5 1
 3 4 5 1 2
 4 5 1 2 3
-Note:- use this formula , value = ((row + column) % n) + 1
+5 1 2 3 4
+Note:- use this formula for using this formula indices should start from 0s , value = ((row + column) % n) + 1
 is used whenever you want numbers to rotate after reaching the maximum value.
 
-Q16. draw this pattern ?
+Q18. draw this pattern ?
    *
   * *
  *   *
@@ -109,8 +116,9 @@ Q16. draw this pattern ?
  *   *
   * *
    *
+making odd number formula : (2 * i) - 1
 
-Q17. draw this pattern ?
+Q19. draw this pattern ?
 *              *
 **            **
 ***          ***
