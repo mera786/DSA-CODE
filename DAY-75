@@ -19,9 +19,9 @@ OOP helps you to:
  Polymorphism
  Abstraction
 
-1️⃣ Encapsulation
+--------------------------------------------------------------------------------- 1️⃣ Encapsulation ---------------------------------------------------------------------------------------
 What?
-Wrapping data (variables) + methods (functions) together into a single unit → called Class.
+Wrapping data (variables) + methods (functions) together into a single unit → called Class. 
 Why?
 ✔ To protect data
 ✔ To control who can access what
@@ -43,10 +43,11 @@ Why?
                                                        | `public`    | Accessible by everyone                      |
 Note:- isme hum data ko hee hide kr dete hai or apne according decide krte hai acess control.
 
-2️⃣ What is Inheritance ?
+------------------------------------------------------------------------- 2️⃣ What is Inheritance ? ---------------------------------------------------------------------------------------
 A mechanism where a subclass inherits properties and methods from a superclass, promoting code reusability and creating an IS-A relationship.
 Child = Subclass / Derived class
 Parent = Superclass / Base class
+note:- jab child bol rhe ho to parent bolo  and jab derived class bol rhe ho to base class bolo
 Example:
 Dog is-a Animal 🐶 → inherits legs, eat(), sleep() from Animal.
 🔷 Why?
@@ -63,11 +64,14 @@ Dog is-a Animal 🐶 → inherits legs, eat(), sleep() from Animal.
 | Hierarchical | One parent, many children              | ✔ Supported                                                     | Animal → Dog, Cat                                    |
 | Multiple     | 1 child inherits from multiple parents | ❌ **Class level not allowed**✔ Allowed using **interfaces**    |class C extends A,B ❌<br>class C implements I1, I2 ✔|
 | Hybrid       | Combination structure                  | ✔ Using interface + classes                                     | (Mix of above)                                       |
+WHAT IS DIAMOND PROBLEM ?
+jab ek child multiple parents ko inherit krega or dono parent me ek common method hoga to child class ke liye diamond problem create krega isko avoid krne ke liye interface ka use hota hai
+Note:- by default jab v ek class bnti hai java me to wo single inheritance hoti hai because by default object class ko inherit krti hai .
 🔷 Access in Inheritance :
 | Parent Member | Child Accessible?                             | Notes                 |
 | ------------- | --------------------------------------------- | --------------------- |
-| `private`     | ❌ Not directly                                | Only by getter/setter |
-| (default)     | ✔ Same package only                           | Outside package ❌     |
+| `private`     | ❌ Not directly                               | Only by getter/setter |
+| (default)     | ✔ Same package only                           | Outside package ❌    |
 | `protected`   | ✔ Same package + Child class in other package | Best for inheritance  |
 | `public`      | ✔ Everywhere                                  | Full access           |
 🔷 Constructor Rules :
