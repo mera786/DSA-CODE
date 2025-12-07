@@ -270,6 +270,13 @@ Try values of x:
 3×4 = 12 → 12 mod 11 = 1 ✅
 So the modular inverse of 3 mod 11 is 4
 
+Q. Follow up Question :
+without modular arithmatic ?
+current time = 10 hrs
+add = 5 hours
+here you will find 15 but in clock 15 does not exist
+so apply modular arithmatic where limit is 12 hrs.
+
 
 
 Q12. Factorial of a Number ?
@@ -343,6 +350,7 @@ STEPS:
  3. return res;
 
 Q14. Write code for Fibonacci series using normal logic and recursion?
+Fibonacci series is a sequence where each number is the sum of the two numbers before it, starting from 0 and 1.
 Input: 
 int num = 15;
 output: 0 1 1 2 3 5 8 13.
