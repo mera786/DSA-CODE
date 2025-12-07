@@ -1,13 +1,27 @@
 Q1. What is a Class?
 A class is like a blueprint or template used to create objects.
 ⚡ Think of a class as a design that describes:
-                   - what things (variables/properties) an object will have
+                   - what things (variables/properties/) an object will have
                    - what actions (methods/functions) an object can do
 Example (Real Life)
 Class → Car
        - Properties → color, model, price
        - Actions → start(), stop(), accelerate()
 A class does not represent a real car… it is only the design for making cars.
+
+Note:-
+- Variable :
+       - A variable is a memory location that stores a value.
+       - here  age = variable, 25=value
+       - Always means memory storage.
+- Property/Field :
+       - A property belongs to an object (class field).
+       - example:  class A { String name; int age ; }
+       - Belongs to an object and used in oops concept
+- Attribute :
+       - Mostly metadata / annotation parameter / JPA/Hibernate field name
+       - example : @column ( name="student_name").
+
 
 Q2. What is an Object?
 An object is the real thing created from a class.
