@@ -1,1 +1,66 @@
+⭐ What is Algorithm Complexity?
+How fast an algorithm runs and how much memory it uses when input size becomes large.
+Well, an algorithm is measured based on :
+                         - Time Complexity → how much time it takes.
+                         - Space Complexity → how much memory (RAM) it uses.
+⭐ Why is Time Complexity important?
+Because when input becomes big (like 10⁴ or 10⁶), slow algorithm becomes too slow, fast algorithm works instantly.
+Example:
+| Algorithm     | Time Complexity | Input = 10⁴ | Steps         |
+| ------------- | --------------- | ----------- | ------------- |
+| Linear Search | O(N)            | 10,000      | 10,000 checks |
+| Binary Search | O(log N)        | log(10,000) | 13 checks     |
+✅ so here, Binary search is 700 times faster.
+
+⭐ What is used to represent the complexity of Algorithms? 
+Asymptotic Notation 
+   a. What is Asymptotic Notation?
+    it is a standard way of writing time complexity. Since we cannot count exact steps, we write approximate growth using: 
+            1️⃣ Big-O (Upper bound) :
+                 Upper bound tells the maximum time an algorithm can take in the worst case. suppose your algorithm worst to worst it will take 10 steps it means your answer can be in one step,2 step but not in 11 steps
+                        - Maximum time taken.
+                        - Worst case.
+                        - Example: O(N) → in worst case, algorithm takes N steps.
+            2️⃣ Big-Omega (Lower bound) :
+                 lower bound tells the minimum time an algorithm will take in the best case. suppose your algoritham If your algorithm needs at least 2 steps,then it might take 2 steps, 10 steps, or 100 steps…but never finish in 1 step.
+                        - Minimum time taken.
+                        - Best case.
+                        - Example: Ω(1) → best case runs in constant time.
+            3️⃣ Big-Theta (Tight bound) :
+                        - Exact/average performance.
+                        - Between best and worst.
+                        - Example: Θ(N log N) → average case complexity.
+⭐ What is Time Complexity?
+Time Complexity tells us , the rate of increase in time with an increase in the size of input. It does not mean real time like seconds or minutes because:
+  - Same code runs faster on one computer,
+  - And slower on another.
+So we measure time using asymptotic notation, not actual seconds.
+⭐ Rules to Analyse Time Complexity :
+- Always check worst case.
+              Worst case = Big-O.
+- Ignore constants.
+              O(2N) → O(N)
+- Ignore smaller terms.
+              O(N + N²) → O(N²)
+- We use Big-O notation because it shows the maximum time taken by the algorithm.
+- For loops:
+            Nested loop → Outer * Inner   , Example: 2 loops → O(N²)
+- If input is divided each time → log
+            Divide by 2 → log₂ N
+            Divide by 3 → log₃ N
+            (Binary search example)
+
+⭐ What is Space Complexity?
+Space Complexity = Input size + Extra space used by algorithm.
+- Input space = space taken by given data
+- Auxiliary space = extra space (new arrays, variables, lists)
+Important rule:
+❗ Do not change (modify) the input array unless allowed. Interviewers don’t like that.
+If you modify input,
+→ convert it back before finishing
+→ still better to avoid.
+
+
+The Big O cheatsheet by Eric is available at https://www.bigocheatsheet.com/.
+
 
