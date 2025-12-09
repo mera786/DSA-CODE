@@ -49,6 +49,11 @@ So we measure time using asymptotic notation, not actual seconds.
             Divide by 2 → log₂ N
             Divide by 3 → log₃ N
             (Binary search example)
+Time Complexity Growth Order :
+O(1) > O(log n) > O(√n) > O(n) > O(n log n) > O(n²) > O(n³) > … > O(2ⁿ) > O(n!)   
+✔ Left = Faster and
+✔ Right = Slower
+
 
 ⭐ What is Space Complexity?
 Space Complexity = Input size + Extra space used by algorithm.
@@ -62,5 +67,81 @@ If you modify input,
 
 
 The Big O cheatsheet by Eric is available at https://www.bigocheatsheet.com/.
+
+⭐ Analysis of time complexity :
+---------------------------------
+Note:-
+-> if there is no loop , no recursion, no repetation, no repetation function call then time complexity will be O(1) means constant time.
+
+LOOP ANALYSIS :
+----------------
+Q1.  for (int i =0; i<n; i++) { something..} 
+Ans: here loop will run 0 to n-1 so worst case time complexity will be O(n-1) since we avoid constant so final time complexity will be O(n).
+
+Q2. for(int i=n; i>0; i--){ something..}
+Ans: here also loop will run n to 0 in reverse but it will run unless n become equals to 0 so either loop is going to run 0 to O(n-1) or n to 0 time complexity will be O(n).
+
+Q3. for (int i =0; i<n; i+=5) { something..}
+Ans: here it will run n/5 because incrementing +5 in each step so if n = 12 so in each step divide 12/5= 2... so we consider ceil value so loop will run 0,5,10 means 3 times so tc will be O(n/5) which is equals to O(n)
+
+Q4. for (int i =0; i<n; i++){
+     for (int j =0; j<m; j++){ something..}}
+Ans : first loop will run O(n-1) and inner loop will run O(m-1) 
+     ex- suppose n = 6; and m = 3;
+         so,     i            j
+                 0            3 times
+                 1            3 times
+                 2            3 times
+                 3            3 times
+                 4            3 times
+                 5            3 times
+                      total = 18 times
+so we can say time complexity will be O(n-1) * O(m-1) but we ignore constant so O(n*m) 
+- if there will be n instead of m so time complexity should have O(n2) except incrementing both loop by +1.
+
+Q5.  for (int i =0; i<n; i++){
+     for (int j =0; j<i; j++){ something..}}
+Ans : suppose n = 5;
+         so,     i            j
+                 0            0 times
+                 1            1 times
+                 2            2 times
+                 3            3 times
+                 4            4 times
+now see how many times j is running for i, j like, 0+1+2+3+4 times which is nothing but equivalent to sum of n natural number formula like n(n+1)/2 so
+n2/2+n/2 => ignore constant and lower power one so n2 => now we have to take one minus as per our loop so O(n-1)2 => here also ignore constant so final O(n2).
+
+Q6. for (int i =0; i<n; i*=2){statement.}
+Ans: it should be infinite loop because 0*2=0 no increment 
+
+Q7. for (int i =1; i<n; i*=2){stmt.}
+ex -    n=10     i          increment   nothing but 2^pow
+                 1            1              2^0
+                 1*2          2              2^1
+                 2*2          4              2^2
+                 4*2          8              2^3
+                                              .
+                                              .
+                                            2^k >=n   => 2^k=n  =>  k=log₂ n
+
+Q8. for (int i =n; i>=1; i=i/2){stmt.}
+ex -    n=10     i            nothing but 2^pow
+                 10                10/2^0
+                 10/2              10/2^1
+                 10/4              10/2^2
+                 10/8              10/2^3
+                                     .
+                                     .
+                                    10/2^k =1 here 1 is the first value which will stop   => 2^k=n n here is 10  =>  k=log₂ n
+
+Q9. for (int i =0; i*i<n; i++){stmt.}
+
+
+                                     
+
+
+
+
+
 
 
