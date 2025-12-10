@@ -135,6 +135,21 @@ ex -    n=10     i            nothing but 2^pow
                                     10/2^k =1 here 1 is the first value which will stop   => 2^k=n n here is 10  =>  k=log₂ n
 
 Q9. for (int i =0; i*i<n; i++){stmt.}
+Ans:  jab i*i>=n to loop bnd ho jayegi so i^2 >=n    =>  i>=(√n)   => O(√n)
+
+Q10. for (int i =0; i<n; i++){stmt.}
+     for (int j =0; j<m; j++){stmt.}
+Ans: both seperate so O(n+m)
+
+Q11. int k=0;
+     for (int i =1; i<n; i*=2){k++}
+     for (int j =1; j<k j*=2){stmt.}
+Ans: first loop log₂ n and second should have log₂ k but k in first loop incrementing so instead of k, we writing  O(log₂ (log₂ n)).
+
+Q12. for (int i =0; i<n; i++){
+     for (int j =1; j<n; j*=2){stmt.}}
+Ans: outer loop O(n) and inner loop log₂ n  so  O(n * log n)   => O(n log n).
+
 
 
                                      
