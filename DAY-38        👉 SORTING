@@ -88,3 +88,32 @@ List: 4, 2, 1, 3
 ✅ Time Complexity = O(n2)
 
 
+4. Brick Sort :
+Brick Sort ek comparison-based sorting algorithm hai jo array ko pair-wise compare karke sort karta hai similar to bubble sort but in this we compare indexes—
+pehle odd index pairs compare karta hai, fir even index pairs, aur ye process tab tak chalta rehta hai jab tak array sorted nahi ho jata.
+Isse Odd-Even Sort bhi kehte hain ya fir parity sort.
+                       ⚙️ Steps to Implement Brick Sort :
+                                              1️⃣ Repeat until no swap happens →
+                                                           Hum overall loop tab tak chalate hain jab tak poora array sorted nahi ho jata.
+                                                           Ek boolean flag use karte hain: isSorted = false; then while(!isSorted) { isSorted= true) both loop inside it}.
+                                              2️⃣ Odd Phase → Compare odd-index pairs
+                                                            Odd phase me hum (index 1,2), (3,4), (5,6) ko compare karte hain:
+                                                             for (int i = 1; i <= n-2; i += 2)
+                                                                      if(arr[i] > arr[i+1])
+                                                                          swap(arr[i], arr[i+1])
+                                              3️⃣ Even Phase → Compare even-index pairs
+                                                             Even phase me hum (index 0,1), (2,3), (4,5) ko compare karte hain:
+                                                                for (int i = 0; i <= n-2; i += 2)
+                                                                     if(arr[i] > arr[i+1])
+                                                                        swap(arr[i], arr[i+1])
+                                              4️⃣ If no swaps in both phases → sorted
+                                                              Agar odd + even phases me ek bhi swap nahi hua → array sorted.
+                                              5️⃣ Continue until sorted
+                                                              Odd → Even → Odd → Even repeatedly Jab tak array sorted nahi ho jaye.
+                                              6️⃣ Final Result →
+                                                             Example: 4,3,2,1
+                                                             After many odd/even rounds → 1,2,3,4
+✅ Time Complexity = O(n2)
+
+
+
