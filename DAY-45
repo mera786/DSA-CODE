@@ -1,0 +1,6 @@
+Q268 LeetCode : missing number ?
+
+Steps :
+find expected sum : int expectedSum = n * (n + 1) / 2;
+find atual sum of array : int actualSum += arr[i];
+now missingNum : int misNum = expectedSum-actualSum;
