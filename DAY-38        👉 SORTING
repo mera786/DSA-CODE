@@ -101,11 +101,13 @@ Isse Odd-Even Sort bhi kehte hain ya fir parity sort.
                                                              for (int i = 1; i <= n-2; i += 2)
                                                                       if(arr[i] > arr[i+1])
                                                                           swap(arr[i], arr[i+1])
+                                                                          isSorted=false;
                                               3️⃣ Even Phase → Compare even-index pairs
                                                              Even phase me hum (index 0,1), (2,3), (4,5) ko compare karte hain:
                                                                 for (int i = 0; i <= n-2; i += 2)
                                                                      if(arr[i] > arr[i+1])
                                                                         swap(arr[i], arr[i+1])
+                                                                          isSorted=false;
                                               4️⃣ If no swaps in both phases → sorted
                                                               Agar odd + even phases me ek bhi swap nahi hua → array sorted.
                                               5️⃣ Continue until sorted
